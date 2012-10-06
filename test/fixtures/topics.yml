@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  topic: MyString
+  subject_id: 1
+  order: 1
+  is_subtopic: false
+  description: MyText
+
+two:
+  topic: MyString
+  subject_id: 1
+  order: 1
+  is_subtopic: false
+  description: MyText

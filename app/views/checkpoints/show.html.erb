@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Checkpoint:</b>
+  <%= @checkpoint.checkpoint %>
+</p>
+
+<p>
+  <b>Lesson:</b>
+  <%= @checkpoint.lesson_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @checkpoint.description %>
+</p>
+
+<p>
+  <b>Videourl:</b>
+  <%= @checkpoint.videourl %>
+</p>
+
+<p>
+  <b>Objective:</b>
+  <%= @checkpoint.objective %>
+</p>
+
+<p>
+  <b>Qaarray:</b>
+  <%= @checkpoint.qaarray %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @checkpoint.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_checkpoint_path(@checkpoint) %> |
+<%= link_to 'Back', checkpoints_path %>

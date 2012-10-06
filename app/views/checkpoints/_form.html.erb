@@ -1,0 +1,45 @@
+<%= form_for(@checkpoint) do |f| %>
+  <% if @checkpoint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@checkpoint.errors.count, "error") %> prohibited this checkpoint from being saved:</h2>
+
+      <ul>
+      <% @checkpoint.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :checkpoint %><br />
+    <%= f.text_field :checkpoint %>
+  </div>
+  <div class="field">
+    <%= f.label :lesson_id %><br />
+    <%= f.number_field :lesson_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :videourl %><br />
+    <%= f.text_field :videourl %>
+  </div>
+  <div class="field">
+    <%= f.label :objective %><br />
+    <%= f.text_area :objective %>
+  </div>
+  <div class="field">
+    <%= f.label :qaarray %><br />
+    <%= f.text_field :qaarray %>
+  </div>
+  <div class="field">
+    <%= f.label :order %><br />
+    <%= f.number_field :order %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

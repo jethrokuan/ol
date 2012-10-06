@@ -1,0 +1,31 @@
+<h1>Listing topics</h1>
+
+<table>
+  <tr>
+    <th>Topic</th>
+    <th>Subject</th>
+    <th>Order</th>
+    <th>Is subtopic</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @topics.each do |topic| %>
+  <tr>
+    <td><%= topic.topic %></td>
+    <td><%= topic.subject_id %></td>
+    <td><%= topic.order %></td>
+    <td><%= topic.is_subtopic %></td>
+    <td><%= topic.description %></td>
+    <td><%= link_to 'Show', topic %></td>
+    <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+    <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Topic', new_topic_path %>
