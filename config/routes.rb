@@ -1,10 +1,25 @@
 Ol::Application.routes.draw do
-  resources :subjects
+  devise_for :users
+
   resources :topics
   resources :lessons
   resources :checkpoints
 
+  resources :subjects do
+    resources :topics
+  end
+  resources :topics do
+    resources :lessons
+  end
+
+  resources :lessons do
+    resources :checkpoints
+  end
+
+
+
   get "pages/index"
+  get "pages/test"
   root to: "pages#index"
 
   # The priority is based upon order of creation:

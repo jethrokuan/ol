@@ -1,2 +1,186 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="container">
+	<h1>Heyy :)</h1>
+	<h6>What would you like to do today?</h6>
+	<div class="row margintop10p marginbot10p">
+		<div class="span4 aligncenter scroll">
+			<a href="#start" data-toggle="tab">
+			<h1 class="hidden-phone"><i class="icon-play-circle icon-large"></i></h1>
+			<p class="hidden-phone">I'm N00B</p>
+			<h3>Get Started</h3>
+			</a>
+		</div><!--span4-->
+		<div class="span4 aligncenter scroll">
+			<a href="#login" data-toggle="tab">
+			<h1 class="hidden-phone"><i class="icon-signin icon-large"></i></h1>
+			<p class="hidden-phone">I'm BOSS</p>
+			<h3>Sign In</h3>
+			</a>
+		</div><!--span4-->
+		<div class="span4 aligncenter scroll">
+			<a href="#browse" data-toggle="tab">
+			<h1 class="hidden-phone"><i class="icon-sitemap icon-large"></i></h1>
+			<p class="hidden-phone">I'm WIN</p>
+			<h3>Browse Lessons</h3>
+			</a>
+		</div><!--span4-->
+	</div><!--row-->
+	<div class="row" id="screen1">
+	<div class="span12" style="padding:0;margin:0">
+	<div class="tab-content">
+	  <div class="tab-pane fade in active" id="start">
+  		<div class="row">
+	  		<div class="span4 aligncenter">
+	  			<h1><i class="icon-chevron-down icon-large muted"></i></h1>
+	  		</div><!--span3-->
+	  	</div><!--row-->
+	  	<div class="row margintop10p marginbot20p" id="start">
+		<div class="span4">
+			<h2>Welcome to <span class="helvetica" style="font-size:65%;"><strong>open</strong>lectures</span></h2>
+			<p class="prettify">We provide free online lectures based on Singapore's curriculum</p>
+		</div><!--span4-->
+		<div class="span8">
+			<iframe src="http://www.youtube.com/embed/lPKBVoYKvIA?rel=0&amp;theme=light&amp;color=white&amp;autoplay=0&amp;showinfo=0&amp;autohide=3&amp;vq=hd1080" frameborder="0" allowfullscreen=""></iframe>
+</iframe>
+		</div><!--8col-->
+		<div class="span12 hidden-phone">
+			<h1>
+				<a href="#name" data-placement="right" rel="tooltip" data-original-title="Gogo!" title="Summary">
+					<i class="icon-circle-arrow-down icon-large muted"></i>
+				</a> 
+			</h1>
+		</div><!--12col-->
+		</div><!--row-->
+		<div class="row" id="name">
+		<div class="span4 marginbot10p">
+			<h2>Get Started</h2>
+			<p class="prettify">We'll create the ultimate learning environment for you. Just let us know what you want!</p>
+		</div><!--span4-->
+		<div class="span7 offset1">
+			<form>
+				<label>What do your friends call you?</label>
+			    <input type="text" class="span6 aligncenter" placeholder="Your Name">
+				<label>Choose a subject, or type your subject combination</label>
+			    <input type="text" class="span6 aligncenter" placeholder="e.g. 'Economics', or 'PCME'">
+			</form>
+		</div><!--8col-->
+		<div class="span12 hidden-phone">
+			<h1>
+				<a href="#name" data-placement="right" rel="tooltip" data-original-title="Gogo!" title="Summary">
+					<i class="icon-circle-arrow-down icon-large muted"></i>
+				</a> 
+			</h1>
+		</div><!--12col-->
+		</div><!--name-->
+	</div>
+	  <div class="tab-pane fade marginbot20p" id="login">
+	  	<div class="row">
+	  		<div class="span4 offset4 aligncenter">
+	  			<h1><i class="icon-chevron-down icon-large muted"></i></h1>
+	  		</div><!--span3-->
+	  	</div><!--row-->
+	  	<div class="row-fluid margintop10p">
+	  		<div class="span4 aligncenter">
+	  			<h1 class="margintop0 marginbot10p" style="font-size:5em"><span class="insignia">ol</span></h1>
+	  			<h3>Welcome Back!</h3>
+	  			<h5>we've missed you</h5>
+	  		</div><!--span4-->
+	  		<div class="span6 offset2">
+	  			<form>
+  				<div class="input-prepend">
+				  <span class="add-on"><i class="icon-user"></i></span>
+				  <input type="email" id="username" class="span11" placeholder="Username">
+				</div><!--inputprepend-->
+				<div class="input-prepend">
+				  <span class="add-on"><i class="icon-lock"></i></span>
+				  <input type="password" id="password" class="span11" placeholder="Password">
+				</div>
+				<p><small><a href="#start">Register</a> | <a href="#">Forgot something?</a></small></p>
+				  <hr>
+				  <button type="submit" class="btn btn-block">Let The Games Begin <i class="icon-arrow-right" style="line-height:0.25em;"></i></button>
+				</form>
+	  		</div><!--span7-->
+	  	</div><!--row-fluid-->
+	  </div>
+	  <div class="tab-pane fade aligncenter marginbot30p" id="browse">
+	  	<div class="row">
+	  		<div class="span4 offset8 aligncenter">
+	  			<h1><i class="icon-chevron-down icon-large muted"></i></h1>
+	  		</div><!--span3-->
+	  	</div><!--row-->
+	  	<form class="form-search aligncenter margintop10p marginbot5p">
+		  <div class="input-append">
+		    <input type="text" class="span6 search-query" data-provide="typeahead">
+		    <button type="submit" class="btn">Search</button>
+		  </div>
+		</form>
+	  	<ul class="thumbnails">
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>E</strong></h1><h6>Economics</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>L</strong></h1><h6>Literature</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>C</strong></h1><h6>Chemistry</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>B</strong></h1><h6>Biology</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>P</strong></h1><h6>Physics</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>M</strong></h1><h6>Math</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>GP</strong></h1><h6>General Paper</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>H</strong></h1><h6>History</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>G</strong></h1><h6>Geography</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>A</strong></h1><h6>Art</h6></a>
+		    </div>
+		  </li>
+		  <li class="span2">
+		    <div class="thumbnail">
+		      <a href=""><h1 class="hidden-phone"><strong>42</strong></h1><h6>Life</h6></a>
+		    </div>
+		  </li>
+		</ul>
+		<p>Can't find what you're looking for? Check our <a href="">Release Schedule</a>, or <a href="">let us know</a>!
+	  </p></div>
+	</div><!--tabcontent-->
+	</div><!--span12-->
+	</div><!--row-->
+	<footer>
+		<div class="row">
+		<div class="span12 aligncenter">
+			<p><small><span class="helvetica"><strong>open</strong>lectures</span> is designed and produced in <a href="/about" title="About Us">a small room</a> on the sunny island of Singapore</small></p>
+		</div><!--span12-->
+		</div><!--row-->
+	</footer>
+</div><!--container-->
+<!-- end scripts -->

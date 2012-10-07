@@ -1,0 +1,35 @@
+@media aural {  
+    #page{  
+    a:active        { voice-family: betty, female; pitch-range: 80; pitch: x-high }  
+    a:link          { voice-family: harry, male }  
+    a:visited       { voice-family: betty, female }  
+    abbr,acronym    { content: attr(title); }  
+    b,strong        { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }  
+    dfn             { pitch: high; pitch-range: 60; stress: 60 }  
+    dt              { stress: 80 }  
+    em              { pitch: medium; pitch-range: 60; stress: 60; richness: 50 }  
+    h1              { pitch: x-low; pitch-range: 90; pause: 20ms }  
+    h1              { voice-family: announcer, old male }  
+    h1, h2, h3,h2   { pitch: x-low; pitch-range: 80; pause: 30ms 40ms }  
+    h3              { pitch: low; pitch-range: 70; pause-after: 10ms }  
+    h4              { pitch: medium; pitch-range: 60 }  
+    h4, h5, h6      { voice-family: paul, male; stress: 20; richness: 90 }  
+    h5              { pitch: medium; pitch-range: 50 }  
+    h6              { pitch: medium; pitch-range: 40 }  
+    img:after       { content: attr(alt) }  
+    img:before      { content: attr(alt) }  
+    li, dt, dd      { pitch: medium; richness: 60 }  
+    li::before      { content: "List item: " }  
+    p.part.juliet   { voice-family: juliet, female }  
+    p.part.mercutio { voice-family: male 2 }  
+    p.part.nurse    { voice-family: child female }  
+    p.part.romeo    { voice-family: romeo, young male }  
+    p.part.tybalt   { voice-family: male 3 }  
+    pre, code, tt   { pitch: medium; pitch-range: 0; stress: 0; richness: 80 }  
+    strong          { pitch: medium; pitch-range: 60; stress: 90; richness: 90 }  
+    strike,del,ins  { richness: 0 }  
+    ul::after       { content: "List end. " }  
+    ul::before      { content: "Start list: " }  
+    /*[accesskey]:after { content: "[" attr(accesskey) "]" }*/  
+    }  
+}  

@@ -1,0 +1,84 @@
+/* LAYOUT */
+/* Pushes body down by 40px to account for the navbar, and pushes the footer down so it won't be so tight */
+a {
+  -webkit-transition: 0.15s color ease;
+	 -moz-transition: 0.15s color ease;
+       -o-transition: 0.15s color ease;
+          transition: 0.15s color ease;
+  text-decoration: none !important;
+}
+
+.olgreen {color:#339999;}
+.white {color: #fff;}
+
+.add-on { font-size: @baseFontSize * 0.72 !important;}
+	
+#pacman canvas{
+    height: auto;
+    width: 80%;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 53.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper>iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Additional push for any purpose necessary */
+.padtop10 {padding-top:10px;}
+.padtop20 {padding-top:20px;}
+.padtop40 {padding-top:40px;}
+.padtop60 {padding-top:60px;}
+.padbot0 {padding-bottom:0;}
+.padbot20 {padding-bottom:20px;}
+.padbot40 {padding-bottom:40px;}
+.padbot60 {padding-bottom:60px;}
+.marginbot0 {margin-bottom:0;}
+.margintop0 {margin-top:0;}
+.margintop5p {margin-top:5%;}
+.marginbot5p {margin-bottom:5%;}
+.margintop10p {margin-top:10%;}
+.marginbot10p {margin-bottom:10%;}
+.margintop20p {margin-top:20%;}
+.marginbot20p {margin-bottom:20%;}
+.margintop30p {margin-top:30%;}
+.marginbot30p {margin-bottom:30%;}
+.margintop40p {margin-top:40%;}
+.marginbot40p {margin-bottom:40%;}
+.line0 {line-height:0 !important;}
+
+h1 { font-size: 2.966em; line-height: @baseLineHeight * 2;}
+h2 { font-size: 2.618em; line-height: @baseLineHeight * 1.6;}
+h3 { font-size: 1.833em; line-height: @baseLineHeight * 1.2;}
+h4 { font-size: 1.618em;}
+h5 { font-size: 1.133em;}
+h6 { font-size: 1em;}
+p.small { font-size: 0.618em !important;}
+
+/* FORMATTING */
+/* Left, right, and center align classes for convenience */
+.alignright { text-align:right; }
+.alignleft { text-align:left; }
+.aligncenter { text-align:center; }
+.alignjustify { text-align:justify; }
+
+/* Adds a fade effect to the edges of the normal <hr> class */
+// hr.soften {
+//   background-color: rgba(0, 0, 0, 0.1); /* fallback color if gradients are not supported */
+//   background: -webkit-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: -moz-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: -o-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: -ms-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   border: 0 none  !important;
+//   height: 2px  !important;
+// }

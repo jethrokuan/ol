@@ -2,7 +2,8 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.all
+    @topic = Topic.find(params[:topic_id])
+    @lessons = @topic.lessons
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,10 +1,132 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Subject:</b>
-  <%= @subject.subject %>
-</p>
-
-
-<%= link_to 'Edit', edit_subject_path(@subject) %> |
-<%= link_to 'Back', subjects_path %>
+<div class="container">
+	<div class="row-fluid">
+	<div class="span3">
+		<div class="aligncenter">
+			<h1 class="insignia padbot20" style="font-size:7em;">ol</h1>
+			<ul class="nav nav-pills nav-stacked">
+			<%@subjects.each do |subject|%>
+			<li><%=subject.subject%></li>
+			<%end%>
+			</ul>
+		</div><!--aligncenter-->
+	</div><!--span4-->
+	<div class="span8 offset1">
+	<h1><%=@subject.subject%></h1>
+	<ul class="nav nav-pills" id="myTab">
+		<li><a href="#h1" data-toggle="tab">H1</a></li>
+		<li class="active"><a href="#h2" data-toggle="tab">H2</a></li>
+		<li><a href="#all" data-toggle="tab">Browse/Search</a></li>
+	</ul>
+	<div class="tab-content">
+	<div class="tab-pane fade" id="h1">
+		<h3>Microeconomics</h3>
+		<h6><small>This section provides an introduction to the basic terminology and concepts of economics.</small></h6>
+		<ol>
+			<li>How the Microeconomy Works</li>
+			<li>Why Markets Fail</li>
+		</ol>
+		<hr>
+		<h3>Macroeconomics</h3>
+		<h6><small>This theme provides an introduction to the nature of economics and examines the operation of markets for goods and services.  It also focuses on how consumers and producers make decisions about the choices they face, recognising that in the market economy, both are motivated by self interest.</small></h6>
+		<ol>
+			<li>How the Macroeconomy Works</li>
+			<li>Macroeconomic Aims, Problems/Issues, Consequences and Policies</li>
+			<li>International Economy</li>
+		</ol>
+	</div><!--tabpane-->
+	<div class="tab-pane active fade in" id="h2">
+		<h3>Market System</h3>
+		<h6><small>The emphasis of this section is on government objectives and policies relating to economic growth, employment, stability of prices and the balance of payments.  It emphasises the use of the AD-AS approach as a tool for the analysis of fiscal, monetary and supply-side policies, and their impact at the micro and macro levels.</small></h6>
+		<ol>
+			<li>Scarcity, Choice and Opportunity Cost</li>
+			<li>Resource Allocation in Competitive Markets</li>
+			<ul class="unstyled">
+				<li><a href="/pd.html">Price Discrimination</a></li>
+			</ul>
+			<li>Firms and How They Operate</li>
+		</ol>
+		<hr>
+		<h3>Market Failure and Government Intervention</h3>
+		<h6><small>This theme examines the nature of market failure, its causes and possible policy remedies.</small></h6>
+		<ol>
+			<li>Market Failure</li>
+			<li>Government Intervention in the Market</li>
+		</ol>
+		<hr>
+		<h3>National and International Economy</h3>
+		<h6><small>This theme provides an introduction to the key indicators of economic performance, the basic AD/AS and AE-Income analysis, and  the main objectives and instruments of government policy.</small></h6>
+		<ol>
+			<li>Key Economic Indicators</li>
+			<li>How The Macroeconomy Works</li>
+			<li>International Economics</li>
+		</ol>
+	</div><!--tabpane-->
+	<div class="tab-pane fade" id="all">
+		<form class="form-search">
+			  <div class="input-append">
+			    <input type="text" class="input-xxlarge search-query">
+			    <button type="submit" class="btn">Search</button>
+			  </div>
+			</form>
+		<div class="row-fluid">
+		<div class="span8">
+		<ul class="unstyled">
+			<li>You Demand</li>
+			<li>I Supply</li>
+			<li>Shifts</li>
+			<li>The Market</li>
+			<li>Introduction to Elasticity</li>
+			<li>Price Elasticity</li>
+			<li>Income Elasticity</li>
+			<li>Market Structure</li>
+			<li>Perfectly Competitive Firms</li>
+			<li>Monopolies</li>
+			<li>Oligopolies</li>
+			<li>Additional Concepts</li>
+			<li>Evaluations</li>
+			<li>Market Failure</li>
+			<li>Introduction to Monetary Policy</li>
+			<li>Interest Rates</li>
+			<li>Demand and Supply of Money</li>
+			<li>Review of Interest Rate and Macroeconomic Goals</li>
+			<li>How Monetary Policy Affects Economic Growth</li>
+			<li>How Monetary Policy Affects Unemployment</li>
+			<li>How Monetary Policy Affects Inflation</li>
+			<li>How Monetary Policy Affects External Stability</li>
+			<li>Evaluation 1 – Sentiments</li>
+			<li>Evaluation 2 – Liquidity Trap</li>
+			<li>Evaluation 3 – Transmission</li>
+			<li>Evaluation 4 – Specificity</li>
+			<li>Other Evaluations</li>
+			<li>Singapore?</li>
+			<li>Impossible Trinity</li>
+			<li>Controlling Money Supply</li>
+			<li>Bond Yields and Interest Rates</li>
+			<li>Introduction to Price Discrimination</li>
+			<li>First Degree Price Discrimination</li>
+			<li>Second Degree Price Discrimination</li>
+			<li>Third Degree Price Discrimination</li>
+			<li>Applications of Price Discrimination</li>
+		</ul><!--unstyled-->
+	</div><!--span8-->
+	<div class="span3 offset1 aligncenter hidden-phone">
+		<h1>36</h1>
+		<p>lessons</p>
+		<hr>
+		<h1>184</h1>
+		<p>checkpoints</p>
+	</div><!--span3-->
+	</div><!--row-fluid-->
+	</div><!--tabpane-->
+	</div><!--tabcontent-->
+	</div><!--span8-->
+</div><!--row-->
+	<footer>
+		<div class="row">
+			<hr>
+		<div class="span12 aligncenter">
+			<p><small><span class="helvetica"><strong>open</strong>lectures</span> is designed and produced in <a href="/about" title="About Us">a small room</a> on the sunny island of Singapore</small></p>
+		</div><!--span12-->
+		</div><!--row-->
+	</footer>
+</div>

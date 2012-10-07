@@ -2,7 +2,8 @@ class CheckpointsController < ApplicationController
   # GET /checkpoints
   # GET /checkpoints.json
   def index
-    @checkpoints = Checkpoint.all
+    @lesson = Lesson.find(params[:lesson_id])
+    @checkpoints = @lesson.checkpoints
 
     respond_to do |format|
       format.html # index.html.erb
