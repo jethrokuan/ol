@@ -1,6 +1,10 @@
 class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
+  load_and_authorize_resource
+  skip_load_resource :only => :index
+  skip_authorize_resource :only => :index
+  
   def index
     @topic = Topic.find(params[:topic_id])
     @lessons = @topic.lessons

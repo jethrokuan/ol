@@ -1,6 +1,10 @@
 class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
+  load_and_authorize_resource
+  skip_load_resource :only => :index
+  skip_authorize_resource :only => :index
+  
   def index
     @subject = Subject.find(params[:subject_id])
     @topics = @subject.topics

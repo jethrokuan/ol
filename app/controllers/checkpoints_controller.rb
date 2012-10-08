@@ -1,6 +1,10 @@
 class CheckpointsController < ApplicationController
   # GET /checkpoints
   # GET /checkpoints.json
+  load_and_authorize_resource
+  skip_load_resource :only => :index
+  skip_authorize_resource :only => :index
+  
   def index
     @lesson = Lesson.find(params[:lesson_id])
     @checkpoints = @lesson.checkpoints
