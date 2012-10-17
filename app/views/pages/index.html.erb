@@ -114,61 +114,7 @@
 		  </div>
 		</form>
 	  	<ul class="thumbnails">
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>E</strong></h1><h6>Economics</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>L</strong></h1><h6>Literature</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>C</strong></h1><h6>Chemistry</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>B</strong></h1><h6>Biology</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>P</strong></h1><h6>Physics</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>M</strong></h1><h6>Math</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>GP</strong></h1><h6>General Paper</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>H</strong></h1><h6>History</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>G</strong></h1><h6>Geography</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>A</strong></h1><h6>Art</h6></a>
-		    </div>
-		  </li>
-		  <li class="span2">
-		    <div class="thumbnail">
-		      <a href=""><h1 class="hidden-phone"><strong>42</strong></h1><h6>Life</h6></a>
-		    </div>
-		  </li>
+		  <%= render(:partial => "subject", :collection => @subjects) %>
 		</ul>
 		<p>Can't find what you're looking for? Check our <a href="">Release Schedule</a>, or <a href="">let us know</a>!
 	  </p></div>
