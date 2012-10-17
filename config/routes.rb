@@ -19,6 +19,11 @@ Ol::Application.routes.draw do
 
 
   get "pages/index"
+  get "pages/team"
+  get "pages/opportunities"
+  get "pages/partners"
+  get "pages/presskit"
+  get "pages/contact"
   get "pages/test"
   root to: "pages#index"
 

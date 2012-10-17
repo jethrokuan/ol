@@ -7,25 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-	  <% if user_signed_in? %>
-	    Signed in as <%= current_user.email %>. Not you?
-	    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-	  <% else %>
-	    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-	  <% end %>
-	</div>
-
+	<%if notice || alert%>
 	<div class="container">
 		<%if notice%>
-		<p class="notice"><%= notice %></p>
+		<div class="alert alert-success">
+			<%= notice %>
+		</div>
 		<%end%>
 		<% if alert%>
-		<p class="alert"><%= alert %></p>
+		<div class="alert alert-error">
+			<%= alert %>
+		</div>
 		<% end%>
 	</div>
+	<%end%>
 	<div class="container">
 		<%= yield %>
 	</div>
 </body>
+<footer>
+	<div class="container">
+	<div class="row">
+	<div class="span8 offset4 aligncenter">
+		<hr>
+		<p><small><span class="helvetica"><strong>open</strong>lectures</span> is designed and produced in <a href="/about" title="About Us">a small room</a> on the sunny island of Singapore</small></p>
+	</div><!--span12-->
+	</div><!--row-->
+	</div>
+</footer>
 </html>

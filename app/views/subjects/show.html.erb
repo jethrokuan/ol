@@ -1,47 +1,23 @@
-<div class="container">
-	<div class="row-fluid">
-	<div class="span3">
-		<div class="aligncenter">
-			<h1 class="insignia padbot20" style="font-size:7em;">ol</h1>
-			<ul class="nav nav-pills nav-stacked">
-			<%@subjects.each do |subject|%>
-			<li><%=subject.subject%></li>
-			<%end%>
-			</ul>
-		</div><!--aligncenter-->
-	</div><!--span4-->
+	<div class="row">
+		<%=render partial: "shared/start"%>
+		<%=render partial: "shared/navsubjects"%>
+		   </ul>
+  </nav><!--span3-->
 	<div class="span8 offset1">
-	<h1><%=@subject.subject%></h1>
+	<h1>Economics</h1>
 	<ul class="nav nav-pills" id="myTab">
-		<li><a href="#h1" data-toggle="tab">H1</a></li>
-		<li class="active"><a href="#h2" data-toggle="tab">H2</a></li>
-		<li><a href="#all" data-toggle="tab">Browse/Search</a></li>
+		<li class="active"><a href="#seab" data-toggle="tab">SEAB Syllabus</a></li>
+		<li><a href="#all" data-toggle="tab">Browse All</a></li>
 	</ul>
 	<div class="tab-content">
-	<div class="tab-pane fade" id="h1">
-		<h3>Microeconomics</h3>
-		<h6><small>This section provides an introduction to the basic terminology and concepts of economics.</small></h6>
-		<ol>
-			<li>How the Microeconomy Works</li>
-			<li>Why Markets Fail</li>
-		</ol>
-		<hr>
-		<h3>Macroeconomics</h3>
-		<h6><small>This theme provides an introduction to the nature of economics and examines the operation of markets for goods and services.  It also focuses on how consumers and producers make decisions about the choices they face, recognising that in the market economy, both are motivated by self interest.</small></h6>
-		<ol>
-			<li>How the Macroeconomy Works</li>
-			<li>Macroeconomic Aims, Problems/Issues, Consequences and Policies</li>
-			<li>International Economy</li>
-		</ol>
-	</div><!--tabpane-->
-	<div class="tab-pane active fade in" id="h2">
+	<div class="tab-pane active fade in" id="seab">
 		<h3>Market System</h3>
 		<h6><small>The emphasis of this section is on government objectives and policies relating to economic growth, employment, stability of prices and the balance of payments.  It emphasises the use of the AD-AS approach as a tool for the analysis of fiscal, monetary and supply-side policies, and their impact at the micro and macro levels.</small></h6>
 		<ol>
 			<li>Scarcity, Choice and Opportunity Cost</li>
 			<li>Resource Allocation in Competitive Markets</li>
 			<ul class="unstyled">
-				<li><a href="/pd.html">Price Discrimination</a></li>
+				<li><a href="pd.html">Price Discrimination</a></li>
 			</ul>
 			<li>Firms and How They Operate</li>
 		</ol>
@@ -62,15 +38,9 @@
 		</ol>
 	</div><!--tabpane-->
 	<div class="tab-pane fade" id="all">
-		<form class="form-search">
-			  <div class="input-append">
-			    <input type="text" class="input-xxlarge search-query">
-			    <button type="submit" class="btn">Search</button>
-			  </div>
-			</form>
 		<div class="row-fluid">
 		<div class="span8">
-		<ul class="unstyled">
+		<ul class="unstyled list">
 			<li>You Demand</li>
 			<li>I Supply</li>
 			<li>Shifts</li>
@@ -121,12 +91,3 @@
 	</div><!--tabcontent-->
 	</div><!--span8-->
 </div><!--row-->
-	<footer>
-		<div class="row">
-			<hr>
-		<div class="span12 aligncenter">
-			<p><small><span class="helvetica"><strong>open</strong>lectures</span> is designed and produced in <a href="/about" title="About Us">a small room</a> on the sunny island of Singapore</small></p>
-		</div><!--span12-->
-		</div><!--row-->
-	</footer>
-</div>

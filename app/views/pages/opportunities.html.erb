@@ -1,0 +1,95 @@
+
+<div class="row">
+<%=render partial: 'shared/start'%>
+<%=render partial: 'shared/navlinks'%>
+	</ul>
+</nav><!--span3-->
+<div class="span8 offset1">
+<ul class="thumbnails">
+	<li class="span8" style="margin-top:-5px;"><a class="thumbnail"><%=image_tag "work.jpg"%></a></li>
+</ul><!--thumbnails-->
+<h1>We can't pay you, but we can give you <span class="salmon">the experience of a lifetime</span></h1>
+<hr>
+<div class="tabbable tabs-left">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#cookie" data-toggle="tab">Cookie Monster</a></li>
+		<li><a href="#octopus" data-toggle="tab">Octopus</a></li>
+		<li><a href="#slideninja" data-toggle="tab">Slide Ninja</a></li>
+		<li><a href="#postproc" data-toggle="tab">Post-proc</a></li>
+		<li><a href="#spd" data-toggle="tab">SPD</a></li>
+		<li><a href="#codemonkey" data-toggle="tab">Code Monkey</a></li>
+		<li><a href="#galactic" data-toggle="tab">Galactic Ambassador</a></li>
+		<li><a href="#unicorn" data-toggle="tab">Magic Unicorn</a></li>
+	</ul>
+<div class="tab-content">
+	<div class="tab-pane active fade in" id="cookie">
+		<h3>Lecturer</h3>
+		<p>If you can teach your grandma about price discrimination, or sell ice to eskimos, you qualify to lecture.</p>
+	</div><!--tabpane-->
+	<div class="tab-pane fade" id="octopus">
+		<h3>Admin Staff</h3>
+		<p>Octopi make us awesome. They work with Cookie Monsters to schedule, plan and publish lectures. Every tentacle influences content.</p>
+	</div><!--tabpane-->
+	<div class="tab-pane fade" id="slideninja">
+		<h3>Keynote Production</h3>
+		<p>Ninjas create the slides and content that appear behind every lecturer. All that eye-catching animation has its roots in ancient shinobi skills.</p>
+	</div><!--tabpane-->
+	<div class="tab-pane fade" id="postproc">
+		<h3>Video Post-Processing</h3>
+		<p>Behind every beautiful lecture is a capable post-proc. You'll curate and process raw footage. Slide Ninjas will feed you daily.</p>
+	</div><!--tabpane-->
+	<div class="tab-pane active fade" id="spd">
+		<h3>Special Projects Division</h3>
+		<p>It's called the SPD for a reason. We can't tell you anything about the holomatrix scanners, or the quantum supercomputer.</p>
+	</div><!--tabpane-->
+	<div class="tab-pane fade" id="codemonkey">
+		<h3>Web Developer</h3>
+		<p>We're looking for someone who speaks Ruby, HTML, CSS, that kind of thing. Bonus points if you own a "nerd" shirt.</p>
+	</div><!--tabpane-->
+	<div class="tab-pane fade" id="galactic">
+		<h3>Outreach Official</h3>
+		<p>If you'd like to work on something with us from your school, this is it! A talk, a project, an adventure. The possibilities are endless.</p>
+	</div><!--tabpane-->
+	<div class="tab-pane fade" id="unicorn">
+		<h3>Everything Else</h3>
+		<p>Do something we're missing, or not getting right. This is an invitation to be brutal - you could help us grow big.</p>
+	</div><!--tabpane-->
+</div><!--tabcontent-->
+</div><!--tabbable-->
+<hr>
+<h1>The Application Form</h1>
+<p class="lead">Pick one, submit one.</p>
+<div class="row">	
+<div class="span4 aligncenter">
+		<form>
+			<legend><a href="http://en.wikipedia.org/wiki/Red_pill_and_blue_pill" target="_blank"><%=image_tag "bluepill.png", style:"width:25%;"%><p>Blue Pill</a></p></legend>
+			<input type="text" class="span4" placeholder="Name" required>
+			<input type="text" class="span4" placeholder="Current Location" required>
+			<input type="email" class="span4" placeholder="Email Address" required>
+			<select multiple class="span4" required>
+				<option>Cookie Monster</option>
+				<option>Octopus</option>
+				<option>Slide Ninja</option>
+				<option>Post-proc</option>
+				<option>Code Monkey</option>
+				<option>Galactic Ambassador</option>
+			</select>
+			<textarea rows="3" class="span4" placeholder="What are we doing wrong?" required></textarea>
+			<div class="input-append hidden-phone">
+				<input class="span3" id="appendedInputButton" size="16" type="text" placeholder="For anything else"><button class="btn" type="button">Upload</button>
+			</div>
+			<h3 class="aligncenter"><a href="#"><span class="hidden-phone"><i class="icon-ok"></i><br/></span><small>Submit Form A</small></a></h3>
+		</form>
+	</div><!--span4-->
+	<div class="span4 aligncenter">
+		<form>
+			<legend class="aligncenter"><a href="http://en.wikipedia.org/wiki/Red_pill_and_blue_pill" target="_blank"><%=image_tag "redpill.png", style:"width:25%;"%><p>Red Pill</a></p></legend>
+			<textarea rows="13" class="span4" placeholder="Anything goes" required></textarea>
+			<h3 class="aligncenter"><a href="#"><span class="hidden-phone"><i class="icon-ok"></i><br/></span><small>Submit Form B</small></a></h3>
+		</form>
+	</div><!--span4-->
+</div><!--row-->
+<hr>
+<p>We've filled out our share of forms, and we know it isn't easy. We'll be in touch, regardless of the outcome of your application. </p>
+</div><!--span8-->
+</div><!--row-->

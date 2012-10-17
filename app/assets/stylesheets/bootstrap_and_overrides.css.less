@@ -30,3 +30,489 @@ body {
 //
 // Example:
 // @linkColor: #ff0000;
+
+@font-face {
+    font-family: 'cmun';
+    src: font-url('cmunoti-webfont.eot');
+    src: font-url('cmunoti-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('cmunoti-webfont.woff') format('woff'),
+         font-url('cmunoti-webfont.ttf') format('truetype'),
+         font-url('cmunoti-webfont.svg#cmunoti') format('svg');
+    font-weight: normal !important;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'cmun';
+    src: font-url('cmunorm-webfont.eot');
+    src: font-url('cmunorm-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('cmunorm-webfont.woff') format('woff'),
+         font-url('cmunorm-webfont.ttf') format('truetype'),
+         font-url('cmunorm-webfont.svg#cmunorm') format('svg');
+    font-weight: normal !important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'cmun';
+    src: font-url('cmunobx-webfont.eot');
+    src: font-url('cmunobx-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('cmunobx-webfont.woff') format('woff'),
+         font-url('cmunobx-webfont.ttf') format('truetype'),
+         font-url('cmunobx-webfont.svg#cmunobx') format('svg');
+    font-weight: bold !important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'miso';
+    src: font-url('miso-regular-webfont.eot');
+    src: font-url('miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('miso-regular-webfont.woff') format('woff'),
+         font-url('miso-regular-webfont.ttf') format('truetype'),
+         font-url('miso-regular-webfont.svg#misoregular') format('svg');
+    font-weight: normal !important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'miso';
+    src: font-url('miso-bold-webfont.eot');
+    src: font-url('miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('miso-bold-webfont.woff') format('woff'),
+         font-url('miso-bold-webfont.ttf') format('truetype'),
+         font-url('miso-bold-webfont.svg#misobold') format('svg');
+    font-weight: bold !important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'miso';
+    src: font-url('miso-light-webfont.eot');
+    src: font-url('miso-light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('miso-light-webfont.woff') format('woff'),
+         font-url('miso-light-webfont.ttf') format('truetype'),
+         font-url('miso-light-webfont.svg#misolight') format('svg');
+    font-weight: 100 !important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'insignia';
+    src: font-url('insignia-webfont.eot');
+    src: font-url('insignia-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('insignia-webfont.woff') format('woff'),
+         font-url('insignia-webfont.ttf') format('truetype'),
+         font-url('insignia-webfont.svg#InsigniaRegular') format('svg');
+    font-weight: normal !important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fontawesome';
+    src: font-url('fontawesome-webfont.eot');
+    src: font-url('fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('fontawesome-webfont.woff') format('woff'),
+         font-url('fontawesome-webfont.ttf') format('truetype'),
+         font-url('fontawesome-webfont.svg#fontawesome') format('svg');
+    font-weight: normal !important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BDCartoonShoutRegular';
+    // src: url('../font/fontawesome-webfont.eot');
+    // src: url('../font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         // url('../font/fontawesome-webfont.woff') format('woff'),
+         src: font-url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
+         // url('../font/fontawesome-webfont.svg#fontawesome') format('svg');
+    font-weight: normal !important;
+    font-style: normal;
+}
+.cmun {
+    font-family: "cmun";
+    display: inline-block;
+    text-decoration: inherit;
+}
+.insignia {
+    font-family: "insignia";
+    display: inline-block;
+    text-decoration: inherit;
+}
+.miso {
+    font-family: "miso";
+    display: inline-block;
+    text-decoration: inherit;
+}
+.helvetica {
+    font-family: "Helvetica Neue", "Helvetica";
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+@accent:				#2eb8b8;
+@salmon:				#ff6666;
+@honeydew:				#ccff66;
+@cantaloupe:			#ffcc66;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;
+@textColor:             @grayDark;
+
+
+// Links
+// -------------------------
+@linkColor:             @accent;
+@linkColorHover:        darken(@linkColor, 15%);
+
+
+// Typography
+// -------------------------
+@sansFontFamily:        "miso", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       "cmun", Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@baseFontSize:          24px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        34px;
+@altFontFamily:         @sansFontFamily;
+
+@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+// Tables
+// -------------------------
+@tableBackground:                   transparent; // overall background-color
+@tableBackgroundAccent:             #f9f9f9; // for striping
+@tableBackgroundHover:              #f5f5f5; // for hover
+@tableBorder:                       #ddd; // table and cell border
+
+// Buttons
+// -------------------------
+@btnBackground:                     @white;
+@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBorder:                         #bbb;
+
+@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
+
+@btnInverseBackground:              #444;
+@btnInverseBackgroundHighlight:     @grayDarker;
+
+
+// Forms
+// -------------------------
+@inputBackground:               @white;
+@inputBorder:                   #ccc;
+@inputBorderRadius:             3px;
+@inputDisabledBackground:       @grayLighter;
+@formActionsBackground:         #f5f5f5;
+
+// Dropdowns
+// -------------------------
+// @dropdownBackground:            @white;
+// @dropdownBorder:                rgba(0,0,0,.2);
+// @dropdownDividerTop:            #e5e5e5;
+// @dropdownDividerBottom:         @white;
+
+// @dropdownLinkColor:             @grayDark;
+// @dropdownLinkColorHover:        @white;
+// @dropdownLinkColorActive:       @dropdownLinkColor;
+
+// @dropdownLinkBackgroundActive:  @linkColor;
+// @dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1030;
+@zindexFixedNavbar:       1030;
+@zindexModalBackdrop:     1040;
+@zindexModal:             1050;
+
+
+// Sprite icons path
+// -------------------------
+// @iconSpritePath:          "../img/glyphicons-halflings.png";
+// @iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+
+
+// Input placeholder text color
+// -------------------------
+@placeholderText:         @grayLight;
+
+
+// Hr border color
+// -------------------------
+@hrBorder:                @grayLighter;
+
+
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset:       180px;
+
+
+// Wells
+// -------------------------
+// @wellBackground:                  #f5f5f5;
+
+
+// Navbar
+// -------------------------
+// @navbarCollapseWidth:             979px;
+
+// @navbarHeight:                    40px;
+// @navbarBackgroundHighlight:       #ffffff;
+// @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
+// @navbarBorder:                    darken(@navbarBackground, 12%);
+
+// @navbarText:                      #777;
+// @navbarLinkColor:                 #777;
+// @navbarLinkColorHover:            @grayDark;
+// @navbarLinkColorActive:           @gray;
+// @navbarLinkBackgroundHover:       transparent;
+// @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+
+// @navbarBrandColor:                @navbarLinkColor;
+
+// Inverted navbar
+// @navbarInverseBackground:                #111111;
+// @navbarInverseBackgroundHighlight:       #222222;
+// @navbarInverseBorder:                    #252525;
+
+// @navbarInverseText:                      @grayLight;
+// @navbarInverseLinkColor:                 @grayLight;
+// @navbarInverseLinkColorHover:            @white;
+// @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+// @navbarInverseLinkBackgroundHover:       transparent;
+// @navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+
+// @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+// @navbarInverseSearchBackgroundFocus:     @white;
+// @navbarInverseSearchBorder:              @navbarInverseBackground;
+// @navbarInverseSearchPlaceholderColor:    #ccc;
+
+// @navbarInverseBrandColor:                @navbarInverseLinkColor;
+
+
+// Pagination
+// -------------------------
+// @paginationBackground:                #fff;
+// @paginationBorder:                    #ddd;
+// @paginationActiveBackground:          #f5f5f5;
+
+
+// Hero unit
+// -------------------------
+// @heroUnitBackground:              @grayLighter;
+// @heroUnitHeadingColor:            inherit;
+// @heroUnitLeadColor:               inherit;
+
+
+// Form states and alerts
+// -------------------------
+@warningText:             #c09853;
+@warningBackground:       @salmon;
+@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+
+@errorText:               #b94a48;
+@errorBackground:         @cantaloupe;
+@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+
+@successText:             #468847;
+@successBackground:       #dff0d8;
+@successBorder:           darken(spin(@successBackground, -10), 5%);
+
+@infoText:                #3a87ad;
+@infoBackground:          #d9edf7;
+@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+
+
+// Tooltips and popovers
+// -------------------------
+// @tooltipColor:            #fff;
+// @tooltipBackground:       #000;
+// @tooltipArrowWidth:       5px;
+// @tooltipArrowColor:       @tooltipBackground;
+
+@popoverBackground:       #fff;
+@popoverArrowWidth:       10px;
+@popoverArrowColor:       #fff;
+@popoverTitleBackground:  darken(@popoverBackground, 3%);
+
+// Special enhancement for popovers
+@popoverArrowOuterWidth:  @popoverArrowWidth + 1;
+@popoverArrowOuterColor:  rgba(0,0,0,.25);
+
+
+
+// GRID
+// --------------------------------------------------
+
+
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:     70px;
+@gridGutterWidth1200:     30px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:      42px;
+@gridGutterWidth768:      20px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1200px min
+@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 768px-979px
+@fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
+
+/* LAYOUT */
+.tinynav { display: none }
+
+@media screen and (max-width: px) {
+    .tinynav { display: block }
+}
+a {
+  -webkit-transition: 0.15s color ease;
+	 -moz-transition: 0.15s color ease;
+       -o-transition: 0.15s color ease;
+          transition: 0.15s color ease;
+  text-decoration: none !important;
+}
+html {
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke: 1px transparent;
+}
+.clean, .clean:hover {
+	color: inherit;
+}
+.popover-title, .popover-content { text-align:center; }
+
+.olgreen {color:@accent;}
+.salmon {color:@salmon;}
+.cantaloupe {color:@cantaloupe;}
+.white {color: @white;}
+.gray {color: @grayDark;}
+
+// .add-on { font-size: @baseFontSize * 0.72 !important;}
+	
+#pacman canvas{
+    height: auto;
+    width: 80%;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 53.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper>iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Additional push for any purpose necessary */
+.padtop10 {padding-top:10px;}
+.padtop20 {padding-top:20px;}
+.padtop40 {padding-top:40px;}
+.padtop60 {padding-top:60px;}
+.padbot0 {padding-bottom:0;}
+.padbot20 {padding-bottom:20px;}
+.padbot40 {padding-bottom:40px;}
+.padbot60 {padding-bottom:60px;}
+.marginbot0 {margin-bottom:0;}
+.margintop0 {margin-top:0;}
+.margintop5p {margin-top:5%;}
+.marginbot5p {margin-bottom:5%;}
+.margintop10p {margin-top:10%;}
+.marginbot10p {margin-bottom:10%;}
+.margintop20p {margin-top:20%;}
+.marginbot20p {margin-bottom:20%;}
+.margintop30p {margin-top:30%;}
+.marginbot30p {margin-bottom:30%;}
+.margintop40p {margin-top:40%;}
+.marginbot40p {margin-bottom:40%;}
+.line0 {line-height:0 !important;}
+
+h1 { font-size: 2.966em; line-height: @baseLineHeight * 2;}
+h2 { font-size: 2.618em; line-height: @baseLineHeight * 1.6;}
+h3 { font-size: 1.833em; line-height: @baseLineHeight * 1.2;}
+h4 { font-size: 1.618em;}
+h5 { font-size: 1.133em;}
+h6 { font-size: 1em;}
+p.small { font-size: 0.618em !important;}
+
+/* FORMATTING */
+/* Left, right, and center align classes for convenience */
+.alignright { text-align:right; }
+.alignleft { text-align:left; }
+.aligncenter { text-align:center; }
+.alignjustify { text-align:justify; }
+
+/* Adds a fade effect to the edges of the normal <hr> class */
+// hr.soften {
+//   background-color: rgba(0, 0, 0, 0.1); /* fallback color if gradients are not supported */
+//   background: -webkit-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: -moz-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: -o-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: -ms-linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   background: linear-gradient(left center , transparent, rgba(0, 0, 0, 0.1), transparent) !important;
+//   border: 0 none  !important;
+//   height: 2px  !important;
+// }

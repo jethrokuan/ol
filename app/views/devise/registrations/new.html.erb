@@ -1,32 +1,26 @@
 <h2>Sign up</h2>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {:class=>"form-horizontal"}) do |f| %>
   <%= devise_error_messages! %>
-
-   <p><%= f.label :surname %><br />
-  <%= f.text_field :surname %></p>
-
-  <p><%= f.label :givenname %><br />
-  <%= f.text_field :givenname %></p>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
-
-  <p><%= f.label :school %><br />
-  <%= f.text_field :school %></p>
-
-  <p><%= f.label :school_year %><br />
-  <%= f.text_field :school_year %></p>
-
-  <div><%= f.submit "Sign up" %></div>
+  <div class="form-inputs">
+    <%= f.input :givenname %>
+    <%= f.input :surname %>
+    <%= f.input :email %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+    <div class="control-group string">
+      <label for="user_role" class="control-label">Select Role</label>
+      <div class="controls">
+        <%= f.collection_select :role, User::ROLES, :to_s, :humanize%>
+      </div>
+    </div>
+    <%= f.input :school %>
+    <%= f.input :school_year %>
+  </div>
+  
+  <div class="form-actions">
+    <%= f.submit "Sign up" %>
+  </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
