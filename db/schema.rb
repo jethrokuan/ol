@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007154650) do
+ActiveRecord::Schema.define(:version => 20121018121003) do
 
   create_table "checkpoints", :force => true do |t|
     t.string   "checkpoint"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(:version => 20121007154650) do
     t.text     "description"
     t.string   "videourl"
     t.text     "objective"
-    t.text     "qaarray"
     t.integer  "order"
     t.string   "slug"
     t.datetime "created_at",  :null => false
@@ -39,6 +38,14 @@ ActiveRecord::Schema.define(:version => 20121007154650) do
   end
 
   add_index "lessons", ["slug"], :name => "index_lessons_on_slug", :unique => true
+
+  create_table "questionanswers", :force => true do |t|
+    t.text     "question"
+    t.text     "answer"
+    t.integer  "checkpoint_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "subjects", :force => true do |t|
     t.string   "subject"

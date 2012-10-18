@@ -3,9 +3,8 @@
     <%= f.input :checkpoint, input_html: {class:"input-xxlarge"}, placeholder: "Checkpoint" %>
     <%= f.association :lesson, label_method: :lesson, input_html: {class: "input-xxlarge" }%>
     <%= f.input :description, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Description Here"%>
-    <%= f.input :videourl, label: "Video Url", input_html: {class:"input-xxlarge"}, placeholder: "eg. http://www.youtube.com/watch?v=wjEGgn8bjh8&list=UUaTWTkrHb13QJokJ5OFI22Q" %>
+    <%= f.input :videourl, label: "Video Url", input_html: {class:"input-xxlarge"}, placeholder: "Only XYZ from http://www.youtube.com/watch?v=XYZ" %>
      <%= f.input :objective, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Objective Here"%>
-     <%= f.input :qaarray, input_html: {class:"input-xxlarge", rows: "5"} %>
      <%= f.input :order, input_html: {class: "input-xxlarge"} %>
   </div>
   <div class="form-actions">

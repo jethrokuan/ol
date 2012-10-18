@@ -1,0 +1,12 @@
+<%= simple_form_for(@questionanswer, html: {class: "form-horizontal"}) do |f| %>
+  <div class="form-inputs">
+    <%= f.association :checkpoint, label_method: :checkpoint, input_html: {class: "input-xxlarge" }%>
+    <%= f.input :question, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Queston Here"%>
+     <%= f.input :answer, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Answer Here"%>
+  </div>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">
+      <span class='hidden-phone'><i class='icon-ok'></i> Create Question and Answer
+    </button>
+  </div>
+<% end %>

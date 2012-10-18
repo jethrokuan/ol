@@ -33,6 +33,7 @@
 		</section>
 		<%@lesson.checkpoints.each do |checkpoint|%>
 			<section id=<%=checkpoint.checkpoint.gsub(' ', '').downcase%>>
+				<section>
 				<div class="row-fluid alignleft">
 				<div class="span4">
 					<ul class="nav nav-pills nav-stacked aligncenter marginbot20p hidden-phone">
@@ -63,12 +64,35 @@
 				<div class="span8">
 					<div class="videoWrapper">
 						<iframe src=<%="http://www.youtube.com/embed/"+checkpoint.videourl+"?rel=0&amp;theme=light&amp;color=white&amp;autoplay=0&amp;showinfo=0&amp;autohide=3&amp;vq=hd1080"%> frameborder="0" allowfullscreen></iframe>
-
 					</div><!--videoWrapper-->
 				</div><!--span8-->
-				</div><!--row-->				
+				</div><!--row-->
+			</section>				
+			
+			<%checkpoint.questionanswers.each do |qa|%>
+				<section class="alignleft">
+					<div class="row-fluid">
+						<div class="span4">
+							<ul class="nav nav-pills nav-stacked aligncenter marginbot20p hidden-phone">
+								<li><a href="#" onclick="Reveal.navigateUp();return false">Back to Lecture</a></li>
+							</ul>
+							<h5 class="muted"><%=checkpoint.order.to_s + ": "+checkpoint.checkpoint%></h5>
+							<h2>Question</h2>
+							<hr>
+							<p><%=qa.question%></p>
+							<ul class="nav nav-pills nav-stacked aligncenter margintop20p">
+								<li><a href="#" onclick="Reveal.navigateNext();return false">Next</a></li>
+							</ul>
+						</div><!--span4-->
+						<div class="span7 offset1">
+							<p class="lead"><%=qa.answer%></p>
+						</div><!--span7-->
+					</div><!--row-->
+				</section>
+			<%end%>
 			</section>
 		<%end%>
+	</section>
 		<section class="alignleft">
 			<div class="row-fluid alignleft">
 				<div class="span4">
