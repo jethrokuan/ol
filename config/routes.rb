@@ -1,4 +1,6 @@
 Ol::Application.routes.draw do
+  resources :questionanswers
+
   get "usr/manage"
   get "usr/profile"
   match "usr/manage/:id" => "subjects#edit"

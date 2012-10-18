@@ -6,7 +6,6 @@ class CreateCheckpoints < ActiveRecord::Migration
       t.text :description
       t.string :videourl
       t.text :objective
-      t.text :qaarray
       t.integer :order
       t.string :slug
 
