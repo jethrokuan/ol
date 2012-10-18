@@ -1,10 +1,10 @@
 <div class="row">
 <nav class="span3">
-<h1 class="insignia padbot20" style="font-size:7em;"><%=link_to "ol", root_path, class: "clean"%></h1>
+<%=render 'shared/logo'%>
 <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
-	<%=render partial: 'shared/start'%>
-	<%=render partial: 'shared/about'%>
-	<hr>
+	<%=render 'shared/start'%>
+	<%=render 'shared/about'%>
+	<%=render 'shared/last'%>
 </ul>
 </nav><!--span3-->
 <div class="span8 offset1">
