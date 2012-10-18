@@ -12,6 +12,11 @@
 	</div><!--span12-->
 	</div><!--row-->
 </div><!--container-->
+
+<%=stylesheet_link_tag "timeline"%>
+<%=javascript_include_tag "storyjs-embed"%>
+<%=javascript_include_tag "timeline-min"%>
+
 <div id="timeline-embed"></div>
 <script>
 	$(document).ready(function() {
@@ -24,4 +29,3 @@
 	    });
 	});
 </script>
-<%=javascript_include_tag "storyjs-embed"%>
