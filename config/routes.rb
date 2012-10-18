@@ -1,4 +1,6 @@
 Ol::Application.routes.draw do
+  get "usr/manage"
+
   devise_for :users
 
   resources :topics

@@ -1,7 +1,7 @@
 class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
-  load_and_authorize_resource
+  load_and_authorize_resource find_by: :slug
   skip_load_resource :only => :index
   skip_authorize_resource :only => :index
   def index
@@ -16,7 +16,6 @@ class SubjectsController < ApplicationController
   # GET /subjects/1
   # GET /subjects/1.json
   def show
-    @subjects = Subject.all
     @subject = Subject.find(params[:id])
 
     respond_to do |format|

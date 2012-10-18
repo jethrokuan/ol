@@ -21,33 +21,45 @@ ActiveRecord::Schema.define(:version => 20121007154650) do
     t.text     "objective"
     t.text     "qaarray"
     t.integer  "order"
+    t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "checkpoints", ["slug"], :name => "index_checkpoints_on_slug", :unique => true
+
   create_table "lessons", :force => true do |t|
     t.string   "lesson"
     t.integer  "topic_id"
+    t.boolean  "is_sublesson", :default => false
     t.integer  "order"
+    t.string   "slug"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "lessons", ["slug"], :name => "index_lessons_on_slug", :unique => true
+
+  create_table "subjects", :force => true do |t|
+    t.string   "subject"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "subjects", :force => true do |t|
-    t.string   "subject"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+  add_index "subjects", ["slug"], :name => "index_subjects_on_slug", :unique => true
 
   create_table "topics", :force => true do |t|
     t.string   "topic"
     t.integer  "subject_id"
     t.integer  "order"
-    t.boolean  "is_subtopic"
     t.text     "description"
+    t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  add_index "topics", ["slug"], :name => "index_topics_on_slug", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

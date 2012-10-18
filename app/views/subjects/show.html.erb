@@ -11,31 +11,19 @@
 	</ul>
 	<div class="tab-content">
 	<div class="tab-pane active fade in" id="seab">
-		<h3>Market System</h3>
-		<h6><small>The emphasis of this section is on government objectives and policies relating to economic growth, employment, stability of prices and the balance of payments.  It emphasises the use of the AD-AS approach as a tool for the analysis of fiscal, monetary and supply-side policies, and their impact at the micro and macro levels.</small></h6>
-		<ol>
-			<li>Scarcity, Choice and Opportunity Cost</li>
-			<li>Resource Allocation in Competitive Markets</li>
-			<ul class="unstyled">
-				<li><a href="pd.html">Price Discrimination</a></li>
-			</ul>
-			<li>Firms and How They Operate</li>
-		</ol>
-		<hr>
-		<h3>Market Failure and Government Intervention</h3>
-		<h6><small>This theme examines the nature of market failure, its causes and possible policy remedies.</small></h6>
-		<ol>
-			<li>Market Failure</li>
-			<li>Government Intervention in the Market</li>
-		</ol>
-		<hr>
-		<h3>National and International Economy</h3>
-		<h6><small>This theme provides an introduction to the key indicators of economic performance, the basic AD/AS and AE-Income analysis, and  the main objectives and instruments of government policy.</small></h6>
-		<ol>
-			<li>Key Economic Indicators</li>
-			<li>How The Macroeconomy Works</li>
-			<li>International Economics</li>
-		</ol>
+		<%@subject.topics.each do |topic|%>
+			<h3><%=topic.topic%></h3>
+			<h6><small><%=topic.description%></small></h6>
+			<ol>
+			<%topic.lessons.each do |lesson|%>
+				<%if lesson.is_sublesson%>
+				<ul class="unstyled"><li><%=link_to lesson.lesson, lesson%></li></ul>
+				<%else%>
+				<li><%=link_to lesson.lesson, lesson%></li>
+				<%end%>
+			<%end%>
+			</ol>
+		<%end%>
 	</div><!--tabpane-->
 	<div class="tab-pane fade" id="all">
 		<div class="row-fluid">

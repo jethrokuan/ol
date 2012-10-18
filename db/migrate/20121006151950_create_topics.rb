@@ -4,10 +4,11 @@ class CreateTopics < ActiveRecord::Migration
       t.string :topic
       t.integer :subject_id
       t.integer :order
-      t.boolean :is_subtopic
       t.text :description
+      t.string :slug
 
       t.timestamps
     end
+    add_index :topics, :slug, unique: true
   end
 end

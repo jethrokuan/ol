@@ -4,6 +4,7 @@ class PagesController < ApplicationController
 	end
 
 	def team
+		@thumbs = Dir.glob('app/assets/images/profile/*')
 	end
 
 	def opportunities

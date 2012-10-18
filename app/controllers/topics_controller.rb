@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
-  load_and_authorize_resource
+  load_and_authorize_resource find_by: :slug
   skip_load_resource :only => :index
   skip_authorize_resource :only => :index
   

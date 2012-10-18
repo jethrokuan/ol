@@ -1,7 +1,7 @@
 class CheckpointsController < ApplicationController
   # GET /checkpoints
   # GET /checkpoints.json
-  load_and_authorize_resource
+  load_and_authorize_resource find_by: :slug
   skip_load_resource :only => :index
   skip_authorize_resource :only => :index
   

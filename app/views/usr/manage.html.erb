@@ -1,0 +1,31 @@
+<div class="row">
+<%=render partial: 'shared/start'%>
+<%=render partial: 'shared/manage'%>
+	</ul>
+</nav><!--span3-->
+<div class="span8 offset1">
+<h1>Subjects</h1>
+<p class="lead"><%=Checkpoint.all.count%> checkpoints in <%=Lesson.all.count%> lessons</p>
+<hr>
+<div class="row">
+	<%Subject.all.each do |subject|%>
+		<div class="span4">
+		<h3><%=link_to subject.subject, "#"%></h3>
+		<dl class="dl-horizontal hidden-phone">
+		<dt>Subject Status:</dt>
+		<dd><span class="salmon">Disabled</span></dd>
+		<span class="muted">
+		<dt>Published Lessons:</dt>
+		<dd><%=subject.lessons.count%></dd>
+		<dt>Checkpoints:</dt>
+		<dd>36</dd>
+		<dt>Date of Last Update:</dt>
+		<dd>5 March 2012</dd>
+		<dt>% Completion:</dt>
+		<dd>10</dd>
+		</span><!--muted-->
+	</dl>
+	</div><!--span4-->
+	<%end%>
+</div><!--row-->
+</div><!--row-->
