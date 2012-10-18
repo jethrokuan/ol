@@ -1,22 +1,12 @@
 <%= simple_form_for(@lesson, html: {class: "form-horizontal"}) do |f| %>
-  <% if @lesson.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@lesson.errors.count, "error") %> prohibited this lesson from being saved:</h2>
-
-      <ul>
-      <% @lesson.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-    <%= f.input :lesson %>
-    <%= f.input :topic_id %>
-    <%= f.input :is_sublesson%>
-    <%= f.input :order %>
+    <%= f.input :lesson, input_html: {class:"input-xxlarge"}, placeholder: "Lesson" %>
+    <%= f.association :topic, label_method: :topic, input_html: {class:"input-xxlarge"}%>
+    <%= f.input :is_sublesson, input_html: {class:"input-xxlarge"}%>
+    <%= f.input :order, input_html: {class:"input-xxlarge"} %>
 
   <div class="form-actions">
-    <%= f.submit %>
+    <button type="submit" class="btn btn-primary">
+      <span class='hidden-phone'><i class='icon-ok'></i> Create Lesson
+    </button>
   </div>
 <% end %>

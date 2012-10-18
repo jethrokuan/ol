@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require reveal.min
 //= require twitter/bootstrap
 // = require_tree .

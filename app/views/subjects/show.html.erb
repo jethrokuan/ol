@@ -29,49 +29,16 @@
 		<div class="row-fluid">
 		<div class="span8">
 		<ul class="unstyled list">
-			<li>You Demand</li>
-			<li>I Supply</li>
-			<li>Shifts</li>
-			<li>The Market</li>
-			<li>Introduction to Elasticity</li>
-			<li>Price Elasticity</li>
-			<li>Income Elasticity</li>
-			<li>Market Structure</li>
-			<li>Perfectly Competitive Firms</li>
-			<li>Monopolies</li>
-			<li>Oligopolies</li>
-			<li>Additional Concepts</li>
-			<li>Evaluations</li>
-			<li>Market Failure</li>
-			<li>Introduction to Monetary Policy</li>
-			<li>Interest Rates</li>
-			<li>Demand and Supply of Money</li>
-			<li>Review of Interest Rate and Macroeconomic Goals</li>
-			<li>How Monetary Policy Affects Economic Growth</li>
-			<li>How Monetary Policy Affects Unemployment</li>
-			<li>How Monetary Policy Affects Inflation</li>
-			<li>How Monetary Policy Affects External Stability</li>
-			<li>Evaluation 1 – Sentiments</li>
-			<li>Evaluation 2 – Liquidity Trap</li>
-			<li>Evaluation 3 – Transmission</li>
-			<li>Evaluation 4 – Specificity</li>
-			<li>Other Evaluations</li>
-			<li>Singapore?</li>
-			<li>Impossible Trinity</li>
-			<li>Controlling Money Supply</li>
-			<li>Bond Yields and Interest Rates</li>
-			<li>Introduction to Price Discrimination</li>
-			<li>First Degree Price Discrimination</li>
-			<li>Second Degree Price Discrimination</li>
-			<li>Third Degree Price Discrimination</li>
-			<li>Applications of Price Discrimination</li>
+			<%@subject.checkpoints.each do |checkpoint|%>
+			<li><%=link_to checkpoint.checkpoint, "#"%></li>
+			<%end%>
 		</ul><!--unstyled-->
 	</div><!--span8-->
 	<div class="span3 offset1 aligncenter hidden-phone">
-		<h1>36</h1>
+		<h1><%=@subject.lessons.count%></h1>
 		<p>lessons</p>
 		<hr>
-		<h1>184</h1>
+		<h1><%=@subject.checkpoints.count%></h1>
 		<p>checkpoints</p>
 	</div><!--span3-->
 	</div><!--row-fluid-->

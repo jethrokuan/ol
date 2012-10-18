@@ -1,21 +1,10 @@
-<%= form_for(@subject) do |f| %>
-  <% if @subject.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
-
-      <ul>
-      <% @subject.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :subject %><br />
-    <%= f.text_field :subject %>
+<%= simple_form_for(@subject, html: {class: "form-horizontal"}) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :subject, input_html: {class:"input-xxlarge"}, placeholder: "Subject" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">
+      <span class='hidden-phone'><i class='icon-ok'></i> Create Subject
+    </button>
   </div>
 <% end %>

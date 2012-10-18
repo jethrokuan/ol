@@ -1,45 +1,16 @@
-<%= form_for(@checkpoint) do |f| %>
-  <% if @checkpoint.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@checkpoint.errors.count, "error") %> prohibited this checkpoint from being saved:</h2>
-
-      <ul>
-      <% @checkpoint.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :checkpoint %><br />
-    <%= f.text_field :checkpoint %>
+<%= simple_form_for(@checkpoint, html: {class: "form-horizontal"}) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :checkpoint, input_html: {class:"input-xxlarge"}, placeholder: "Checkpoint" %>
+    <%= f.association :lesson, label_method: :lesson, input_html: {class: "input-xxlarge" }%>
+    <%= f.input :description, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Description Here"%>
+    <%= f.input :videourl, label: "Video Url", input_html: {class:"input-xxlarge"}, placeholder: "eg. http://www.youtube.com/watch?v=wjEGgn8bjh8&list=UUaTWTkrHb13QJokJ5OFI22Q" %>
+     <%= f.input :objective, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Objective Here"%>
+     <%= f.input :qaarray, input_html: {class:"input-xxlarge", rows: "5"} %>
+     <%= f.input :order, input_html: {class: "input-xxlarge"} %>
   </div>
-  <div class="field">
-    <%= f.label :lesson_id %><br />
-    <%= f.number_field :lesson_id %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :videourl %><br />
-    <%= f.text_field :videourl %>
-  </div>
-  <div class="field">
-    <%= f.label :objective %><br />
-    <%= f.text_area :objective %>
-  </div>
-  <div class="field">
-    <%= f.label :qaarray %><br />
-    <%= f.text_field :qaarray %>
-  </div>
-  <div class="field">
-    <%= f.label :order %><br />
-    <%= f.number_field :order %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">
+      <span class='hidden-phone'><i class='icon-ok'></i> Create Checkpoint
+    </button>
   </div>
 <% end %>
