@@ -31,6 +31,44 @@
 			</div><!--span8-->
 			</div><!--row-->
 		</section>
+		<%@lesson.checkpoints.each do |checkpoint|%>
+			<section id=<%=checkpoint.checkpoint.gsub(' ', '').downcase%>>
+				<div class="row-fluid alignleft">
+				<div class="span4">
+					<ul class="nav nav-pills nav-stacked aligncenter marginbot20p hidden-phone">
+						<li><a href="#" onclick="Reveal.navigateTo(0,0);return false">Back to Start</a></li>
+					</ul>
+					<h5 class="muted"><%=checkpoint.order%></h5>
+					<h2><%=checkpoint.checkpoint%></h2>
+					<hr>
+					<p><%=checkpoint.description%></p>
+					<div class="row-fluid margintop20p hidden-phone">
+						<div class="span4">
+							<ul class="nav nav-pills nav-stacked aligncenter">
+								<li><a href="#" onclick="Reveal.navigateLeft();return false">Back</a></li>
+							</ul>
+						</div><!--span4-->
+						<div class="span4">
+							<ul class="nav nav-pills nav-stacked aligncenter">
+								<li><a href="#" onclick="Reveal.navigateNext();return false">Question</a></li>
+							</ul>
+						</div><!--span4-->
+						<div class="span4">
+							<ul class="nav nav-pills nav-stacked aligncenter">
+								<li><a href="#" onclick="Reveal.navigateRight();return false">Next</a></li>
+							</ul>
+						</div><!--span4-->
+					</div><!--row-->
+				</div><!--span4-->
+				<div class="span8">
+					<div class="videoWrapper">
+						<iframe src=<%="http://www.youtube.com/embed/"+checkpoint.videourl+"?rel=0&amp;theme=light&amp;color=white&amp;autoplay=0&amp;showinfo=0&amp;autohide=3&amp;vq=hd1080"%> frameborder="0" allowfullscreen></iframe>
+
+					</div><!--videoWrapper-->
+				</div><!--span8-->
+				</div><!--row-->				
+			</section>
+		<%end%>
 		<section>
 			<section>
 				<div class="row-fluid alignleft">

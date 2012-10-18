@@ -46,7 +46,7 @@ class CheckpointsController < ApplicationController
   # POST /checkpoints.json
   def create
     @checkpoint = Checkpoint.new(params[:checkpoint])
-    @checkpoint.qaarray = nil
+    @checkpoint.qaarray = params[:qaarray]
 
     respond_to do |format|
       if @checkpoint.save
@@ -63,6 +63,7 @@ class CheckpointsController < ApplicationController
   # PUT /checkpoints/1.json
   def update
     @checkpoint = Checkpoint.find(params[:id])
+    @checkpoint.qaarray = JSON.parse(params[:qaarray])
 
     respond_to do |format|
       if @checkpoint.update_attributes(params[:checkpoint])
