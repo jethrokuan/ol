@@ -11,16 +11,16 @@
 				</ul>
 			</nav><!--span3-->
 			<div class="span8 offset1">
-			<h1>Applications of Price Discrimination</h1>
+			<h1><%=@lesson.lesson%></h1>
 			<p class="lead"><small>by</small> <a href="#">Lydia Liu</a></p>
 			<hr>
 			<div class="row">
 				<div class="span6">
 			<h3>Checkpoints</h3>
 			<ol>
-				<li><a href="#" onclick="Reveal.navigateTo(1,0)">Costs</a></li>
-				<li><a href="#" onclick="Reveal.navigateTo(2,0)">Benefits</a></li>
-				<li><a href="#" onclick="Reveal.navigateTo(3,0)">Fair Trade Coffee</a></li>
+				<%@lesson.checkpoints.each_with_index do |checkpoint,index|%>
+					<li><a href="#" onclick=<%="Reveal.navigateTo(" + (index+1).to_s + ",0)"%>><%=checkpoint.checkpoint%></a></li>
+				<%end%>
 				<li><a href="#" onclick="Reveal.navigateTo(4,0)" class="salmon">Summary</a></li>
 			</ol>
 		</div><!--span6-->
