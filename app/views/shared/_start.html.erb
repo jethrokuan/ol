@@ -2,7 +2,7 @@
 <h1 class="insignia padbot20" style="font-size:7em;"><%=link_to "ol", root_path, class: "clean"%></h1>
 <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone" id="nav">
    <% if user_signed_in? %>
-     <li><%=link_to current_user.givenname+ " "+ current_user.surname, "#"%></li>
+     <li><%=link_to current_user.givenname+ " "+ current_user.surname, usr_profile_path%></li>
      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
   <% else %>
     <li><%= link_to "Sign Up", new_user_registration_path %></li>
