@@ -8,7 +8,6 @@
 
 @import "fontawesome";
 @import "font";
-@import "ol";
 
 @accent:				#2eb8b8;
 @salmon:				#ff6666;
@@ -21,13 +20,19 @@
 @serifFontFamily:       "cmun", Georgia, "Times New Roman", Times, serif;
 
 @baseFontSize:          24px;
-@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        34px;
 @altFontFamily:         @sansFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    normal;    // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
 
 @warningBackground:       @salmon;
 @errorBackground:         @cantaloupe;
+
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.5;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+
+@import "ol";
