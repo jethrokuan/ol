@@ -1,0 +1,681 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"timeline",
+				"timeline-embed"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"gray",
+				"grayLight"
+			],
+			[
+				"text-",
+				"text-decoration:   (property)"
+			],
+			[
+				"cour",
+				"course"
+			],
+			[
+				"course",
+				"course_ID"
+			],
+			[
+				"net",
+				"next_post_ID"
+			],
+			[
+				"lesson_li",
+				"lesson_list_by_ID"
+			],
+			[
+				"link",
+				"link_ID"
+			],
+			[
+				"i",
+				"i  (variable)"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"prev",
+				"previous_post"
+			],
+			[
+				"previous",
+				"previous_post_ID"
+			],
+			[
+				"get_the",
+				"get_the_category_by_ID"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"wysih",
+				"wysihtml5"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/pages/team.html.erb",
+			"settings":
+			{
+				"buffer_size": 1648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/shared/_end.html.erb",
+			"settings":
+			{
+				"buffer_size": 136,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"rails",
+				"Set Syntax: HTML (Rails)"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"launch",
+				"ADB: Launch"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Tidy HTML"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"sass",
+				"Set Syntax: CSS"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"align",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"tag",
+				"Tag: Auto-Format Tags on Selection"
+			],
+			[
+				"te",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"zen",
+				"Zen Coding: Select next item"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set",
+				"Set Syntax: CSS"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"set syntax php",
+				"Set Syntax: PHP"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 588.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/Kenneth/openlectures/Website/ol/app/views/shared/_about.html.erb",
+		"/Volumes/Kenneth/openlectures/Website/ol/app/views/layouts/application.html.erb",
+		"/Volumes/Kenneth/openlectures/Website/ol/app/views/shared/_navsubjects.html.erb",
+		"/Volumes/Kenneth/openlectures/Website/ol/app/views/shared/_manage.html.erb",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/economics.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/pd.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/css/main.css",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/subjects.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/manage-lesson.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/manage-subject.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/opportunities.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/manage-economics.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/partners.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/profile.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/staff.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/topic.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/wtf.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/user.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/responsive-768px-979px.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/responsive-767px-max.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/ol.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/tinynav.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/bootstrap.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/lesson.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/delete.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/checkpoint.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/login.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/variables.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/datepicker.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/css/select2.css",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/pitch.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/font.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/newtopic.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/css/bootstrap.css",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/fontawesome.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/type.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/admin/manage-subject.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/admin/staff.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/admin/manage-economics.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/admin/manage-lesson.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/admin/profile.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/new-topic.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/checklist.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/contact-us.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/dash-staff-new.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/press.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/404.html",
+		"/Users/kenlimmj/Library/Caches/Cleanup At Startup/Transmit/663B3E44-3867-473F-83EB-A559ECFDAD47/index.html",
+		"/Users/kenlimmj/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/kenlimmj/Library/Caches/Cleanup At Startup/Transmit/35D1EAD5-90F2-4AEF-8EA4-F29967850FEA/lecture.php",
+		"/Users/kenlimmj/Library/Caches/Cleanup At Startup/Transmit/6CF7D8F2-DE72-4139-A049-4D225BDFF8CA/page.php",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/pie.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/ol-verethragna.sublime-project",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/widowtamer.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/join.html",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/list/list.min.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/popovers.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/tooltip.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/index.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/thumbnails.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/reveal.min.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/aural.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/navs.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/bootstrap-tab.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/people.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/about-us.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/timeline.jsonp",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/css/timeline.css",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/subject.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/timeline.jsonp.json",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/timeline.json",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/lesson5.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/navbar.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/lesson5-3.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/forms.less",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/pacman/pacman.js",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/reveal.js/css/main.css",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/reveal.js/css/theme/default.css",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/reveal.js/index.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/css/paper.css",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/reveal.js/css/theme/simple.css",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/pacman/index.html",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/Pac-Man/index.htm",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/Pac-Man/pacman.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/pacman.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/lesson2.html",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/pager.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/css/pdf.css",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/buttons.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/jquery.fitvids.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/css/default.css",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/js/head.min.js",
+		"/Volumes/Kenneth/openlectures/Website/Frameworks/reveal.js/lib/js/head.min.js",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/sprites.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/accordion.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/alerts.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/breadcrumbs.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/button-groups.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/buttons.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/carousel.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/close.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/code.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/component-animations.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/dropdowns.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/grid.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/hero-unit.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/labels-badges.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/layouts.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/mixins.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/modals.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/navbar.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/navs.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/pager.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/pagination.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/popovers.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/progress-bars.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/reset.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/responsive-767px-max.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/responsive-768px-979px.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/responsive-navbar.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/responsive-utilities.less",
+		"/Users/kenlimmj/Downloads/twitter-bootstrap-c52368d/less/responsive.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/responsive-1200px-min.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/mixins.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/responsive-utilities.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/component-animations.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/close.less",
+		"/Volumes/Kenneth/openlectures/Website/ol-verethragna/less/button-groups.less"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"add-lesson.html",
+			"newtopic.html",
+			"url('spinner.gif')",
+			"spinner",
+			"<a href=\"#\">(EDIT)",
+			"<small><a href=\"#\">",
+			"hpb",
+			"if i have",
+			"<a href=\"#\" class=\"thumbnail\">",
+			"miso",
+			"border-radius",
+			"font-size",
+			"font",
+			"progress",
+			"#000",
+			"atlas",
+			"margin",
+			"\"MENU\"",
+			"menu",
+			"#000",
+			"p",
+			"class=\"pager\"",
+			"navigatePrevious",
+			".roll",
+			"roll",
+			"ul",
+			"iframe",
+			"input",
+			"prepend",
+			"nav-list",
+			"Checkpoint Question",
+			"==",
+			".menu",
+			"menu",
+			"line",
+			"timestamp",
+			"enableclasses",
+			"png",
+			"attention",
+			"</li>",
+			"<li>",
+			"user",
+			"video",
+			"shadow",
+			"#33cccc",
+			"#fff",
+			"toggle-nav",
+			"toggle nav",
+			"span",
+			"name",
+			"45px",
+			"36px",
+			"38px",
+			"45px",
+			"#222",
+			"hover",
+			"#333",
+			"#000",
+			"000",
+			"black",
+			"$successColor",
+			"#333",
+			"#111",
+			"navbarColor",
+			"successcolor",
+			"#111",
+			"attached",
+			"font-family",
+			"font",
+			"topbar",
+			"top-bar",
+			"bar",
+			"top",
+			"helvet",
+			"helvetica",
+			"settings",
+			"<a href=\"{SourceURL}\"><i class=\"icon-external-link\"></i> {SourceTitle}</a>",
+			"bookmark",
+			"icon-share-alt",
+			"{NoteCount}",
+			"pad20",
+			"panel",
+			"orbit",
+			"panel",
+			"'",
+			"\\item moment (1)",
+			"\\item learning (29)\n\\item school (27)\n\\item year (21)\n\\item based (20)\n\\item learn (20)\n\\item bit (16)\n\\item mobile (14)\n\\item information (13)\n\\item ict (13)\n\\item mac (13)\n\\item teacher (13)\n\\item level (12)\n\\item project (12)\n\\item challenge (11)\n\\item people (11)\n\\item system (11)\n\\item device (10)\n\\item fun (9)\n\\item ib (9)\n\\item product (9)\n\\item questions (8)\n\\item levels (8)\n\\item friends (8)\n\\item powerful (7)\n\\item software (7)\n\\item apple (7)\n\\item devices (6)\n\\item technology (6)\n\\item research (6)\n\\item student (6)\n\\item essential (6)\n\\item easy (6)\n\\item concept (6)\n\\item kind (6)\n\\item maths (5)\n\\item ipod (5)\n\\item programme (5)\n\\item computer (5)\n\\item online (5)\n\\item work (5)\n\\item planning (5)\n\\item design (5)\n\\item subject (5)\n\\item proficient (5)\n\\item applications (4)\n\\item teachers (4)\n\\item presentation (4)\n\\item future (4)\n\\item topic (4)\n\\item major (4)\n\\item idea (4)\n\\item subjects (4)\n\\item complementary (4)\n\\item amount (4)\n\\item months (4)\n\\item personal (4)\n\\item motivation (4)\n\\item android (4)\n\\item start (4)\n\\item art (3)\n\\item media (3)\n\\item world (3)\n\\item mainstream (3)\n\\item war (3)\n\\item photoshop (3)\n\\item ipad (3)\n\\item keynote (3)\n\\item slides (3)\n\\item humanities (3)\n\\item helpful (3)\n\\item doubt (3)\n\\item meant (3)\n\\item crafted (3)\n\\item works (3)\n\\item question (3)\n\\item suitable (3)\n\\item class (3)\n\\item developing (3)\n\\item ios (3)\n\\item group (3)\n\\item compared (3)\n\\item problems (3)\n\\item care (3)\n\\item check (3)\n\\item formulate (3)\n\\item schools (3)\n\\item report (3)\n\\item scale (3)\n\\item feel (3)\n\\item complete (3)\n\\item good (3)\n\\item process (3)\n\\item steps (3)\n\\item fast (3)\n\\item monitor (3)\n\\item computers (3)\n\\item time (3)\n\\item nspire (3)\n\\item graphs (3)\n\\item give (3)\n\\item humongous (2)\n\\item personally (2)\n\\item secondary (2)\n\\item skills (2)\n\\item devised (2)\n\\item usage (2)\n\\item experience (2)\n\\item history (2)\n\\item teach (2)\n\\item revolves (2)\n\\item panopticon (2)\n\\item taxing (2)\n\\item ip (2)\n\\item memory (2)\n\\item spend (2)\n\\item open (2)\n\\item hefty (2)\n\\item iphones (2)\n\\item ipads (2)\n\\item hours (2)\n\\item key (2)\n\\item syllabus (2)\n\\item form (2)\n\\item exams (2)\n\\item feedback (2)\n\\item virtually (2)\n\\item generally (2)\n\\item considered (2)\n\\item guided (2)\n\\item term (2)\n\\item develop (2)\n\\item forest (2)\n\\item area (2)\n\\item build (2)\n\\item resolution (2)\n\\item developed (2)\n\\item main (2)\n\\item guinea (2)\n\\item requires (2)\n\\item corroborate (2)\n\\item triangulate (2)\n\\item pigs (2)\n\\item mates (2)\n\\item organise (2)\n\\item search (2)\n\\item exploring (2)\n\\item interview (2)\n\\item website (2)\n\\item researching (2)\n\\item applied (2)\n\\item craft (2)\n\\item communication (2)\n\\item experimenting (2)\n\\item purposes (2)\n\\item engineers (2)\n\\item guiding (2)\n\\item generate (2)\n\\item built (2)\n\\item depending (2)\n\\item survivors (2)\n\\item interesting (2)\n\\item similar (2)\n\\item elderly (2)\n\\item daily (2)\n\\item lives (2)\n\\item basic (2)\n\\item hardware (2)\n\\item pages (2)\n\\item university (2)\n\\item interest (2)\n\\item heavily (2)\n\\item batches (2)\n\\item instruments (2)\n\\item credibility (2)\n\\item stuff (2)\n\\item pro (2)\n\\item classes (2)\n\\item server (2)\n\\item autocad (2)\n\\item higher (2)\n\\item effective (2)\n\\item writing (2)\n\\item extremely (2)\n\\item html (2)\n\\item lighter (2)\n\\item tests (2)\n\\item lesser (2)\n\\item efficient (2)\n\\item immediately (2)\n\\item english (1)\n\\item sidetracking (1)\n\\item land (1)\n\\item chinese (1)\n\\item moe (1)\n\\item aperture (1)\n\\item macbook (1)\n\\item friend (1)\n\\item metal (1)\n\\item government (1)\n\\item close (1)\n\\item boiling (1)\n\\item point (1)\n\\item water (1)\n\\item plan (1)\n\\item hot (1)\n\\item components (1)\n\\item reserved (1)\n\\item battery (1)\n\\item life (1)\n\\item thinking (1)\n\\item flowchart (1)\n\\item suited (1)\n\\item expand (1)\n\\item provide (1)\n\\item share (1)\n\\item campus (1)\n\\item powerpoint (1)\n\\item hostel (1)\n\\item relevant (1)\n\\item rapidly (1)\n\\item expanding (1)\n\\item create (1)\n\\item replaced (1)\n\\item vision (1)\n\\item headed (1)\n\\item unlucky (1)\n\\item score (1)\n\\item music (1)\n\\item stressful (1)\n\\item stream (1)\n\\item buy (1)\n\\item connector (1)\n\\item mirror (1)\n\\item amazing (1)\n\\item assessments (1)\n\\item exam (1)\n\\item loopholes (1)\n\\item wanted (1)\n\\item offer (1)\n\\item post (1)\n\\item times (1)\n\\item reason (1)\n\\item moved (1)\n\\item apps (1)\n\\item passion (1)\n\\item program (1)\n\\item development (1)\n\\item sad (1)\n\\item lines (1)\n\\item registers (1)\n\\item studies (1)\n\\item stops (1)\n\\item grades (1)\n\\item input (1)\n\\item line (1)\n\\item specific (1)\n\\item selected (1)\n\\item vice (1)\n\\item controlled (1)\n\\item principal (1)\n\\item rephrased (1)\n\\item onwards (1)\n\\item problem (1)\n\\item tweet (1)\n\\item anymore (1)\n\\item purpose (1)\n\\item degrades (1)\n\\item screen (1)\n\\item corroborated (1)\n\\item answers (1)\n\\item randomly (1)\n\\item guide (1)\n\\item groups (1)\n\\item conclusion (1)\n\\item notes (1)\n\\item researched (1)\n\\item allowed (1)\n\\item quickly (1)\n\\item buying (1)\n\\item earlier (1)\n\\item choose (1)\n\\item thought (1)\n\\item luckier (1)\n\\item concentrate (1)\n\\item wwii (1)\n\\item projects; (1)\n\\item show (1)\n\\item link (1)\n\\item free (1)\n\\item internet (1)\n\\item read (1)\n\\item baccalaureate (1)\n\\item talking (1)\n\\item engaging (1)\n\\item asks (1)\n\\item motivated (1)\n\\item experiment (1)\n\\item put (1)\n\\item narrow (1)\n\\item opinion (1)\n\\item individually (1)\n\\item depending (1)\n\\item relation (1)\n\\item interact (1)\n\\item grade (1)\n\\item individual (1)\n\\item discuss (1)\n\\item credible (1)\n\\item meaning (1)\n\\item interactions (1)\n\\item communicate (1)\n\\item varies (1)\n\\item greatly (1)\n\\item life (1)\n\\item views (1)\n\\item hour (1)\n\\item text (1)\n\\item approach (1)\n\\item integrated (1)\n\\item rules (1)\n\\item minds (1)\n\\item contributes (1)\n\\item slide (1)\n\\item quality (1)\n\\item luckily (1)\n\\item helps (1)\n\\item promote (1)\n\\item creativity (1)\n\\item ways (1)\n\\item asked (1)\n\\item experimental (1)\n\\item hand (1)\n\\item experiences (1)\n\\item knowledge (1)\n\\item experiential (1)\n\\item perspective (1)\n\\item connect (1)\n\\item offered (1)\n\\item programme (1)\n\\item countless (1)\n\\item mindmaps (1)\n\\item polytechnic (1)\n\\item mindmap (1)\n\\item tool (1)\n\\item mindnode (1)\n\\item powerful (1)\n\\item print (1)\n\\item operating (1)\n\\item quick (1)\n\\item numbers (1)\n\\item working (1)\n\\item bad (1)\n\\item cases (1)\n\\item remote (1)\n\\item others (1)\n\\item removing (1)\n\\item takes (1)\n\\item action (1)\n\\item remotely (1)\n\\item managing (1)\n\\item hacking (1)\n\\item servers (1)\n\\item mutual (1)\n\\item person (1)\n\\item lets (1)\n\\item attack (1)\n\\item authorities (1)\n\\item component (1)\n\\item suggested (1)\n\\item grow (1)\n\\item joined (1)\n\\item sst (1)\n\\item slow (1)\n\\item forced (1)\n\\item naturally (1)\n\\item adapt (1)\n\\item gaining (1)\n\\item normal (1)\n\\item aspects (1)\n\\item rely (1)\n\\item bought (1)\n\\item iphone (1)\n\\item lucky (1)\n\\item geogebra (1)\n\\item pioneer (1)\n\\item plot (1)\n\\item realising (1)\n\\item recording (1)\n\\item batch (1)\n\\item frightening (1)\n\\item emulator (1)\n\\item variety (1)\n\\item playing (1)\n\\item opens (1)\n\\item fetch (1)\n\\item change (1)\n\\item real (1)\n\\item suggestions (1)\n\\item answer (1)\n\\item target (1)\n\\item graph (1)\n\\item plotting (1)\n\\item application (1)\n\\item visual (1)\n\\item relationship (1)\n\\item sorts (1)\n\\item linear (1)\n\\item quadratic (1)\n\\item cubic (1)\n\\item tech (1)\n\\item troublesome (1)\n\\item taught (1)\n\\item google (1)\n\\item sketchup (1)\n\\item amateur (1)\n\\item beginner (1)\n\\item complicated (1)\n\\item happy (1)\n\\item receive (1)\n\\item require (1)\n\\item industrial (1)\n\\item standard (1)\n\\item sketchbook (1)\n\\item dreamweaver (1)\n\\item lab (1)\n\\item mice (1)\n\\item approaches (1)\n\\item rare (1)\n\\item singapore (1)\n\\item arts (1)\n\\item closest (1)\n\\item super (1)\n\\item physically (1)\n\\item expensive (1)\n\\item write (1)\n\\item effectiveness (1)\n\\item lowered (1)\n\\item dependent (1)\n\\item highest (1)\n\\item explore (1)\n\\item bother (1)\n\\item costlier (1)\n\\item code (1)\n\\item deliver (1)\n\\item appealing (1)\n\\item custom (1)\n\\item templates (1)\n\\item issues (1)\n\\item systems (1)\n\\item portal (1)\n\\item waiting (1)\n\\item assign (1)\n\\item home (1)\n\\item noticeable (1)\n\\item approved (1)\n\\item eventually (1)\n\\item stop (1)\n\\item bringing (1)\n\\item bring (1)\n\\item support (1)\n\\item handle (1)\n\\item thinner (1)\n\\item pay (1)\n\\item premium (1)\n\\item understand (1)\n\\item play (1)\n\\item obstructive (1)\n\\item easier (1)\n\\item designed (1)\n\\item moment (1)",
+			"'",
+			"provide(2)",
+			"(?>\\x0D\\x0A?|[\\x0A-\\x0C\\x85\\x{2028}\\x{2029}]) ",
+			"\\cM\\cJ",
+			"\\r\\n",
+			"	",
+			" ",
+			"collapse",
+			"jquery",
+			"wt",
+			"yepnope",
+			"theme",
+			"Open Lectures",
+			"soften",
+			"pushdown",
+			"video",
+			"/stylesheets/fonts/..",
+			"q",
+			"$",
+			"merlin",
+			"textarea",
+			"localhost",
+			"bootstrap",
+			"fade",
+			"fade in",
+			"'/wp-content/themes/olresponsive",
+			">",
+			"<",
+			"a:hover",
+			"li",
+			"var Tooltip = function ( element, options )",
+			"<p>",
+			"p wrap",
+			"get_posts",
+			",",
+			"recent",
+			"DROP TABLE IF EXISTS `qa_categories` ;",
+			"openlectures.sg",
+			"INSERT INTO `wp_options` VALUES",
+			"ourholder",
+			"timeline"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"lesson.html",
+			"topic.html",
+			"url('../img/spinner.gif')",
+			"<a href=\"#\" class=\"salmon\">(EDIT)",
+			"<small><a href=\"#\" class=\"salmon\">",
+			"<a href=\"#\" class=\"thumbnail\" rel=\"popover\" data-placement=\"top\" data-trigger=\"hover\" data-content=\"Stuff about Anni\" data-original-title=\"Anni Cai\">",
+			"#fff",
+			"li",
+			"class=\"pager hidden-phone\"",
+			"navigatePrev",
+			"Feeling Confused?",
+			"===",
+			"\"></i>",
+			"<i class=\"",
+			"$topbarHighlight",
+			"$txtColor",
+			"$navBarHeight+5",
+			"$navBarHeight+7",
+			"#33CCCC",
+			"$topbarColor",
+			"$successColor",
+			"topbarColor",
+			"navbarColor",
+			"<li><a href=\"{SourceURL}\"><i class=\"icon-external-link\"></i> {SourceTitle}</a></li>",
+			"comments",
+			"icon-retweet",
+			"{NoteCount} Notes",
+			"\"",
+			"\"\"",
+			")",
+			"(",
+			"actual	145\nvery	52\nlearn	50\nquite	39\nyeah	35\nuse	33\nthing	30\nyear	30\nhow	29\nschool	29\nproject	27\nreal	26\nbecause	24\njust	23\nthink	22\nright	22\nbase	20\nlevel	20\nmac	19\nget	19\nbit	17\nteacher	17\ndevice	17\ngo	17\nsystem	15\nway	14\nexample	14\nmobile	14\nict	13\nstudent	13\nwant	13\ninformation	13\nchallenge	12\nquestion	12\ncause	12\ndepend	12\npeople	11\nib	11\nproduct	11\nkind	10\none	10\nsubject	9\nend	9\nresearch	9\nfun	9\nknow	9\nwork	9\nlot	9\nfriend	9\nthere	9\nsoftware	8\ninterest	8\ncomputer	8\ndevelop	8\napple	8\npowerful	8\nmany	7\nmuch	7\nsay	7\ntake	7\nfit	7\nsomething	7\nhelp	7\nbetter	6\nmake	6\neasy	6\nprogramme	6\ntechnology	6\ndesign	6\nmath	6\nconcept	6\nstart	6\nessential	6\nguide	6\nfind	6\nipod	5\namount	5\nstep	5\nproficient	5\nonline	5\npersonal	5\nslide	5\nipad	5\napplication	5\nplan	5\ntook	5\ntime	5\nmight	5\ntouch	5\ncraft	5\nmain	5\nidea	5\ncomplementary	4\nmonth	4\nfuture	4\nproblem	4\ngood	4\nfew	4\nmaybe	4\nart	4\nandroid	4\nmotivation	4\nbig	4\nbasical	4\ngraph	4\npurpose	4\nbecome	4\npresentation	4\npiece	4\nconsider	4\ncame	4\nwhole	4\naround	4\ntopic	4\ndid	4\ndone	4\nclass	4\nmajor	4\ngive	3\ncare	3\ncheck	3\ndefinite	3\nquick	3\nfast	3\nscale	3\nsec	3\nserious	3\nless	3\nsmall	3\nrequire	3\ngot	3\nask	3\nrun	3\nhour	3\nhelpful	3\ncompare	3\nprocess	3\nkeynote	3\nformulate	3\nmonitor	3\nios	3\neffective	3\nnspire	3\nlet	3\nhumanity	3\nfeel	3\nphotoshop	3\ncomplete	3\nschool	3\nnew	3\nstuff	3\nmainstream	3\nterm	3\nexam	3\nbatch	3\nopen	3\nusual	3\nwrite	3\nwar	3\ndoubt	3\nmean	3\nexperience	3\nace-learn	3\nsurvivor	3\ncredible	3\nmedia	3\nsuitable	3\nserver	3\nmeant	3\nreport	3\nworld	3\nform	2\nbuy	2\nclasse	2\nsize	2\nrelevant	2\ninterview	2\nevery	2\nvirtual	2\nmindmap	2\nprovide	2",
+			"<span class=\"openlectures\"></span>",
+			"padtop60",
+			"../olresponsive/font",
+			"m",
+			"jQuery",
+			"OL-Responsive",
+			"THEME_DIR.'",
+			"&gt;",
+			"&lt;",
+			"localhost"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/pages/team.html.erb",
+					"settings":
+					{
+						"buffer_size": 1648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/shared/_end.html.erb",
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true
+}

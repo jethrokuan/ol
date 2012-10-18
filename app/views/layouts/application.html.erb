@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ol</title>
+  <title>openlectures</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -24,15 +23,14 @@
 	<div class="container">
 		<%= yield %>
 	</div>
-</body>
-<!-- <footer>
-	<div class="container">
-		<div class="row">
-			<div class="span8 offset4 aligncenter">
-				<hr>
-				<p><small><span class="helvetica"><strong>open</strong>lectures</span> is designed and produced in <a href="/about" title="About Us">a small room</a> on the sunny island of Singapore</small></p>
-			</div>
+<footer class="container">
+	<div class="row">
+		<div class="span8 offset4 aligncenter">
+			<hr>
+			<p><small><span class="helvetica"><strong>open</strong>lectures</span> is designed and produced in <a href="/about" title="About Us">a small room</a> on the sunny island of Singapore</small></p>
 		</div>
 	</div>
-</footer> -->
+</footer>
+<%= javascript_include_tag "application" %>
+</body>
 </html>

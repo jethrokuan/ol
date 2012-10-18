@@ -1,8 +1,12 @@
 <div class="container">
 <div class="row">
-<%=render partial: 'shared/start'%>
-<%=render partial: 'shared/navlinks'%>
-	</ul>
+<nav class="span3">
+<h1 class="insignia padbot20" style="font-size:7em;"><%=link_to "ol", root_path, class: "clean"%></h1>
+<ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+	<%=render partial: 'shared/start'%>
+	<%=render partial: 'shared/about'%>
+	<hr>
+</ul>
 </nav><!--span3-->
 <div class="span8 offset1">
 <h1>We believe that education should be free and accessible</h1>
@@ -26,3 +30,4 @@
 <h1 class="aligncenter">Got something special? <%=link_to "Join Us!", pages_opportunities_path%></h1>
 </div><!--span8-->
 </div><!--row-->
+</div><!--container-->
