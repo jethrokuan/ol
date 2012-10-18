@@ -46,6 +46,7 @@ class CheckpointsController < ApplicationController
   # POST /checkpoints.json
   def create
     @checkpoint = Checkpoint.new(params[:checkpoint])
+    @checkpoint.qaarray = nil
 
     respond_to do |format|
       if @checkpoint.save

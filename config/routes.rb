@@ -1,6 +1,6 @@
 Ol::Application.routes.draw do
   get "usr/manage"
-
+  match "usr/manage/:id" => "subjects#edit"
   devise_for :users
 
   resources :topics
@@ -27,6 +27,7 @@ Ol::Application.routes.draw do
   get "pages/presskit"
   get "pages/contact"
   get "pages/test"
+
   root to: "pages#index"
 
   # The priority is based upon order of creation:

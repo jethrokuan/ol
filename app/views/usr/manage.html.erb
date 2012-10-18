@@ -1,6 +1,6 @@
 <div class="row">
 <%=render partial: 'shared/start'%>
-<%=render partial: 'shared/manage'%>
+<%=render partial: 'shared/navmanage'%>
 	</ul>
 </nav><!--span3-->
 <div class="span8 offset1">
@@ -10,7 +10,7 @@
 <div class="row">
 	<%Subject.all.each do |subject|%>
 		<div class="span4">
-		<h3><%=link_to subject.subject, "#"%></h3>
+		<h3><%=link_to subject.subject, "/usr/manage/"+subject.subject.downcase%></h3>
 		<dl class="dl-horizontal hidden-phone">
 		<dt>Subject Status:</dt>
 		<dd><span class="salmon">Disabled</span></dd>

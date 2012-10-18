@@ -1,33 +1,13 @@
-<%= form_for(@topic) do |f| %>
-  <% if @topic.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
-
-      <ul>
-      <% @topic.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :topic %><br />
-    <%= f.text_field :topic %>
+<%= simple_form_for(@topic, html: {class: "form-horizontal"}) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :topic, input_html: {class:"input-xxlarge"}, placeholder: "Topic" %>
+    <%= f.association :subject,input_html: {class:"input-xxlarge"}, label_method: :subject %>
+    <%= f.input :order, input_html: {class:"input-xxlarge"}, placeholder: "Order your topic:" %>
+    <%= f.input :description, input_html: {class:"input-xxlarge"}, placeholder: "Description Here" %>
   </div>
-  <div class="field">
-    <%= f.label :subject_id %><br />
-    <%= f.number_field :subject_id %>
-  </div>
-  <div class="field">
-    <%= f.label :order %><br />
-    <%= f.number_field :order %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">
+      <span class='hidden-phone'><i class='icon-ok'></i> Create Topic
+    </button>
   </div>
 <% end %>

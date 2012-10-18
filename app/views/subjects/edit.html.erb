@@ -1,6 +1,90 @@
-<h1>Editing subject</h1>
+<div class="row">
+	<%=render partial: "shared/start"%>
+	<%=render partial: "shared/navmanage"%>
+		</ul>
+	</nav><!--span3-->
+	<div class="span8 offset1">
+	<h1><%=@subject.subject%></h1>
+	<p class="lead"><%=@subject.checkpoints.count%> checkpoints in <%=@subject.lessons.count%> lessons</p>
+	<hr>
+		<%=render partial: "shared/manage"%>
+	<hr>
+	<%@subject.topics.each do |topic|%>
+		<div class="modal hide fade" id=<%=topic.topic%>>
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Change Title</h3>
+		  </div>
+		  <div class="modal-body">
+		  	Insert form for editing form title
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" data-dismiss="modal" class="btn">Close</a>
+		    <a href="#" class="btn btn-primary">Save changes</a>
+		  </div>
+		</div>
 
-<%= render 'form' %>
+		<h3><%=topic.topic%> <small><a href=<%="#"+topic.topic%> role="button" data-toggle="modal" class="salmon">(EDIT)</a></small></h3>
+		<h6><small><%=topic.description%></small></h6>
+		<ol>
+			<%topic.lessons.each do |lesson|%>
+			<%if lesson.is_sublesson%>
+				<ul class="unstyled">
+					<li><%=lesson.lesson%></li>
+					<ul class="unstyled">
+					<%lesson.checkpoints.each do |checkpoint|%>
+						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>
+					<%end%>
+					</ul>
+				</ul>
+				<%else%>
+				<li><%=lesson.lesson%></li>
+				<ul class="unstyled">
+					<%lesson.checkpoints.each do |checkpoint|%>
+						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>
+					<%end%>
+					</ul>
+				<%end%>
+			<%end%>
+		</ol>
+		<hr>
+	<%end%>
+	<%=render partial: "shared/manage"%>
+	</div><!--span8-->
+	</div><!--row-->
 
-<%= link_to 'Show', @subject %> |
-<%= link_to 'Back', subjects_path %>
+<script>
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault(); // Necessary. Allows us to drop.
+  }
+
+  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+  return false;
+}
+var dragSrcEl = null;
+function handleDragStart(e) {
+  dragSrcEl = this;
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.innerHTML);
+}
+function handleDrop(e) {
+  if (e.stopPropagation) {
+    e.stopPropagation();
+  }
+  if (dragSrcEl != this) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData('text/html');
+  }
+
+  return false;
+}
+var cols = document.querySelectorAll('.lesson');
+[].forEach.call(cols, function(col) {
+  col.addEventListener('dragstart', handleDragStart, false);
+  col.addEventListener('dragover', handleDragOver, false);
+  col.addEventListener('drop', handleDrop, false);
+});
+</script>
