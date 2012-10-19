@@ -22,6 +22,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+#Oauth
+gem 'omniauth'
+gem 'oauth2'
+gem 'omniauth-facebook'
+
 #For sanity
 gem 'thin'
 gem 'faraday'
