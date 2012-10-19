@@ -1,7 +1,7 @@
 <%Subject.all.each do |subject|%>
-<%if params[:id] == subject.subject.downcase%>
-<li class="active"><%= link_to subject.subject, subject%></li>
-<%else%>
-<li><%= link_to subject.subject, subject%></li>
-<%end%>
+	<%if params[:id] == subject.subject.downcase%>
+		<li class="active"><%= link_to subject.subject, subject%></li>
+	<%else%>
+		<li><%= link_to subject.subject, subject%></li>
+	<%end%>
 <%end%>
