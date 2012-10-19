@@ -10,7 +10,7 @@ class LessonsController < ApplicationController
     @lessons = @topic.lessons
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {render :layout => 'lessons'}
       format.json { render json: @lessons }
     end
   end
@@ -21,7 +21,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html {render :layout => 'lessons'}
       format.json { render json: @lesson }
     end
   end
