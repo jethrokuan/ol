@@ -11,7 +11,7 @@
 <div class="span8 offset1">
 	<h1>Sign In</h1>
 	<hr>
-	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), ) do |f| %>
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:name => "myform"} ) do |f| %>
 	<%= f.email_field :email, class: "input-xxlarge aligncenter", placeholder: "Email", required: "required", autofocus: "autofocus", multiple: "multiple"%><br>	
 	<%= f.password_field :password, class: "input-xxlarge aligncenter", placeholder: "Password", required: "required"%><br/>
 

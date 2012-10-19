@@ -38,7 +38,7 @@
   <%= f.collection_select :role, User::ROLES, :to_s, :humanize%>
   </div>
   </div>
-  <%= f.submit "Sign Up", class: "hidden"%>
+  <%= f.submit "Sign Up", class: "btn btn-link"%>
   <% end %>
   <hr>
   <%= render "devise/shared/links" %>
