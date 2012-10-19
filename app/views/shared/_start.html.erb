@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
     <li><%= link_to(current_user.givenname+ " "+ current_user.surname, usr_profile_path)%></li>
 <% else %>
-    <li><%= link_to('Log In/Register', new_user_session_path)%></li>
+    <li><%= link_to('Log In', new_user_session_path)%>, <%=link_to('Register', new_user_registration_path)%></li>
 <% end %>
 <hr>
