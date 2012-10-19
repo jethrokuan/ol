@@ -1,22 +1,27 @@
+<%- title "Sign In" %>
 <div class="row">
-	<div class="span12 aligncenter">
-		<h1 class="insignia padbot10" style="font-size:7em;"><a href="index.html" class="clean">ol</a></h1>
-		<p>Sign In</p>
-		<hr>
-		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), ) do |f| %>
-		  <%= f.text_field :email, class: "span4 aligncenter", placeholder: "Email" %><br>
-		  <%= f.password_field :password, class: "span4 aligncenter", placeholder: "Password" %>
+<nav class="span3">
+<%=render 'shared/logo'%>
+<ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+  <%=render 'shared/start'%>
+  <%=render 'shared/about'%>
+  <%=render 'shared/last'%>
+</ul>
+</nav><!--span3-->
+<div class="span8 offset1">
+	<h1>Sign In</h1>
+	<hr>
+	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:name => "myform"} ) do |f| %>
+	<%= f.email_field :email, class: "input-xxlarge aligncenter", placeholder: "Email", required: "required", autofocus: "autofocus", multiple: "multiple"%><br>	
+	<%= f.password_field :password, class: "input-xxlarge aligncenter", placeholder: "Password", required: "required"%><br/>
 
-		  <% if devise_mapping.rememberable? -%>
-		    <p><%= f.check_box :remember_me %>  Remember Me </p>
-		  <% end -%>
-
-		  <%= f.submit "Sign In", class: "btn btn-primary", style: "visibility: hidden;" %>
-		<% end %>
-
-		<%= render "devise/shared/links" %>
-		<hr>
-		<p class="lead">Got Facebook? Use your username and password!</p>
-		<p><a href"#">Forgot something?</a></p>
-	</div><!--span12-->
-</div><!--row-->
+	<% if devise_mapping.rememberable? -%>
+	<label class="checkbox inline" style="line-height:0.9;">
+	<%= f.check_box :remember_me, class: "aligncenter", checked: "checked"%> Don't forget me
+	</label>
+	<% end -%>
+	<%= f.submit "Sign In", class: "hidden"%>
+	<% end %>
+	<hr>
+	<%= render "devise/shared/links" %>
+</div><!--span8-->

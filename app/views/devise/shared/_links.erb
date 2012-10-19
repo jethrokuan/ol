@@ -1,14 +1,26 @@
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Sign in", new_session_path(resource_name) %><br />
-<% end -%>
-
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
-<% end -%>
-
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-<% end -%>
+<div class="row">
+	<div class="span2 aligncenter">
+		<h3 class="aligncenter">
+			<span class="hidden-phone"><a onclick="document.myform.submit().submit(); return false;"><i class="icon-ok"></i><br/></span><small>Submit</small></h3>
+		</h3>
+	</div><!--span2-->
+	<%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
+	<div class="span2 aligncenter">
+		<h3 class="aligncenter">
+			<%= link_to new_password_path(resource_name) do%>
+				<span class="hidden-phone"><i class="icon-question-sign"></i><br/></span><small>Password</small>
+			<% end %>
+		</h3>
+	</div><!--span2-->
+	<% end -%>
+	<div class="span2 aligncenter">
+		<h3 class="aligncenter">
+			<%= link_to :back, class:"salmon" do%>
+				<span class="hidden-phone"><i class="icon-ban-circle"></i><br/></span><small>Cancel</small>
+			<% end %>
+		</h3>
+	</div><!--span2-->
+</div><!--row-->
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
   <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
