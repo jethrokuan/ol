@@ -9,13 +9,16 @@
 </ul>
 </nav><!--span3-->
 <div class="span8 offset1">
-<%=stylesheet_link_tag "timeline"%>
-<%=javascript_include_tag "storyjs-embed"%>
-<%=javascript_include_tag "timeline-min"%>
+	
 <div id="timeline-embed"></div>
 </div><!--span8-->
 </div><!--row-->
-<script>
+
+<%=stylesheet_link_tag "timeline"%>
+<%=javascript_include_tag "storyjs-embed"%>
+<%=javascript_include_tag "timeline-min"%>
+	
+<script type="text/javascript">
 	$(document).ready(function() {
 	    createStoryJS({
 	        type:       'timeline',

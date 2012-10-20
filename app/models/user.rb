@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
 	ROLES = %w[staff user]
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :school_year, :school, :surname, :givenname, :checkpoint_id, :subject_ids
+
 end

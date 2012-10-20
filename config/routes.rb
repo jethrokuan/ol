@@ -3,6 +3,8 @@ Ol::Application.routes.draw do
 
   get "usr/manage"
   get "usr/profile"
+  get "usr/staff"
+  
   match "usr/manage/:id" => "subjects#edit"
   devise_for :users
 

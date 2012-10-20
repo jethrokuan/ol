@@ -1,8 +1,12 @@
 <div class="row">
-	<%=render partial: "shared/start"%>
-	<%=render partial: "shared/navmanage"%>
-	</ul>
-</nav><!--span3-->
+	<nav class="span3">
+      <%=render partial: 'shared/logo'%>
+      <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+        <%=render partial: 'shared/start'%>
+        <%=render partial: "shared/navmanage"%>
+        <%=render partial: "shared/last"%>
+      </ul>
+  </nav><!--span3-->
 <div class="span8 offset1">
 <h1>New Lesson</h1>
 <hr>

@@ -4,4 +4,8 @@ class UsrController < ApplicationController
 
   def profile
   end
+
+  def staff
+  	@staff = User.where("role = ?", "staff")
+  end
 end

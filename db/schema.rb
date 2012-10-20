@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20121018121003) do
     t.string   "school_year"
     t.integer  "checkpoint_id"
     t.text     "subject_ids"
+    t.string   "phone"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -6,5 +6,6 @@ class AddFieldsToUsers < ActiveRecord::Migration
   	add_column :users, :school_year, :string
   	add_column :users, :checkpoint_id, :integer
   	add_column :users, :subject_ids, :text
+  	add_column :users, :phone, :string
   end
 end

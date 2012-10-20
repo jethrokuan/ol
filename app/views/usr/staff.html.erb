@@ -1,5 +1,6 @@
+<%title "Staff"%>
 <div class="row">
-	<nav class="span3">
+<nav class="span3">
       <%=render partial: 'shared/logo'%>
       <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
         <%=render partial: 'shared/start'%>
@@ -8,8 +9,22 @@
       </ul>
   </nav><!--span3-->
 <div class="span8 offset1">
-<h1>New Checkpoint</h1>
+<h1>Staff Database</h1>
+<p class="lead">Find your fellow staff here (:</a></p>
 <hr>
-<%=render partial: "form"%>
+<table>
+  <tr>
+    <th>Name:</th>
+  <th>Email Address:</th>
+  <th>Phone Number:</th>  
+  </tr>
+<%@staff.each do |s|%>
+  <tr>
+	<td><%=s.givenname + " " + s.surname%></td>
+	<td><%=s.email%></td>
+	<td><%=s.phone%></td>
+  </tr>
+<%end%>
+</table>
 </div><!--span8-->
 </div><!--row-->

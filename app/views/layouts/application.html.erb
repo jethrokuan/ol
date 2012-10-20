@@ -4,6 +4,7 @@
   <title><%= content_for(:title) + " | "%>openlectures</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application" %>
 </head>
 <body>
 	<%if notice || alert%>
@@ -29,6 +30,5 @@
 		</div>
 	</footer>
 	</div><!--container-->
-<%= javascript_include_tag "application" %>
 </body>
 </html>
