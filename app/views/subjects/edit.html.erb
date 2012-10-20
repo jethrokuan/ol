@@ -15,13 +15,13 @@
 		<%=render partial: "shared/manage"%>
 	<hr>
 	<%@subject.topics.each do |topic|%>
-		<h3><%=topic.topic%> <small><a href=<%=edit_topic_path(topic)%> role="button" data-toggle="modal" class="salmon">(EDIT)</a></small></h3>
+		<h3><%=topic.topic%> <small><a href=<%=edit_topic_path(topic)%> class="salmon">(EDIT)</a></small></h3>
 		<h6><small><%=topic.description%></small></h6>
 		<ol>
 			<%topic.lessons.each do |lesson|%>
 			<%if lesson.is_sublesson%>
 				<ul class="unstyled">
-					<li><%=lesson.lesson%><a href=<%=edit_lesson_path(lesson)%> role="button" data-toggle="modal" class="salmon">(EDIT)</a></small></li>
+					<li><%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small></li>
 					<ul class="unstyled">
 					<%lesson.checkpoints.each do |checkpoint|%>
 						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>
@@ -29,7 +29,7 @@
 					</ul>
 				</ul>
 				<%else%>
-				<li><%=lesson.lesson%><a href=<%=edit_lesson_path(lesson)%> role="button" data-toggle="modal" class="salmon">(EDIT)</a></small></li>
+				<li><%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small></li>
 				<ul class="unstyled">
 					<%lesson.checkpoints.each do |checkpoint|%>
 						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>

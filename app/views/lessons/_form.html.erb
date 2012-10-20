@@ -1,6 +1,7 @@
+<%=stylesheet_link_tag "chosen"%>
 <%= simple_form_for(@lesson, html: {class: "form-horizontal"}) do |f| %>
     <%= f.input :lesson, input_html: {class:"input-xxlarge"}, placeholder: "Lesson" %>
-    <%= f.association :topic, label_method: :topic, input_html: {class:"input-xxlarge"}%>
+    <%= f.association :topic, label_method: :topic, input_html: {class:"input-xxlarge chzn-select"}%>
     <%= f.input :is_sublesson, input_html: {class:"input-xxlarge"}%>
     <%= f.input :order, input_html: {class:"input-xxlarge"} %>
 
@@ -10,3 +11,9 @@
     </button>
   </div>
 <% end %>
+
+<script type="text/javascript">
+	jQuery(function($){
+    	$('.chzn-select').chosen();
+	});
+</script>

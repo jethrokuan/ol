@@ -1,3 +1,4 @@
+<%title @subject.subject%>
 <div class="row">
 	<nav class="span3">
       <%=render partial: 'shared/logo'%>
@@ -21,9 +22,25 @@
 			<ol>
 			<%topic.lessons.each do |lesson|%>
 				<%if lesson.is_sublesson%>
-				<ul class="unstyled"><li><%=link_to lesson.lesson, lesson%></li></ul>
+				<ul class="unstyled"><li><%=link_to lesson.lesson, lesson%><small><a data-target=<%="#"+lesson.id.to_s%> role="button" data-toggle="collapse">(Show Checkpoints)</a></small></li></ul>
+				<div id=<%=lesson.id.to_s%> class="collapse">
+				<ul>
+				<%lesson.checkpoints.each do |checkpoint|%>		
+					<li><%=link_to checkpoint.checkpoint, lesson_path(checkpoint.lesson)+"#/"+checkpoint.checkpoint.gsub(' ', '').downcase%></li>
+				<%end%>
+				</ul>
+				</div>
 				<%else%>
-				<li><%=link_to lesson.lesson, lesson%></li>
+				<li><%=link_to lesson.lesson, lesson%> <small><a data-target=<%="#"+lesson.id.to_s%> role="button" data-toggle="collapse">(Show Checkpoints)</a></small> </li>
+				
+				<div id=<%=lesson.id.to_s%> class="collapse">
+				<ul>
+				<%lesson.checkpoints.each do |checkpoint|%>		
+					<li><%=link_to checkpoint.checkpoint, lesson_path(checkpoint.lesson)+"#/"+checkpoint.checkpoint.gsub(' ', '').downcase%></li>
+				<%end%>
+				</ul>
+				</div>
+				
 				<%end%>
 			<%end%>
 			</ol>

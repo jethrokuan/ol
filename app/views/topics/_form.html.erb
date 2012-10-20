@@ -1,7 +1,8 @@
+<%=stylesheet_link_tag "chosen"%>
 <%= simple_form_for(@topic, html: {class: "form-horizontal"}) do |f| %>
   <div class="form-inputs">
     <%= f.input :topic, input_html: {class:"input-xxlarge"}, placeholder: "Topic" %>
-    <%= f.association :subject,input_html: {class:"input-xxlarge"}, label_method: :subject %>
+    <%= f.association :subject,input_html: {class:"input-xxlarge chzn-select"}, label_method: :subject %>
     <%= f.input :order, input_html: {class:"input-xxlarge"}, placeholder: "Order your topic:" %>
     <%= f.input :description, input_html: {class:"input-xxlarge"}, placeholder: "Description Here" %>
   </div>
@@ -11,3 +12,9 @@
     </button>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  jQuery(function($){
+      $('.chzn-select').chosen();
+  });
+</script>
