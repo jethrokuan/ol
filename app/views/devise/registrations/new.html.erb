@@ -38,7 +38,11 @@
   <%= f.collection_select :role, User::ROLES, :to_s, :humanize%>
   </div>
   </div>
-  <%= f.submit "Sign Up", class: "btn btn-link"%>
+  <%= f.submit "Sign Up", class: "btn btn-link", style: "visibility:hidden;"%>
+
+  <h3 class="muted">Applying as staff</h3>
+  <hr>
+  <input type="text" name="staffpass" class="span8 aligncenter" placeholder="Enter Secret Staff Password">
   <% end %>
   <hr>
   <%= render "devise/shared/links" %>
