@@ -34,7 +34,7 @@
 		<div class="span8">
 		<ul class="unstyled list">
 			<%@subject.checkpoints.each do |checkpoint|%>
-			<li><%=link_to checkpoint.checkpoint, "#"%></li>
+			<li><%=link_to checkpoint.checkpoint, lesson_path(checkpoint.lesson)+"#/"+checkpoint.checkpoint.gsub(' ', '').downcase%></li>
 			<%end%>
 		</ul><!--unstyled-->
 	</div><!--span8-->
