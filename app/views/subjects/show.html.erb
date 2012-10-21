@@ -1,7 +1,12 @@
+<%title @subject.subject%>
 <div class="row">
-		<%=render partial: "shared/start"%>
-		<%=render partial: "shared/navsubjects"%>
-		   </ul>
+	<nav class="span3">
+      <%=render partial: 'shared/logo'%>
+      <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+        <%=render partial: 'shared/start'%>
+        <%=render partial: "shared/about"%>
+        <%=render partial: "shared/last"%>
+      </ul>
   </nav><!--span3-->
 	<div class="span8 offset1">
 	<h1><%=@subject.subject%></h1>
@@ -17,9 +22,25 @@
 			<ol>
 			<%topic.lessons.each do |lesson|%>
 				<%if lesson.is_sublesson%>
-				<ul class="unstyled"><li><%=link_to lesson.lesson, lesson%></li></ul>
+				<ul class="unstyled"><li><%=link_to lesson.lesson, lesson%><small><a data-target=<%="#"+lesson.id.to_s%> role="button" data-toggle="collapse">(Show Checkpoints)</a></small></li></ul>
+				<div id=<%=lesson.id.to_s%> class="collapse">
+				<ul>
+				<%lesson.checkpoints.each do |checkpoint|%>		
+					<li><%=link_to checkpoint.checkpoint, lesson_path(checkpoint.lesson)+"#/"+checkpoint.checkpoint.gsub(' ', '').downcase%></li>
+				<%end%>
+				</ul>
+				</div>
 				<%else%>
-				<li><%=link_to lesson.lesson, lesson%></li>
+				<li><%=link_to lesson.lesson, lesson%> <small><a data-target=<%="#"+lesson.id.to_s%> role="button" data-toggle="collapse">(Show Checkpoints)</a></small> </li>
+				
+				<div id=<%=lesson.id.to_s%> class="collapse">
+				<ul>
+				<%lesson.checkpoints.each do |checkpoint|%>		
+					<li><%=link_to checkpoint.checkpoint, lesson_path(checkpoint.lesson)+"#/"+checkpoint.checkpoint.gsub(' ', '').downcase%></li>
+				<%end%>
+				</ul>
+				</div>
+				
 				<%end%>
 			<%end%>
 			</ol>
@@ -30,7 +51,7 @@
 		<div class="span8">
 		<ul class="unstyled list">
 			<%@subject.checkpoints.each do |checkpoint|%>
-			<li><%=link_to checkpoint.checkpoint, "#"%></li>
+			<li><%=link_to checkpoint.checkpoint, lesson_path(checkpoint.lesson)+"#/"+checkpoint.checkpoint.gsub(' ', '').downcase%></li>
 			<%end%>
 		</ul><!--unstyled-->
 	</div><!--span8-->

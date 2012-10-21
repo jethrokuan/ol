@@ -1,0 +1,92 @@
+<%= stylesheet_link_tag  "reveal", :media => "all" %>
+<div class="reveal">
+
+<!-- Used to fade in a background when a specific slide state is reached -->
+<div class="state-background"></div>
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+	<section>
+		<section>
+			<div class="container">
+				<div class="row-fluid margintop10p">
+					<div class="span4 hidden-phone">
+						<h1 style="font-size:20em;"><icon class="icon-globe"></icon></h1>
+						<h3 class="margintop40p">KABOOM!</h3>
+					</div><!--span4-->
+					<div class="span7 offset1 alignleft">
+						<h1>404: Oops</h1>
+						<p>We don't really know how to put this, but one of those <a href="http://en.wikipedia.org/wiki/Spacetime">space-time continuum</a> things happened, and the stuff you were looking for disappeared.</p>
+						<hr>
+						<div class="row-fluid">
+							<div class="span3 aligncenter">
+								<a href="#" onclick="history.back(-1);return false">
+									<h1 class="hidden-phone"><icon class="icon-chevron-left"></icon></h1>
+									<p>Go Back</p>
+								</a>
+							</div><!--span3-->
+							<div class="span3 aligncenter">
+								<a href=<%=root_path%>>
+									<h1 class="hidden-phone"><icon class="icon-home"></icon></h1>
+									<p>Home</p>
+								</a>
+							</div><!--span3-->
+							<div class="span3 aligncenter">
+								<a href=<%=pages_contact_path%>>
+									<h1 class="hidden-phone"><icon class="icon-envelope"></icon></h1>
+									<p>Contact Us</p>
+								</a>
+							</div><!--span3-->
+							<div class="span3 aligncenter">
+								<a href="#" onclick="Reveal.navigateNext();return false">
+									<h1 class="hidden-phone"><icon class="icon-ban-circle"></icon></h1>
+									<p>Do Not Click</p>
+								</a>
+							</div><!--span3-->
+						</div><!--row-->
+					</div><!--span7-->
+				</div><!--row-->
+		</section>
+
+		<section data-state="blackout">
+			<div class="container">
+				<div class="row-fluid">
+					<div class="span4 white alignleft">
+						<h1>Take a Break!</h1>
+						<p class="lead">We present approximately fifteen minutes of distraction from that which you were gainfully occupied with prior.</p>
+						<p><a href="#" onclick="Reveal.navigatePrev();return false"><i class="icon-arrow-up"></i> Resume Work</a></p>
+					</div><!--span3-->
+					<div class="span7 offset1 pull-right">
+						<div id="pacman"></div>
+					</div><!--span8-->
+				</div><!--row-->
+			</div><!--container-->
+		</section>
+	</section>
+</div><!--slides-->
+
+<%=javascript_include_tag "head.min"%>
+<%=javascript_include_tag "reveal.min"%>
+<%=javascript_include_tag "pacman"%>
+<%=javascript_include_tag "modernizr-1.5.min"%>
+
+ <script>
+    var el = document.getElementById("pacman");
+
+    if (Modernizr.canvas && Modernizr.localstorage && 
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+    } else { 
+      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+    }
+  </script>
+<script>
+	Reveal.initialize({
+		rollingLinks: false,
+		transition: 'linear',
+		keyboard: false,
+		mouseWheel: false
+	});
+</script>
+</html>

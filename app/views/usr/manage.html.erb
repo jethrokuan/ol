@@ -1,11 +1,13 @@
+<%title "Manage"%>
 <div class="row">
-<nav class="span3">
-	<ul>
-		<%=render partial: 'shared/logo'%>
-		<%=render partial: 'shared/start'%>
-		<%=render partial: 'shared/navmanage'%>
-	</ul>
-</nav><!--span3-->
+	<nav class="span3">
+      <%=render partial: 'shared/logo'%>
+      <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+        <%=render partial: 'shared/start'%>
+        <%=render partial: "shared/navmanage"%>
+        <%=render partial: "shared/last"%>
+      </ul>
+  </nav><!--span3-->
 <div class="span8 offset1">
 <h1>Subjects</h1>
 <p class="lead"><%=Checkpoint.all.count%> checkpoints in <%=Lesson.all.count%> lessons</p>
@@ -23,10 +25,17 @@
 		<dt>Checkpoints:</dt>
 		<dd><%=subject.checkpoints.count%></dd>
 		<dt>Date of Last Update:</dt>
-		<dd><%=subject.checkpoints.last%></dd>
+		<%if subject.checkpoints.count != 0%>
+		<dd><%=subject.checkpoints.last.created_at.to_date%></dd>
+		<%else%>
+		<dd>N/A</dd>
+		<%end%>
 		</span><!--muted-->
 	</dl>
 	</div><!--span4-->
 	<%end%>
+	<div class="span4">
+		<a href=<%=new_subject_path%>><h3><i class="icon-plus"></i> New Subject</h3></a> 
+	</div>
 </div><!--row-->
 </div><!--row-->

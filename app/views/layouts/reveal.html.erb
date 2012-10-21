@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= content_for(:title) + " | "%>openlectures</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag "application" %>
+</head>
+<body>
+	<%if notice || alert%>
+	<div class="container">
+		<%if notice%>
+		<div class="alert alert-success">
+			<%= notice %>
+		</div>
+		<%end%>
+		<% if alert%>
+		<div class="alert alert-error">
+			<%= alert %>
+		</div>
+		<% end%>
+	</div>
+	<%end%>
+		<%= yield %>
+</body>
+</html>

@@ -1,76 +1,80 @@
-
+<%title "Profile"%>
 <div class="row">
-<%=render partial: "shared/start"%>
-<%=render partial: "shared/navmanage"%>
-	</ul>
-</nav><!--span3-->
+<nav class="span3">
+      <%=render partial: 'shared/logo'%>
+      <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+        <%=render partial: 'shared/start'%>
+        <%=render partial: "shared/navmanage"%>
+        <%=render partial: "shared/last"%>
+      </ul>
+  </nav><!--span3-->
 <div class="span8 offset1">
-<h1><%=current_user.givenname + " " + current_user.surname%></h1>
-<p class="lead"><%=current_user.school%></a></p>
-<p></p>
-<hr>
-<h3>Important Information</h3>
-<h6><small>Y'know, the boyfriend/girlfriend's birthday, the place that sells the cheapest tequila shots, and the people who will attempt to hit on you. All this, neatly compiled and tabulated.</small></h6>
-<dl class="dl-horizontal">
-	<dt>Official Title:</dt>
-	<dd>Chief Executive Officer</dd>
-	<dt>Real Working Title:</dt>
-	<dd>Octopus</dd>
-	<dt>Role:</dt>
-	<dd>Staff</dd>
-	<dt>Email:</dt>
-	<dd><%=current_user.email%> <a href="#">(Configuration)</a></dd>
-	<dt>Office Address:</dt>
-	<dd>NYC Academy, <a href="http://gothere.sg/maps#q:nyc%20academy">113 Somerset Road, Singapore 238165</a></dd>
-</dl>
-<hr>
-<h3>Registry</h3>
-<h6><small>A quick list of all the email addresses and people you will spam in the course of your servitude</small></h6>
-<dl class="dl-horizontal">
-	<dt>Everything:</dt>
-	<dd><a href='&#109;a&#105;l&#116;o&#58;&#107;enn%&#54;5t&#104;&#46;lim&#64;openle&#99;t%75r%&#54;5s%2Eorg'>Kenneth Lim</a></dd>
-	<dt>Lectures:</dt>
-	<dd><a href='mailto&#58;gary&#46;l&#37;65&#101;&#64;ope%6&#69;l&#101;%63t%&#55;5&#114;&#37;65s%2&#69;or&#103;'>Gary Lee</a> (also <a href='&#109;ailto&#58;o&#108;&#95;%&#54;&#49;&#99;a&#37;64%73&#37;4&#48;g&#111;&#37;6Fgle&#37;6&#55;roup&#37;&#55;3&#46;co&#109;'>ol_acads&#64;go&#111;gle&#103;ro&#117;ps&#46;&#99;om</a>)</dd>
-	<dt>Schools Outreach:</dt>
-	<dd><a href='mail&#116;&#111;&#58;&#37;67%6&#67;o&#114;ia&#46;%63h&#117;a&#64;o&#112;e&#110;le&#99;&#116;u%7&#50;e&#37;&#55;3&#46;org'>Gloria Chua</a> (also <a href='m&#97;il&#116;&#111;&#58;o&#108;&#37;5&#70;o&#117;tr%6&#53;a%63h&#64;googl%6&#53;g&#114;ou%70%73&#46;&#99;o%6D'>&#111;&#108;_&#111;&#117;&#116;re&#97;ch&#64;googleg&#114;oup&#115;&#46;com</a>)</dd>
-	<dt>Design:</dt>
-	<dd><a href='ma&#105;l&#116;o&#58;%73u&#46;&#104;&#97;ng&#64;&#111;%70enlect%7&#53;&#114;%65s&#46;&#111;r%67'>Su Hang</a></dd>
-	<dt>Technology:</dt>
-	<dd><a href='&#109;ailto&#58;&#106;&#101;t%&#54;8ro&#46;&#107;uan%40op&#101;&#37;&#54;E%&#54;C&#37;65%6&#51;tur&#101;%7&#51;&#46;or%67'>Jethro Kuan</a></dd>
-	<dt>Publicity:</dt>
-	<dd><a href='&#109;ailto&#58;&#115;%&#54;1%6Da%6E%&#55;4ha&#46;%&#55;4ing%&#52;&#48;openlec&#116;%7&#53;&#114;es%&#50;Eo&#114;g'>Ting Ting</a></dd>
-	<dt>People:</dt>
-	<dd><a href='mailto&#58;ly&#100;ia&#46;&#37;6C%69u&#64;op&#101;n%6Cec%74%&#55;5&#37;72es%2Eorg'>Lydia</a></dd>
-	<dt>Money:</dt>
-	<dd><a href='&#109;&#97;i&#108;to&#58;&#122;ex&#37;7&#53;%61&#110;&#46;on%6&#55;&#64;ope&#110;lectu&#114;es&#46;o%72g'>Ze Xuan</a></dd>
-	<dt>A Lot of Money:</dt>
-	<dd><a href='mai&#108;&#116;o&#58;linan&#46;%71i&#117;&#64;%6Fpe&#110;%&#54;C&#37;65ct&#117;re&#115;&#46;o&#114;&#103;'>Linan</a></dd>
-	<dt>Alcohol:</dt>
-	<dd><a href='&#109;ailto&#58;&#115;%&#54;1%6Da%6E%&#55;4ha&#46;%&#55;4ing%&#52;&#48;openlec&#116;%7&#53;&#114;es%&#50;Eo&#114;g'>Ting Ting</a></dd>
-</dl>
+	<%if user_signed_in?%>
+		<h1><%=current_user.givenname + " " + current_user.surname%></h1>
+		<p class="lead"><%=current_user.school%></a></p>
+	<%elsif staff_signed_in?%>
+		<h1><%=current_staff.givenname + " " + current_staff.surname%></h1>
+		<hr>
+		<h3>Important Information</h3>
+		<h6 class="muted">Y'know, the boyfriend/girlfriend's birthday, the place that sells the cheapest tequila shots, and the people who will attempt to hit on you. All this, neatly compiled and tabulated.</h6>
+		<dl class="dl-horizontal">
+			<dt>Official Title:</dt>
+			<dd><%=current_staff.title%></dd>
+			<dt>Email:</dt>
+			<dd><%=current_staff.email%> <a href="#">(Configuration)</a></dd>
+			<dt>Office Address:</dt>
+			<dd>NYC Academy, <a href="http://gothere.sg/maps#q:nyc%20academy">113 Somerset Road, Singapore 238165</a></dd>
+		</dl>
+		<hr>
+		<h3>Registry</h3>
+		<h6 class="muted">A quick list of all the email addresses and people you will spam in the course of your servitude</h6>
+		<dl class="dl-horizontal">
+			<dt>Everything:</dt>
+			<dd><a href='&#109;a&#105;l&#116;o&#58;&#107;enn%&#54;5t&#104;&#46;lim&#64;openle&#99;t%75r%&#54;5s%2Eorg'>Kenneth Lim</a></dd>
+			<dt>Lectures:</dt>
+			<dd><a href='mailto&#58;gary&#46;l&#37;65&#101;&#64;ope%6&#69;l&#101;%63t%&#55;5&#114;&#37;65s%2&#69;or&#103;'>Gary Lee</a> (also <a href='&#109;ailto&#58;o&#108;&#95;%&#54;&#49;&#99;a&#37;64%73&#37;4&#48;g&#111;&#37;6Fgle&#37;6&#55;roup&#37;&#55;3&#46;co&#109;'>ol_acads&#64;go&#111;gle&#103;ro&#117;ps&#46;&#99;om</a>)</dd>
+			<dt>Schools Outreach:</dt>
+			<dd><a href='mail&#116;&#111;&#58;&#37;67%6&#67;o&#114;ia&#46;%63h&#117;a&#64;o&#112;e&#110;le&#99;&#116;u%7&#50;e&#37;&#55;3&#46;org'>Gloria Chua</a> (also <a href='m&#97;il&#116;&#111;&#58;o&#108;&#37;5&#70;o&#117;tr%6&#53;a%63h&#64;googl%6&#53;g&#114;ou%70%73&#46;&#99;o%6D'>&#111;&#108;_&#111;&#117;&#116;re&#97;ch&#64;googleg&#114;oup&#115;&#46;com</a>)</dd>
+			<dt>Design:</dt>
+			<dd><a href='ma&#105;l&#116;o&#58;%73u&#46;&#104;&#97;ng&#64;&#111;%70enlect%7&#53;&#114;%65s&#46;&#111;r%67'>Su Hang</a></dd>
+			<dt>Technology:</dt>
+			<dd><a href='&#109;ailto&#58;&#106;&#101;t%&#54;8ro&#46;&#107;uan%40op&#101;&#37;&#54;E%&#54;C&#37;65%6&#51;tur&#101;%7&#51;&#46;or%67'>Jethro Kuan</a></dd>
+			<dt>Publicity:</dt>
+			<dd><a href='&#109;ailto&#58;&#115;%&#54;1%6Da%6E%&#55;4ha&#46;%&#55;4ing%&#52;&#48;openlec&#116;%7&#53;&#114;es%&#50;Eo&#114;g'>Ting Ting</a></dd>
+			<dt>People:</dt>
+			<dd><a href='mailto&#58;ly&#100;ia&#46;&#37;6C%69u&#64;op&#101;n%6Cec%74%&#55;5&#37;72es%2Eorg'>Lydia</a></dd>
+			<dt>Money:</dt>
+			<dd><a href='&#109;&#97;i&#108;to&#58;&#122;ex&#37;7&#53;%61&#110;&#46;on%6&#55;&#64;ope&#110;lectu&#114;es&#46;o%72g'>Ze Xuan</a></dd>
+			<dt>A Lot of Money:</dt>
+			<dd><a href='mai&#108;&#116;o&#58;linan&#46;%71i&#117;&#64;%6Fpe&#110;%&#54;C&#37;65ct&#117;re&#115;&#46;o&#114;&#103;'>Linan</a></dd>
+			<dt>Alcohol:</dt>
+			<dd><a href='&#109;ailto&#58;&#115;%&#54;1%6Da%6E%&#55;4ha&#46;%&#55;4ing%&#52;&#48;openlec&#116;%7&#53;&#114;es%&#50;Eo&#114;g'>Ting Ting</a></dd>
+		</dl>
 
-<hr>
-<h3>Documents</h3>
-<h6><small>These items will assist your world domination. If you need help, email Gary Lee at <a href='mailto&#58;gary&#46;l&#37;65&#101;&#64;ope%6&#69;l&#101;%63t%&#55;5&#114;&#37;65s%2&#69;or&#103;'>gary.lee@openlectures.org</a>.</small></h6>
-<dl class="dl-horizontal">
-	<dt>Project Starter Kit:</dt>
-	<dd>Hi</dd>
-	<dt>Lesson Template:</dt>
-	<dd>Hi</dd>
-</dl>
+		<hr>
+		<h3>Documents</h3>
+		<h6 class="muted">These items will assist your world domination. If you need help, email Gary Lee at <a href='mailto&#58;gary&#46;l&#37;65&#101;&#64;ope%6&#69;l&#101;%63t%&#55;5&#114;&#37;65s%2&#69;or&#103;'>gary.lee@openlectures.org</a>.</h6>
+		<dl class="dl-horizontal">
+			<dt>Project Starter Kit:</dt>
+			<dd>Hi</dd>
+			<dt>Lesson Template:</dt>
+			<dd>Hi</dd>
+		</dl>
 
-<hr>
-<h3>Technical Assets</h3>
-<h6><small>Being the poor, mysogynistic bastards we are, we actively exploit free online services and storage. Judge not!</small></h6>
-<dl class="dl-horizontal">
-	<dt>Dropbox:</dt>
-	<dd></dd>
-	<dt>Google Drive:</dt>
-	<dd></dd>
-	<dt>Asana:</dt>
-	<dd></dd>
-	<dt>AWS:</dt>
-	<dd></dd>
-</dl>
+		<hr>
+		<h3>Technical Assets</h3>
+		<h6 class="muted">Being the poor, mysogynistic bastards we are, we actively exploit free online services and storage. Judge not!</h6>
+		<dl class="dl-horizontal">
+			<dt>Dropbox:</dt>
+			<dd></dd>
+			<dt>Google Drive:</dt>
+			<dd></dd>
+			<dt>Asana:</dt>
+			<dd></dd>
+			<dt>AWS:</dt>
+			<dd></dd>
+		</dl>
+	<%end%>
+
 </div><!--span8-->
 </div><!--row-->

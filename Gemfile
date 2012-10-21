@@ -35,8 +35,10 @@ gem "cancan"
 gem 'jquery-rails'
 gem 'quiet_assets'
 gem 'simple_form'
+gem 'select2-rails'
 
 gem 'friendly_id'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
