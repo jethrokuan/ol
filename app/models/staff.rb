@@ -1,6 +1,6 @@
-class User < ActiveRecord::Base
+class Staff < ActiveRecord::Base
   def admin?
-    false
+    true
   end
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -8,8 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-	ROLES = %w[user staff]
-
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :school_year, :school, :surname, :givenname, :checkpoint_id, :subject_ids
-
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :title, :givenname, :surname, :school, :phone
+  # attr_accessible :title, :body
 end

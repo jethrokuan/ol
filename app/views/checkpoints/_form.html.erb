@@ -1,9 +1,9 @@
-<%=stylesheet_link_tag "chosen"%>
+<%=stylesheet_link_tag "select2"%>
 
 <%= simple_form_for(@checkpoint, html: {class: "form-horizontal"}) do |f| %>
   <div class="form-inputs">
     <%= f.input :checkpoint, input_html: {class:"input-xxlarge"}, placeholder: "Checkpoint" %>
-    <%= f.association :lesson, label_method: :lesson, input_html: {class: "input-xxlarge chzn-select" }%>
+    <%= f.association :lesson, label_method: :lesson, input_html: {class: "input-xxlarge e1" }%>
     <%= f.input :description, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Description Here"%>
     <%= f.input :videourl, label: "Video Url", input_html: {class:"input-xxlarge"}, placeholder: "Only XYZ from http://www.youtube.com/watch?v=XYZ" %>
      <%= f.input :objective, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Objective Here"%>
@@ -15,9 +15,9 @@
     </button>
   </div>
 <% end %>
-
+<%=javascript_include_tag "select2"%>
 <script type="text/javascript">
   jQuery(function($){
-      $('.chzn-select').chosen();
+      $('.e1').select2();
   });
 </script>

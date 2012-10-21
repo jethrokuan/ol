@@ -9,41 +9,10 @@
 </ul>
 </nav><!--span3-->
 <div class="span8 offset1">
-  <h1>Start Your Adventure</h1>
-  <hr>
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), ) do |f| %>
-  <%= devise_error_messages! %>
-  <label class="control-label">Name</label>
-  <div class="controls controls-row" >
-  <%= f.text_field :givenname, class: "span4 aligncenter", placeholder: "Given Name", required: "required", autofocus: "autofocus" %>
-  <%= f.text_field :surname, class: "span4 aligncenter", placeholder: "Surname", required: "required" %>
-  </div><!--controls-->
-  <label class="control-label">Email</label>
-  <div class="controls controls-row">
-  <%= f.email_field :email, class: "span8 aligncenter", placeholder: "Email", required: "required"%>
-  </div><!--controls-->
-  <label class="control-label">Password</label>
-  <div class="controls controls-row">
-  <%= f.password_field :password, class: "span4 aligncenter", placeholder: "Password", required: "required"%>
-  <%= f.password_field :password_confirmation, class: "span4 aligncenter", placeholder: "Confirm Password", required: "required"%>
-  </div><!--controls-->
-  <label class="control-label">Education</label>
-  <div class="controls controls-row">
-  <%= f.text_field :school, class: "span6 aligncenter", placeholder: "School" %>
-  <%= f.number_field :school_year, class: "span2 aligncenter", placeholder: "Year eg. 2013", min: "2012" %>
-  </div><!--controls-->
-  <div class="control-group string hidden">
-  <label for="user_role" class="control-label">Membership Type</label>
-  <div class="controls">
-  <%= f.collection_select :role, User::ROLES, :to_s, :humanize%>
-  </div>
-  </div>
-  <%= f.submit "Sign Up", class: "btn btn-link", style: "visibility:hidden;"%>
-
-  <h3 class="muted">Applying as staff</h3>
-  <hr>
-  <input type="text" name="staffpass" class="span8 aligncenter" placeholder="Enter Secret Staff Password">
-  <% end %>
-  <hr>
-  <%= render "devise/shared/links" %>
+    <%if current_page?(new_staff_registration_path)%>
+    <%=render "devise/staff/staffsignup"%>
+    <%elsif current_page?(new_user_registration_path)%>
+    <%=render "devise/user/usersignup"%>
+    <%else%>
+    <%end%>
 </div><!--span8-->

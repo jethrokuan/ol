@@ -1,3 +1,4 @@
-#Immediate To-Dos
-- Fix Nav bar styling
-- Fix partials in all pages (some were renamed)
+#NOTE
+Router debugging disabled to test 404 page:
+re-enable in `development.rb`
+`config.consider_all_requests_local       = false`
