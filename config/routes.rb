@@ -1,6 +1,11 @@
 Ol::Application.routes.draw do
   resources :questionanswers
 
+  devise_for :staffs, :skip => [:new_staff_registration]
+  as :staff do
+    get 'a/really/really/really/really/long/route/for/staff/to/sign/up' => 'devise/registrations#new', :as => :new_staff_registration
+  end
+
   get "usr/manage"
   get "usr/profile"
   get "usr/staff"
