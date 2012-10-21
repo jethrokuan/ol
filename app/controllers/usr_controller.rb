@@ -1,8 +1,8 @@
 class UsrController < ApplicationController
   def manage
   	if staff_signed_in?
-  		redirect_to root_path, alert: "You are unauthorized to access this action."
   	else
+      redirect_to root_path, alert: "You are unauthorized to access this action."
   	end
   end
 
@@ -10,6 +10,6 @@ class UsrController < ApplicationController
   end
 
   def staff
-  	@staff = User.where("role = ?", "staff")
+  	@staff = Staff.all
   end
 end
