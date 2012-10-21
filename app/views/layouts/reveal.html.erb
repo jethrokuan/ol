@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= content_for(:title) + " | "%>openlectures</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <%= javascript_include_tag "application" %>
 </head>
@@ -21,8 +21,6 @@
 		<% end%>
 	</div>
 	<%end%>
-	<div class="container">
 		<%= yield %>
-	</div><!--container-->
 </body>
 </html>

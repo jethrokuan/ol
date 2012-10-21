@@ -1,0 +1,34 @@
+<h1>The start of an amazing journey</h1>
+<p class="muted">If you're not really staff we'll just delete you anyway >:D</p>
+<p class="muted">And yeah we need your email.</p>
+<hr>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), ) do |f| %>
+<%= devise_error_messages! %>
+<label class="control-label">Name</label>
+<div class="controls controls-row">
+    <%= f.text_field :givenname, class: "span4 aligncenter", placeholder: "Given Name", required: "required", autofocus: "autofocus" %><%= f.text_field :surname, class: "span4 aligncenter", placeholder: "Surname", required: "required" %>
+</div><!--controls-->
+<label class="control-label">Email</label>
+<div class="controls controls-row">
+    <%= f.email_field :email, class: "span8 aligncenter", placeholder: "Email", required: "required"%>
+</div><!--controls-->
+<label class="control-label">Password</label>
+<div class="controls controls-row">
+    <%= f.password_field :password, class: "span4 aligncenter", placeholder: "Password", required: "required"%><%= f.password_field :password_confirmation, class: "span4 aligncenter", placeholder: "Confirm Password", required: "required"%>
+</div><!--controls-->
+<label class="control-label">Education</label>
+<div class="controls controls-row">
+    <%= f.text_field :school, class: "span8 aligncenter", placeholder: "School" %>	
+</div><!--controls-->
+<label class="control-label">Information</label>
+<div class="controls controls-row">
+    <%= f.text_field :title, class: "span8 aligncenter", placeholder: "What are you working for us as?" %>
+</div><!--controls-->
+<div class="controls controls-row">
+    <%= f.text_field :phone, class: "span8 aligncenter", placeholder: "Phone Number (For staff database)" %>
+</div><!--controls-->
+<%= f.submit "Sign Up", class: "btn btn-link", style: "visibility:hidden;"%>
+<% end %>
+<hr>
+<%= render "devise/shared/links" %>
+

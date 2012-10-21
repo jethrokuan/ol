@@ -35,7 +35,7 @@ gem "cancan"
 gem 'jquery-rails'
 gem 'quiet_assets'
 gem 'simple_form'
-gem 'chosen-rails'
+gem 'select2-rails'
 
 gem 'friendly_id'
 
