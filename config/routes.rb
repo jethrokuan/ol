@@ -1,4 +1,6 @@
 Ol::Application.routes.draw do
+  get "youtube/upload"
+
   resources :questionanswers
 
   devise_for :staffs, :skip => [:new_staff_registration]
