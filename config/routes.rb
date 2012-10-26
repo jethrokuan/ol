@@ -1,4 +1,6 @@
 Ol::Application.routes.draw do
+  resources :schedules
+
   get "youtube/upload"
 
   resources :questionanswers
