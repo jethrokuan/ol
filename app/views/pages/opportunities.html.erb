@@ -3,6 +3,7 @@
 <nav class="span3">
 <%=render 'shared/logo'%>
 <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+	<%=render 'shared/search'%>
 	<%=render 'shared/start'%>
 	<%=render 'shared/about'%>
 	<%=render 'shared/last'%>
@@ -10,7 +11,7 @@
 </nav><!--span3-->
 <div class="span8 offset1">
 <ul class="thumbnails">
-	<li class="span8" style="margin-top:-5px;"><a class="thumbnail"><%=image_tag "work.jpg"%></a></li>
+	<li class="span8"><a class="thumbnail"><%=image_tag "work.jpg"%></a></li>
 </ul><!--thumbnails-->
 <h1>We can't pay you, but we can give you <span class="salmon">the experience of a lifetime</span></h1>
 <hr>
@@ -66,7 +67,7 @@
 <div class="row">	
 <div class="span4 aligncenter">
 		<form>
-			<legend><a href="http://en.wikipedia.org/wiki/Red_pill_and_blue_pill" target="_blank"><%=image_tag "bluepill.png", style:"width:25%;"%><p>Blue Pill</a></p></legend>
+			<legend><a href="http://en.wikipedia.org/wiki/Red_pill_and_blue_pill" target="_blank"><%=image_tag "bluepill.svg"%><p>Blue Pill</a></p></legend>
 			<input type="text" class="span4" placeholder="Name" required>
 			<input type="text" class="span4" placeholder="Current Location" required>
 			<input type="email" class="span4" placeholder="Email Address" required>
@@ -80,14 +81,14 @@
 			</select>
 			<textarea rows="3" class="span4" placeholder="What are we doing wrong?" required></textarea>
 			<div class="input-append hidden-phone">
-				<input class="span3" id="appendedInputButton" size="16" type="text" placeholder="For anything else"><button class="btn" type="button">Upload</button>
+				<input class="span3 muted" id="appendedInputButton" size="16" type="text" placeholder="For anything else"><button class="btn" type="button">Upload</button>
 			</div>
 			<h3 class="aligncenter"><a href="#"><span class="hidden-phone"><i class="icon-ok"></i><br/></span><small>Submit Form A</small></a></h3>
 		</form>
 	</div><!--span4-->
 	<div class="span4 aligncenter">
 		<form>
-			<legend class="aligncenter"><a href="http://en.wikipedia.org/wiki/Red_pill_and_blue_pill" target="_blank"><%=image_tag "redpill.png", style:"width:25%;"%><p>Red Pill</a></p></legend>
+			<legend class="aligncenter"><a href="http://en.wikipedia.org/wiki/Red_pill_and_blue_pill" target="_blank"><%=image_tag "redpill.svg"%><p>Red Pill</a></p></legend>
 			<textarea rows="13" class="span4" placeholder="Anything goes" required></textarea>
 			<h3 class="aligncenter"><a href="#"><span class="hidden-phone"><i class="icon-ok"></i><br/></span><small>Submit Form B</small></a></h3>
 		</form>

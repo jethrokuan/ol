@@ -1,8 +1,10 @@
+<input type="search" placeholder="Search Everything!">
+<hr>
 <% if user_signed_in? %>
 	<li><%= link_to(current_user.givenname+ " "+ current_user.surname, usr_profile_path)%></li>
 <%elsif staff_signed_in?%>
     <li><%= link_to(current_staff.givenname+ " "+ current_staff.surname, usr_profile_path)%></li>
-    <li><%= link_to "Manage OL", usr_manage_path%></li>
+    <li><%= link_to('OL Command', usr_manage_path)%></li>
 <% else %>
     <li><%= link_to('Log In', new_user_session_path)%></li>
     <li><%= link_to('Get Started', new_user_registration_path)%></li>
