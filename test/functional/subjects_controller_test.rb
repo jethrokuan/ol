@@ -13,7 +13,7 @@ class SubjectsControllerTest < ActionController::TestCase
 
   test "should get new" do
     get :new
-    assert_response :success
+    assert_response :redirect
   end
 
   test "should create subject" do

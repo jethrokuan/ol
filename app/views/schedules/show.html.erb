@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Checkpoint:</b>
+  <%= @schedule.checkpoint %>
+</p>
+
+<p>
+  <b>Lesson:</b>
+  <%= @schedule.lesson %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @schedule.subject %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @schedule.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

@@ -16,7 +16,7 @@
 				</nav><!--span3-->
 			<div class="span8 offset1">
 			<h1><%=@lesson.lesson%></h1>
-			<p class="lead"><small>by</small> <a href="#">Lydia Liu</a></p>
+			<p class="lead"><small>by</small> <a href="#"><%=@lesson.staff.givenname + " " + @lesson.staff.surname%></a></p>
 			<hr>
 			<div class="row">
 				<div class="span6">
@@ -25,7 +25,7 @@
 				<%@lesson.checkpoints.each_with_index do |checkpoint,index|%>
 					<li><a href="#" onclick=<%="Reveal.navigateTo(" + (index+1).to_s + ",0)"%>><%=checkpoint.checkpoint%></a></li>
 				<%end%>
-				<li><a href="#" onclick="Reveal.navigateTo(4,0)" class="salmon">Summary</a></li>
+				<li><a href="#/summary" class="salmon">Summary</a></li>
 			</ol>
 		</div><!--span6-->
 		<div class="span2 aligncenter hidden-phone">
@@ -97,7 +97,7 @@
 			</section>
 		<%end%>
 	</section>
-		<section class="alignleft">
+		<section class="alignleft" id="summary">
 			<div class="row-fluid alignleft">
 				<div class="span4">
 					<ul class="nav nav-pills nav-stacked aligncenter marginbot20p hidden-phone">

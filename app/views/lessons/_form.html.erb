@@ -4,10 +4,11 @@
     <%= f.association :topic, label_method: :topic, input_html: {class:"input-xxlarge e1"}%>
     <%= f.input :is_sublesson, input_html: {class:"input-xxlarge"}%>
     <%= f.input :order, input_html: {class:"input-xxlarge"} %>
+    <%= f.association :staff, label_method: :givenname%>
 
   <div class="form-actions">
     <button type="submit" class="btn btn-primary">
-      <span class='hidden-phone'><i class='icon-ok'></i> Create Lesson
+      <span class='hidden-phone'><i class='icon-ok'></i> Submit
     </button>
   </div>
 <% end %>
