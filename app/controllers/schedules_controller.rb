@@ -1,6 +1,11 @@
 class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
+
+  load_and_authorize_resource find_by: :slug
+  skip_load_resource :except => [:index, :show]
+  skip_authorize_resource :except => [:index, :show]
+
   def index
     @schedules = Schedule.all
 
