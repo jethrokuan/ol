@@ -4,7 +4,7 @@ class CreateSchedules < ActiveRecord::Migration
       t.string :checkpoint
       t.string :lesson
       t.string :subject
-      t.datetime :date
+      t.date :date
 
       t.timestamps
     end

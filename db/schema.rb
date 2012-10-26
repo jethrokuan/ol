@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20121026102114) do
     t.string   "checkpoint"
     t.string   "lesson"
     t.string   "subject"
-    t.datetime "date"
+    t.date     "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
