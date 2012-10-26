@@ -18,9 +18,7 @@ class ApplicationController < ActionController::Base
 	    @current_ability or @current_ability = Ability.new(current_auth_resource)
 	end
 
-	helper_method :yt_client
-	private
-    def yt_client
-      @yt_client ||=  YouTubeIt::Client.new(:username => "openlecturessg", :password =>  "tequilatequila", :dev_key => "AI39si5kvS-bEkdPPvkQ9MrLDlnN_julXKUHxNvVeqzMMpSloUShVhwhIsbDWdkHgyZDLTWmWwKJ6e8Zp0N23gWwJZx38_dINw")
-    end
+	def after_sign_in_path_for(resource)
+	 usr_profile_path
+	end
 end
