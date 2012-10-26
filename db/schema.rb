@@ -52,10 +52,13 @@ ActiveRecord::Schema.define(:version => 20121026102114) do
     t.string   "checkpoint"
     t.string   "lesson"
     t.string   "subject"
+    t.string   "slug"
     t.date     "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "schedules", ["slug"], :name => "index_schedules_on_slug", :unique => true
 
   create_table "staffs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

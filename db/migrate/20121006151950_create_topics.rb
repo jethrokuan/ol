@@ -3,7 +3,7 @@ class CreateTopics < ActiveRecord::Migration
     create_table :topics do |t|
       t.string :topic
       t.integer :subject_id
-      t.integer :order
+      t.integer :position
       t.text :description
       t.string :slug
 

@@ -4,9 +4,11 @@ class CreateSchedules < ActiveRecord::Migration
       t.string :checkpoint
       t.string :lesson
       t.string :subject
+      t.string :slug
       t.date :date
 
       t.timestamps
     end
+    add_index :schedules, :slug, unique: true
   end
 end

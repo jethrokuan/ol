@@ -4,7 +4,7 @@ class CreateLessons < ActiveRecord::Migration
       t.string :lesson
       t.integer :topic_id
       t.boolean :is_sublesson, default: false
-      t.integer :order
+      t.integer :position
       t.string :slug
       t.integer :staff_id
 
