@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  checkpoint: MyString
+  lesson: MyString
+  subject: MyString
+  date: 2012-10-26 18:21:14
+
+two:
+  checkpoint: MyString
+  lesson: MyString
+  subject: MyString
+  date: 2012-10-26 18:21:14

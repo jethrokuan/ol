@@ -6,6 +6,7 @@ class CreateLessons < ActiveRecord::Migration
       t.boolean :is_sublesson, default: false
       t.integer :order
       t.string :slug
+      t.integer :staff_id
 
       t.timestamps
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021043439) do
+ActiveRecord::Schema.define(:version => 20121026102114) do
 
   create_table "checkpoints", :force => true do |t|
     t.string   "checkpoint"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20121021043439) do
     t.boolean  "is_sublesson", :default => false
     t.integer  "order"
     t.string   "slug"
+    t.integer  "staff_id"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
   end
@@ -45,6 +46,15 @@ ActiveRecord::Schema.define(:version => 20121021043439) do
     t.integer  "checkpoint_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "schedules", :force => true do |t|
+    t.string   "checkpoint"
+    t.string   "lesson"
+    t.string   "subject"
+    t.datetime "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "staffs", :force => true do |t|

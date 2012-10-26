@@ -1,0 +1,14 @@
+<%= simple_form_for(@schedule) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :checkpoint %>
+    <%= f.input :lesson %>
+    <%= f.input :subject %>
+    <%= f.input :date %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
