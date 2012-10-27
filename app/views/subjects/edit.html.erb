@@ -17,11 +17,13 @@
 	<%@subject.topics.each do |topic|%>
 		<h3><%=topic.topic%> <small><a href=<%=edit_topic_path(topic)%> class="salmon">(EDIT)</a></small></h3>
 		<h6><small><%=topic.description%></small></h6>
-		<ol>
+		<ol id="lesson-list">
 			<%topic.lessons.each do |lesson|%>
 			<%if lesson.is_sublesson%>
 				<ul class="unstyled">
-					<li><%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small></li>
+          <% content_tag_for :li, lesson do %>  
+               <%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small> 
+             <% end %>
 					<ul class="unstyled">
 					<%lesson.checkpoints.each do |checkpoint|%>
 						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>
@@ -43,39 +45,3 @@
 	<%=render partial: "shared/manage"%>
 	</div><!--span8-->
 	</div><!--row-->
-
-<script>
-function handleDragOver(e) {
-  if (e.preventDefault) {
-    e.preventDefault(); // Necessary. Allows us to drop.
-  }
-
-  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
-
-  return false;
-}
-var dragSrcEl = null;
-function handleDragStart(e) {
-  dragSrcEl = this;
-
-  e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/html', this.innerHTML);
-}
-function handleDrop(e) {
-  if (e.stopPropagation) {
-    e.stopPropagation();
-  }
-  if (dragSrcEl != this) {
-    dragSrcEl.innerHTML = this.innerHTML;
-    this.innerHTML = e.dataTransfer.getData('text/html');
-  }
-
-  return false;
-}
-var cols = document.querySelectorAll('.lesson');
-[].forEach.call(cols, function(col) {
-  col.addEventListener('dragstart', handleDragStart, false);
-  col.addEventListener('dragover', handleDragOver, false);
-  col.addEventListener('drop', handleDrop, false);
-});
-</script>

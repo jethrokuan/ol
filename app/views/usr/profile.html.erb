@@ -4,7 +4,11 @@
       <%=render partial: 'shared/logo'%>
       <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
         <%=render partial: 'shared/start'%>
-        <%=render partial: "shared/navmanage"%>
+        <% if staff_signed_in?%>
+        	<%=render partial: "shared/navmanage"%>
+        <%else%>
+        	<%=render partial: "shared/navsubjects"%>
+        <%end%>
         <%=render partial: "shared/last"%>
       </ul>
   </nav><!--span3-->

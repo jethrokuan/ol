@@ -1,5 +1,5 @@
 class Checkpoint < ActiveRecord::Base
-  attr_accessible :checkpoint, :description, :lesson_id, :objective, :order, :qaarray, :videourl
+  attr_accessible :checkpoint, :description, :lesson_id, :objective, :position, :videourl
   has_many :questionanswers
   belongs_to :lesson
 

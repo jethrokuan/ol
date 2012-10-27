@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20121026102114) do
     t.text     "description"
     t.string   "videourl"
     t.text     "objective"
-    t.integer  "order"
+    t.integer  "position"
     t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20121026102114) do
     t.string   "lesson"
     t.integer  "topic_id"
     t.boolean  "is_sublesson", :default => false
-    t.integer  "order"
+    t.integer  "position"
     t.string   "slug"
     t.integer  "staff_id"
     t.datetime "created_at",                      :null => false
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(:version => 20121026102114) do
   create_table "topics", :force => true do |t|
     t.string   "topic"
     t.integer  "subject_id"
-    t.integer  "order"
+    t.integer  "position"
     t.text     "description"
     t.string   "slug"
     t.datetime "created_at",  :null => false

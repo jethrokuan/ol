@@ -36,6 +36,6 @@ gem 'jquery-rails'
 gem 'quiet_assets'
 gem 'simple_form'
 gem 'select2-rails'
-# gem 'youtube_it'
+gem 'acts_as_list'
 
 gem 'friendly_id'
