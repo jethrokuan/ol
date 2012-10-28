@@ -14,10 +14,10 @@
   </nav><!--span3-->
 <div class="span8 offset1">
 	<%if user_signed_in?%>
-		<h1><%=current_user.givenname + " " + current_user.surname%></h1>
+		<h1><%=current_user.fullname%></h1>
 		<p class="lead"><%=current_user.school%></a></p>
 	<%elsif staff_signed_in?%>
-		<h1><%=current_staff.givenname + " " + current_staff.surname%></h1>
+		<h1><%=current_staff.fullname%></h1>
 		<hr>
 		<h3>Important Information</h3>
 		<h6 class="muted">Y'know, the boyfriend/girlfriend's birthday, the place that sells the cheapest tequila shots, and the people who will attempt to hit on you. All this, neatly compiled and tabulated.</h6>

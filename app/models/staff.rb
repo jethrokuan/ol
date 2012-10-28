@@ -12,4 +12,8 @@ class Staff < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :title, :givenname, :surname, :school, :phone
   # attr_accessible :title, :body
+
+  def fullname
+    return givenname+" "+surname
+  end
 end
