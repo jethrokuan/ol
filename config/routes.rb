@@ -1,8 +1,6 @@
 Ol::Application.routes.draw do
   resources :schedules
 
-  get "youtube/upload"
-
   resources :questionanswers
 
   devise_for :staffs, :skip => [:new_staff_registration]

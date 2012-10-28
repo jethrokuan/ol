@@ -22,7 +22,7 @@
 				<div class="span6">
 			<h3>Checkpoints</h3>
 			<ol>
-				<%@lesson.checkpoints.each_with_index do |checkpoint,index|%>
+				<%@lesson.checkpoints.order("position desc").	each_with_index do |checkpoint,index|%>
 					<li><a href="#" onclick=<%="Reveal.navigateTo(" + (index+1).to_s + ",0)"%>><%=checkpoint.checkpoint%></a></li>
 				<%end%>
 				<li><a href="#/summary" class="salmon">Summary</a></li>
@@ -43,7 +43,7 @@
 					<ul class="nav nav-pills nav-stacked aligncenter marginbot20p hidden-phone">
 						<li><a href="#" onclick="Reveal.navigateTo(0,0);return false">Back to Start</a></li>
 					</ul>
-					<h5 class="muted"><%=checkpoint.order%></h5>
+					<h5 class="muted"><%=checkpoint.position%></h5>
 					<h2><%=checkpoint.checkpoint%></h2>
 					<hr>
 					<p><%=checkpoint.description%></p>
@@ -80,7 +80,7 @@
 							<ul class="nav nav-pills nav-stacked aligncenter marginbot20p hidden-phone">
 								<li><a href="#" onclick="Reveal.navigateUp();return false">Back to Lecture</a></li>
 							</ul>
-							<h5 class="muted"><%=checkpoint.order.to_s + ": "+checkpoint.checkpoint%></	h5>
+							<h5 class="muted"><%=checkpoint.position.to_s + ": "+checkpoint.checkpoint%></	h5>
 							<h2>Question</h2>
 							<hr>
 							<p><%=qa.question%></p>

@@ -21,9 +21,8 @@
 			<%topic.lessons.each do |lesson|%>
 			<%if lesson.is_sublesson%>
 				<ul class="unstyled">
-          <% content_tag_for :li, lesson do %>  
-               <%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small> 
-             <% end %>
+          <li>
+               <%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small> </li>
 					<ul class="unstyled">
 					<%lesson.checkpoints.each do |checkpoint|%>
 						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>

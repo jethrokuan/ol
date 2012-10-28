@@ -4,7 +4,7 @@
   <tr>
     <th>Lesson</th>
     <th>Topic</th>
-    <th>Order</th>
+    <th>Position</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,7 +14,7 @@
   <tr>
     <td><%= lesson.lesson %></td>
     <td><%= lesson.topic_id %></td>
-    <td><%= lesson.order %></td>
+    <td><%= lesson.position %></td>
     <td><%= link_to 'Show', lesson %></td>
     <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
     <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
