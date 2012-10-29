@@ -16,7 +16,9 @@ Ol::Application.routes.draw do
   devise_for :users
 
   resources :topics
-  resources :lessons
+  resources :lessons do 
+    collection {post :sort}
+  end
   resources :checkpoints
 
   resources :subjects do

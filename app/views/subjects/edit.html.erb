@@ -17,30 +17,23 @@
 	<%@subject.topics.each do |topic|%>
 		<h3><%=topic.topic%> <small><a href=<%=edit_topic_path(topic)%> class="salmon">(EDIT)</a></small></h3>
 		<h6><small><%=topic.description%></small></h6>
-		<ol id="lesson-list">
+		<ol id="lessons-list" data-update-url="<%= sort_lessons_url %>">
 			<%topic.lessons.each do |lesson|%>
-			<%if lesson.is_sublesson%>
-				<ul class="unstyled">
-          <li>
-               <%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small> </li>
-					<ul class="unstyled">
-					<%lesson.checkpoints.each do |checkpoint|%>
-						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>
-					<%end%>
-					</ul>
-				</ul>
-				<%else%>
-				<li><%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a></small></li>
-				<ul class="unstyled">
-					<%lesson.checkpoints.each do |checkpoint|%>
-						<li class="lesson" draggable="true"><i class="icon-sort"></i><%=link_to checkpoint.checkpoint, checkpoint%></li>
-					<%end%>
-					</ul>
-				<%end%>
+        <%=content_tag_for :li, lesson do%>
+        <span class="handle" style="cursor:move">[drag]</span>
+        <%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a>
+        <%if lesson.is_sublesson%>
+          [sublesson]
+        <%end%>
+        </small>
 			<%end%>
+    <%end%>   
 		</ol>
 		<hr>
 	<%end%>
 	<%=render partial: "shared/manage"%>
 	</div><!--span8-->
 	</div><!--row-->
+
+<%=javascript_include_tag "jquery-ui-1.9.1.custom.min"%>
+<%=javascript_include_tag "subjects.js.coffee"%>
