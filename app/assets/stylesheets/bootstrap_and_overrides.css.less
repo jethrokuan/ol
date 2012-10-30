@@ -7,7 +7,79 @@
 @fontAwesomeTtfPath: '/assets/fontawesome-webfont.ttf';
 @fontAwesomeSvgPath: '/assets/fontawesome-webfont.svg';
 @import "fontawesome";
-@import "font";
+
+/* Fonts */
+@font-face {
+    font-family: 'miso';
+    src: font-url('miso-regular-webfont.eot');
+    src: font-url('miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('miso-regular-webfont.woff') format('woff'),
+         font-url('miso-regular-webfont.ttf') format('truetype'),
+         font-url('miso-regular-webfont.svg#misoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'miso';
+    src: font-url('miso-bold-webfont.eot');
+    src: font-url('miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('miso-bold-webfont.woff') format('woff'),
+         font-url('miso-bold-webfont.ttf') format('truetype'),
+         font-url('miso-bold-webfont.svg#misobold') format('svg');
+    font-weight: bold;   
+    font-style: normal;
+}
+@font-face {
+    font-family: 'miso';
+    src: font-url('miso-light-webfont.eot');
+    src: font-url('miso-light-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('miso-light-webfont.woff') format('woff'),
+         font-url('miso-light-webfont.ttf') format('truetype'),
+         font-url('miso-light-webfont.svg#misolight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'insignia';
+    src: font-url('insignia-webfont.eot');
+    src: font-url('insignia-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('insignia-webfont.woff') format('woff'),
+         font-url('insignia-webfont.ttf') format('truetype'),
+         font-url('insignia-webfont.svg#InsigniaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fontawesome';
+    src: font-url('fontawesome-webfont.eot');
+    src: font-url('fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         font-url('fontawesome-webfont.woff') format('woff'),
+         font-url('fontawesome-webfont.ttf') format('truetype'),
+         font-url('fontawesome-webfont.svg#fontawesome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BDCartoonShoutRegular';
+     src: font-url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.insignia {
+    font-family: "insignia";
+    display: inline-block;
+    text-decoration: inherit;
+}
+.miso {
+    font-family: "miso";
+    display: inline-block;
+    text-decoration: inherit;
+}
+.helvetica {
+    font-family: "Helvetica Neue", "Helvetica";
+    display: inline-block;
+    text-decoration: inherit;
+}
 
 @accent:				#2eb8b8;
 @salmon:				#ff6666;
@@ -28,4 +100,131 @@
 @warningBackground:       @salmon;
 @errorBackground:         @cantaloupe;
 
-@import "ol";
+/* OL overrides */
+body {
+  margin-top:10px;
+}
+
+hr {
+  margin: 10px 0;
+}
+a {
+  -webkit-transition: 0.15s color ease;
+   -moz-transition: 0.15s color ease;
+       -o-transition: 0.15s color ease;
+          transition: 0.15s color ease;
+  text-decoration: none !important;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 1px transparent;
+}
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.5;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+.clean, .clean:hover {
+  color: inherit;
+}
+.popover-title, .popover-content { text-align:center; }
+
+.olgreen {color:@accent;}
+.salmon {color:@salmon;}
+.cantaloupe {color:@cantaloupe;}
+.white {color: @white;}
+.gray {color: @grayDark;}
+  
+#pacman canvas{
+    height: auto;
+    width: 80%;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 53.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper>iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Additional push for any purpose necessary */
+.padtop10 {padding-top:10px;}
+.padtop20 {padding-top:20px;}
+.padtop40 {padding-top:40px;}
+.padtop60 {padding-top:60px;}
+.padbot0 {padding-bottom:0;}
+.padbot20 {padding-bottom:20px;}
+.padbot40 {padding-bottom:40px;}
+.padbot60 {padding-bottom:60px;}
+.marginbot0 {margin-bottom:0;}
+.margintop0 {margin-top:0;}
+.margintop5p {margin-top:5%;}
+.marginbot5p {margin-bottom:5%;}
+.margintop10p {margin-top:10%;}
+.marginbot10p {margin-bottom:10%;}
+.margintop20p {margin-top:20%;}
+.marginbot20p {margin-bottom:20%;}
+.margintop30p {margin-top:30%;}
+.marginbot30p {margin-bottom:30%;}
+.margintop40p {margin-top:40%;}
+.marginbot40p {margin-bottom:40%;}
+.line0 {line-height:0 !important;}
+
+h1 { font-size: 2.966em; line-height: @baseLineHeight * 2;}
+h2 { font-size: 2.618em; line-height: @baseLineHeight * 1.6;}
+h3 { font-size: 1.833em; line-height: @baseLineHeight * 1.2;}
+h4 { font-size: 1.618em;}
+h5 { font-size: 1.133em;}
+h6 { font-size: 1em;}
+p.small, small { font-size: 0.618em !important;}
+
+/* FORMATTING */
+/* Left, right, and center align classes for convenience */
+.alignright { text-align:right; }
+.alignleft { text-align:left; }
+.aligncenter { text-align:center; }
+.alignjustify { text-align:justify; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: @inputBackground;
+  border: 1px solid @inputBorder;
+  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  .transition(~"border linear .2s, box-shadow linear .2s");
+
+  // Focus state
+  &:focus {
+    border-color: @accent;
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    .box-shadow(0 0 8px @accent);
+  }
+}
+
+.dl-horizontal dt {
+  margin-right: 10px;
+  width: 160px;
+}
