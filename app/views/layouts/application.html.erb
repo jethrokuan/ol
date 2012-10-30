@@ -17,7 +17,7 @@
 	<!-- end windows meta -->
 
 	<!-- icons and humans.txt -->
-	<link rel="dns-prefetch" href="/youtube.com">
+	<link rel="dns-prefetch" href="//youtube.com">
 	<%= favicon_link_tag 'favicon.ico'%>
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
@@ -52,6 +52,11 @@
 	<footer class="row" id="footer">
 		<div class="span8 offset2 aligncenter">
 			<hr>
+			<div class="table" style="display:table; margin:0 auto;">
+			<ul class="nav nav-pills marginbot0" style="display:inline-block;">
+				<%=render 'shared/about'%>
+			</ul>
+			</div><!--table-->
 			<p><span class="helvetica" style="font-size:0.9em;"><strong>open</strong>lectures</span> is designed and produced in <%=link_to "a small room", pages_team_path%> on the sunny island of Singapore</p>
 		</div>
 	</footer>

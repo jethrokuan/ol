@@ -1,13 +1,18 @@
 <%- title "Welcome" %>
 <div class="row">
-<nav class="span3">
+<div class="span12 aligncenter">
 <%=render 'shared/logo'%>
-<ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
-	<%=render 'shared/start'%>
-	<%=render 'shared/home'%>
-	<%=render 'shared/last'%>
-</ul>
-</nav><!--span3-->
-<div class="span8 offset1">
-	<h1>Free online education for anyone who wants to learn</h1>
-</div><!--span8-->
+<h4>Free, online lectures for anyone who wants to learn</h4>
+<div class="row">
+<div class="span4">
+<h2><%= link_to('Sign In', new_user_session_path)%></h2>
+</div><!--span4-->
+<div class="span4">
+<h1><%= link_to('Get Started', new_user_registration_path)%></h1>
+</div><!--span4-->
+<div class="span4">
+<h2>Subjects</h2>
+</div><!--span4-->
+</div><!--row-->
+</div><!--span12-->
+</div><!--row-->
