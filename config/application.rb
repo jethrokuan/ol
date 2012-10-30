@@ -11,7 +11,7 @@ end
 
 module Ol
   class Application < Rails::Application
-    config.assets.precompile += ['jquery-ui-1.9.1.custom.min.js', 'modernizr-1.5.min.js', 'select2.js', 'storyjs-embed.js', 'timeline-min.js', 'reveal.min.js', 'pacman.js', 'head.min.js', 'reveal.css', 'select2.css', 'timeline.css']
+    config.assets.precompile += ['*.js', '*.css']
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
