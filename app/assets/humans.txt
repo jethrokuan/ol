@@ -1,0 +1,147 @@
+/* TEAM */
+  The openlectures Cookie: Says Hello
+  Contact: hello [at] openlectures.org
+  Twitter: @openlecturessg
+  From: Singapore
+
+  Founder and Chief Executive Officer (CEO): Linan Qiu
+  Contact: linan.qiu [at] openlectures.org
+  Twitter: @linanqiu
+  From: Singapore
+
+  Founder: Yitao Zhang
+  Contact: yitao.zhang [at] openlectures.org
+  From: Singapore
+
+  Chief Financial Officer (CFO) and Regional Director, Singapore: Zexuan Ong
+  Contact: zexuan.ong [at] openlectures.org
+  From: Singapore
+
+  Chief Technology Officer (CTO): Kenneth Lim Mingjie
+  Contact: kenneth.lim [at] openlectures.org
+  Twitter: @kenlimmj
+  From: Singapore
+
+  Chief Academics Officer (CAO): Gary Lee Cheng Feng
+  Contact: gary.lee [at] openlectures.org
+  Twitter: @leegend411
+  From: Singapore
+
+  Chief Operations Officer (COO): Yong Jian Tek
+  Contact: yongjian.tek [at] openlectures.org
+  From: Singapore
+
+  Chief Communications Officer (CCO): Kang Jie Law
+  Contact: kangjie.law [at] openlectures.org
+  Twitter: @lawkangjie
+  From: Singapore
+
+  Regional Director, Japan: Ying Hui Xu
+  Contact: yinghui.xu [at] openlectures.org
+  From: Singapore
+
+  Regional Director, Britain: Crystalbel Foo
+  Contact: crystalbel.foo [at] openlectures.org
+  From: Singapore
+
+  Head, Strategy: Zhi Yuan He
+  Contact: zhiyuan.he [at] openlectures.org
+  From: Singapore
+
+  Head, Human Resource and Talent Development: Lydia Liu Tingruo
+  Contact: lydia.liu [at] openlectures.org
+  From: Singapore
+
+  Head, Outreach and Engagement: Gloria Chua Jia Min 
+  Contact: gloria.chua [at] openlectures.org
+  From: Singapore
+
+  Deputy Head, Outreach and Engagement: Samantha Ting Ting
+  Contact: samantha.ting [at] openlectures.org
+  Twitter: @tingsquarey
+  From: Singapore
+
+  Head, Corporate and Acquisition: Han Yingyue
+  Contact: yingyue.han [at] openlectures.org
+  Twitter: @linanqiu
+  From: Singapore
+
+  Deputy Head, Corporate and Acquisition: Jeremy Teoh
+  Contact: jeremy.teoh [at] openlectures.org
+  From: Singapore
+
+  Photography: Shengyi Ho
+  Contact: shengyi.ho [at] openlectures.org
+  From: Singapore
+
+  Videography and Post Production: Seeto Toh Yu Xiang
+  Contact: yuxiang.toh [at] openlectures.org
+  From: Singapore
+
+  Web Development: Jethro Kuan
+  Contact: jethro.kuan [at] openlectures.org
+  Twitter: @jethrokuan
+  From: Singapore
+
+  User Experience: Matthew Soh
+  Contact: matthew.soh [at] openlectures.org
+  From: Singapore
+
+  Design: Su Hang
+  Contact: su.hang [at] openlectures.org
+  Twitter: @suhangdageek
+  From: Singapore
+
+  Subject Coordinator, Biology: Samantha Seah
+  Contact: samanatha.seah [at] openlectures.org
+  Twitter: @sammiseah
+  From: Singapore
+
+  Subject Coordinator, Chemistry: Jian Yang Lum
+  Contact: jianyang.lum [at] openlectures.org
+  From: Singapore
+
+  Subject Coordinator, Physics: Daniel Lim
+  Contact: daniel.lim [at] openlectures.org
+  From: Singapore
+
+  Subject Coordinator, Mathematics: Jun Le Goh
+  Contact: junle.goh [at] openlectures.org
+  Twitter: @junlesg
+  From: Singapore
+
+  Subject Coordinator, Mathematics O-Level: Qian Kun
+  Contact: qian.kun [at] openlectures.org
+  From: Singapore
+
+  Subject Coordinator, History: James Andrew Linford
+  Contact: andrew.linford [at] openlectures.org
+  From: San Francisco, USA
+
+  Subject Coordinator, Hacks: Jun Wei Lam
+  Contact: junwei.lam [at] openlectures.org
+  From: Singapore
+
+  Subject Coordinator, Literature: Yu Neng Gan
+  Contact: yuneng.gan [at] openlectures.org
+  From: Singapore
+
+/* THANKS */
+  Copywriting: Austin Zeng Xu Jie
+  Contact: austinzengxujie [at] gmail.com
+  From: Singapore
+
+  REActor Singapore: Khairul Rusydi
+  Contact: khairulrusydi [at] gmail.com
+  Twitter: @khairulrusydi
+  From: Singapore
+
+  Marketing and Design: Jonathan Lim Eng Sze
+  Contact: jonathanlimes [at] gmail.com
+  From: Singapore
+
+/* SITE */
+  Last update: 4 July 2012
+  Language: English
+  Standards: HTML5, CSS3, SVG
+  Components: Modernizr, jQuery, yepnope.js, Ruby on Rails, Ember.js

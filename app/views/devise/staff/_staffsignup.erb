@@ -1,11 +1,9 @@
-<h1>The start of an amazing journey</h1>
-<p class="muted">If you're not really staff we'll just delete you anyway >:D</p>
-<p class="muted">And yeah we need your email.</p>
+<h1>Welcome to Ghetto Land</h1>
 <hr>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), ) do |f| %>
 <%= devise_error_messages! %>
 <label class="control-label">Name</label>
-<div class="controls controls-row">
+<div class="controls controls-row">	
     <%= f.text_field :givenname, class: "span4 aligncenter", placeholder: "Given Name", required: "required", autofocus: "autofocus" %><%= f.text_field :surname, class: "span4 aligncenter", placeholder: "Surname", required: "required" %>
 </div><!--controls-->
 <label class="control-label">Email</label>

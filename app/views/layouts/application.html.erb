@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
 <head>
+	<!-- universal meta -->
 	<meta charset="utf-8">
+	<title><%= content_for(:title) + ' | '%>openlectures</title>
 	<meta name="description" content="Free, online lectures for anyone who wants to learn - because effort should decide success">
-	<meta name="author" content="The openlectures Team">
+	<meta name="author" content="The Cookie Monster, hello@openlectures.org">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta property="og:site_name" content="openlectures">
+	<meta property="og:url" content="<%= request.url %>">
+	<meta property="og:title" content="<%= content_for(:title) + '|'%> openlectures">
+	<meta property="fb:app_id" content="238184899560410">
+	<meta property="og:email" content="hello@openlectures.org">
+	<%= csrf_meta_tags %>
 	<!-- end universal meta -->
 
 	<!-- windows meta -->
 	<!--[if lt IE 7]>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<%= stylesheet_link_tag "font-awesome-ie7", :media => "all" %>
 	<meta name="application-name" content="openlectures">
 	<meta name="msapplication-tooltip" content="Free, online lectures for anyone who wants to learn">
 	<meta name="msapplication-starturl" content="/">
@@ -18,19 +33,18 @@
 
 	<!-- icons and humans.txt -->
 	<link rel="dns-prefetch" href="//youtube.com">
-	<%= favicon_link_tag 'favicon.ico'%>
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<link rel="fluid-icon" href="/apple-touch-icon-144x144-precomposed.png" title="openlectures">
-	<link rel="author" type="text/plain" href="humans.txt">
+	<%= favicon_link_tag 'favicon.ico', :rel =>"shortcut icon", :type=> 'image/ico'%>
+	<%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel=>"apple-touch-icon-precomposed", :sizes=>"144x144", :type => 'image/png'%>
+	<%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel=>"apple-touch-icon-precomposed", :sizes=>"114x114", :type => 'image/png'%>
+	<%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel=>"apple-touch-icon-precomposed", :sizes=>"72x72", :type => 'image/png'%>
+	<%= favicon_link_tag 'apple-touch-icon-57x57-precomposed.png', :rel=>"apple-touch-icon-precomposed", :sizes=>"57x57", :type => 'image/png'%>
+	<%= favicon_link_tag 'apple-touch.png', :rel=>"apple-touch-icon", :type => 'image/png'%>
+	<%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel=>"fluid-icon", :title=>"openlectures", :type => 'image/png'%>
+	<%= favicon_link_tag 'humans.txt', :rel=>"author", :type => 'text/plain'%>
 	<!-- end icons and humans.txt -->
-  <title><%= content_for(:title) + " | "%>openlectures</title>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= csrf_meta_tags %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application"%>
 </head>
 <body>
 	<%if notice || alert%>
@@ -60,7 +74,7 @@
 			</ul>
 			</div><!--table-->
 			<p><span class="helvetica" style="font-size:0.9em;"><strong>open</strong>lectures</span> is designed and produced in <%=link_to "a small room", pages_team_path%> on the sunny island of Singapore</p>
-		</div>
+		</div><!--span8-->
 	</footer>
 	</div><!--container-->
 </body>
