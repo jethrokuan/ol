@@ -11,6 +11,7 @@ end
 
 module Ol
   class Application < Rails::Application
+    config.assets.precompile += ['*.js', '*.css']
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
