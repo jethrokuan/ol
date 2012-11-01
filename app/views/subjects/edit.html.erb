@@ -15,7 +15,7 @@
 		<%=render partial: "shared/manage"%>
 	<hr>
 	<%@subject.topics.each do |topic|%>
-		<h3><%=topic.topic%> <small><a href=<%=edit_topic_path(topic)%> class="salmon">(EDIT)</a></small></h3>
+		<h3><%=topic.topic%> <small><a href=<%=edit_topic_path(topic)%> class="salmon">(EDIT)</a><%=link_to "(DELETE)", topic_path(topic), method: :delete, class: "salmon"%></small></h3>
 		<h6><small><%=topic.description%></small></h6>
 		<ol id="lessons-list" data-update-url="<%= sort_lessons_url %>">
 			<%topic.lessons.each do |lesson|%>

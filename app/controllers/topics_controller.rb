@@ -81,7 +81,7 @@ class TopicsController < ApplicationController
     @topic.destroy
 
     respond_to do |format|
-      format.html { redirect_to topics_url }
+      format.html { redirect_to edit_subject_path(@topic.subject) }
       format.json { head :no_content }
     end
   end

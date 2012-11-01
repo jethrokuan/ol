@@ -81,7 +81,7 @@ class LessonsController < ApplicationController
     @lesson.destroy
 
     respond_to do |format|
-      format.html { redirect_to lessons_url }
+      format.html { redirect_to edit_subject_path(@lesson.subject) }
       format.json { head :no_content }
     end
   end
