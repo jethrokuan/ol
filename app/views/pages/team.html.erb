@@ -21,7 +21,7 @@
 	<ul class="thumbnails">
 	<%@thumbs.each do |thumb|%>
 	  <li class="span2">
-	    <a href="#" class="thumbnail" rel="popover" data-placement="top" data-trigger="hover" data-content=<%=thumb.gsub("app/assets/images/profile/","").gsub(".jpg","").capitalize%> data-title="Academic Dean" data-trigger="hover">
+	    <a class="thumbnail" rel="popover" data-placement="top" data-trigger="hover" data-content=<%=thumb.gsub("app/assets/images/profile/","").gsub(".jpg","").capitalize%> data-trigger="hover">
 	    	<%=image_tag thumb.gsub("app/assets/images/", "")%>
 	    </a>
 	  </li>
