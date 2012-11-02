@@ -9,19 +9,21 @@
 </head>
 <body>
 	<%if notice || alert%>
-	<div class="container">
-		<%if notice%>
-		<div class="alert alert-success">
-			<%= notice %>
-		</div>
-		<%end%>
-		<% if alert%>
-		<div class="alert alert-error">
-			<%= alert %>
-		</div>
-		<% end%>
-	</div>
-	<%end%>
+  <div class="container">
+    <%if notice%>
+    <div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+      <%= notice %>
+    </div>
+    <%end%>
+    <% if alert%>
+    <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+      <%= alert %>
+    </div>
+    <% end%>
+  </div>
+  <%end%>
 		<%= yield %>
 </body>
 </html>

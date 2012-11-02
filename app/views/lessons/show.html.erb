@@ -121,9 +121,9 @@
 				</div><!--span4-->
 				<div class="span7 offset1">
 					<ul class="icons">
-						<li><i class="icon-check"></i> How to elucidate the costs of price discrimination</li>
-						<li><i class="icon-check"></i> How to elucidate the benefits of price discrimination</li>
-						<li><i class="icon-check"></i> Be able to talk about how cafes price discriminate, as an example</li>
+						<%@lesson.summaries.each do |l|%>
+						<li><i class="icon-check"></i> <%=l.summary%></li>
+						<%end%>
 					</ul>
 				</div><!--span7-->
 			</div><!--row-->

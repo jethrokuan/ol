@@ -3,6 +3,8 @@ class Checkpoint < ActiveRecord::Base
   has_many :questionanswers
   belongs_to :lesson
 
+  acts_as_list :scope => :lesson
+
   extend FriendlyId
   friendly_id :checkpoint, use: :slugged
 end

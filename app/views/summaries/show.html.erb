@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Summary:</b>
+  <%= @summary.summary %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @summary.position %>
+</p>
+
+<p>
+  <b>Checkpoint:</b>
+  <%= @summary.checkpoint_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_summary_path(@summary) %> |
+<%= link_to 'Back', summaries_path %>

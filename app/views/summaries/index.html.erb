@@ -1,0 +1,27 @@
+<h1>Listing summaries</h1>
+
+<table>
+  <tr>
+    <th>Summary</th>
+    <th>Position</th>
+    <th>Checkpoint</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @summaries.each do |summary| %>
+  <tr>
+    <td><%= summary.summary %></td>
+    <td><%= summary.position %></td>
+    <td><%= summary.checkpoint_id %></td>
+    <td><%= link_to 'Show', summary %></td>
+    <td><%= link_to 'Edit', edit_summary_path(summary) %></td>
+    <td><%= link_to 'Destroy', summary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Summary', new_summary_path %>

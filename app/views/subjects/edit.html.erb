@@ -21,7 +21,7 @@
 			<%topic.lessons.each do |lesson|%>
         <%=content_tag_for :li, lesson do%>
         <span class="handle" style="cursor:move">[drag]</span>
-        <%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)</a>
+        <%=lesson.lesson%><small><a href=<%=edit_lesson_path(lesson)%> class="salmon">(EDIT)<%=link_to "(DELETE)", lesson_path(lesson), method: :delete, class: "salmon"%></a>
         <%if lesson.is_sublesson%>
           [sublesson]
         <%end%>

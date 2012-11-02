@@ -1,9 +1,8 @@
-<%=stylesheet_link_tag  "select2"%>
 <%= simple_form_for(@questionanswer, html: {class: "form-horizontal"}) do |f| %>
   <div class="form-inputs">
-    <%= f.association :checkpoint, label_method: :checkpoint, input_html: {class: "input-xxlarge e1" }%>
-    <%= f.input :question, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Question Here"%>
-     <%= f.input :answer, input_html: {class:"input-xxlarge", rows: "5"}, placeholder: "Answer Here"%>
+    <%= f.hidden_field :checkpoint_id%>
+    <%= f.input :question, input_html: {rows: "5"}, placeholder: "Question Here"%>
+     <%= f.input :answer, input_html: {rows: "5"}, placeholder: "Answer Here"%>
   </div>
   <div class="form-actions">
     <button type="submit" class="btn btn-primary">
@@ -12,8 +11,3 @@
   </div>
 <% end %>
 <%=javascript_include_tag "select2"%>
-<script type="text/javascript">
-  jQuery(function($){
-      $('.e1').select2();
-  });
-</script>

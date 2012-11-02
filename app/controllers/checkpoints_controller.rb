@@ -19,7 +19,8 @@ class CheckpointsController < ApplicationController
   # GET /checkpoints/1.json
   def show
     @checkpoint = Checkpoint.find(params[:id])
-    @questionanswer = Questionanswer.new
+    @questionanswer = @checkpoint.questionanswers.new
+    @summary = @checkpoint.lesson.summaries.new
 
     respond_to do |format|
       format.html # show.html.erb

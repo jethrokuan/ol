@@ -34,7 +34,14 @@
 <%@checkpoint.questionanswers.each do |qa|%>
   <%=qa.question%> - <%=qa.answer%>
 <%end%>
+<div class="row">
+  <div class="span6">
+    <%=render partial: "questionanswers/form"%>
+  </div>
+  <div class="span6">
+    <%=render partial: "summaries/form"%>
+  </div>
+</div>
 
-<%=render partial: "questionanswers/form"%>
 <%= link_to 'Edit', edit_checkpoint_path(@checkpoint) %> |
 <%= link_to 'Back', checkpoints_path %>

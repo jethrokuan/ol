@@ -1,4 +1,6 @@
 Ol::Application.routes.draw do
+  resources :summaries
+
   resources :schedules
 
   resources :questionanswers
