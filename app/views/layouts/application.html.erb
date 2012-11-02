@@ -63,19 +63,24 @@
 		<% end%>
 	</div>
 	<%end%>
-	<div class="container">
-		<%= yield %>
-	<div class="row" id="footer">
+	<div id="wrap">
+		<div class="container">
+			<%= yield %>
+		</div><!--container-->
+		<div id="push"></div>
+	</div><!--wrap-->
+	<footer class="container">
+		<div class="row">
 		<div class="span8 offset2 aligncenter">
 			<hr>
-			<div class="table" style="display:table; margin:0 auto;">
+			<div style="display:table; margin:0 auto;">
 			<ul class="nav nav-pills marginbot0" style="display:inline-block;">
 				<%=render 'shared/about'%>
 			</ul>
 			</div><!--table-->
 			<p><span class="helvetica" style="font-size:0.9em;"><strong>open</strong>lectures</span> is designed and produced in <%=link_to "a small room", pages_team_path%> on the sunny island of Singapore</p>
 		</div><!--span8-->
-	</div>
-	</div><!--container-->
+		</div><!--container-->
+	</footer>
 </body>
 </html>
