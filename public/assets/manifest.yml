@@ -1,9 +1,5 @@
 ---
 BD_Cartoon_Shout-webfont.ttf: BD_Cartoon_Shout-webfont.ttf
-insignia-webfont.eot: insignia-webfont.eot
-insignia-webfont.svg: insignia-webfont.svg
-insignia-webfont.ttf: insignia-webfont.ttf
-insignia-webfont.woff: insignia-webfont.woff
 miso-bold-webfont.eot: miso-bold-webfont.eot
 miso-bold-webfont.svg: miso-bold-webfont.svg
 miso-bold-webfont.ttf: miso-bold-webfont.ttf
@@ -20,6 +16,11 @@ He_Zhiyuan.jpg: He_Zhiyuan.jpg
 Jiahui_Liu.jpg: Jiahui_Liu.jpg
 Kenneth_Lim.jpg: Kenneth_Lim.jpg
 Linan_Qiu.jpg: Linan_Qiu.jpg
+apple-touch-icon-114x114-precomposed.png: apple-touch-icon-114x114-precomposed.png
+apple-touch-icon-144x144-precomposed.png: apple-touch-icon-144x144-precomposed.png
+apple-touch-icon-57x57-precomposed.png: apple-touch-icon-57x57-precomposed.png
+apple-touch-icon-72x72-precomposed.png: apple-touch-icon-72x72-precomposed.png
+apple-touch-icon.png: apple-touch-icon.png
 bluepill.png: bluepill.png
 bluepill.svg: bluepill.svg
 competitors1.png: competitors1.png
@@ -94,14 +95,18 @@ schedules.js: schedules.js
 select2.js: select2.js
 storyjs-embed.js: storyjs-embed.js
 subjects.js: subjects.js
+summaries.js: summaries.js
 timeline-min.js: timeline-min.js
 topics.js: topics.js
 usr.js: usr.js
 application.css: application.css
 bootstrap_and_overrides.css: bootstrap_and_overrides.css
 font-awesome-ie7.css: font-awesome-ie7.css
+main.css: main.css
 reveal.css: reveal.css
+scaffolds.css: scaffolds.css
 select2.css: select2.css
+summaries.css: summaries.css
 timeline.css: timeline.css
 jquery-ui.js: jquery-ui.js
 jquery-ui.min.js: jquery-ui.min.js

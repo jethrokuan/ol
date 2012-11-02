@@ -9327,36 +9327,22 @@ ul.icons li .icon-large:before {
 @font-face {
   font-family: 'miso';
   src: url(/assets/miso-regular-webfont.eot);
-  src: url(/assets/miso-regular-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/miso-regular-webfont.woff) format('woff'), url(/assets/miso-regular-webfont.ttf) format('truetype'), url(/assets/miso-regular-webfont.svg#misoregular) format('svg');
+  src: url(/assets/miso-regular-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/miso-regular-webfont.svg#misoregular) format('svg'), url(/assets/miso-regular-webfont.woff) format('woff'), url(/assets/miso-regular-webfont.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'miso';
   src: url(/assets/miso-bold-webfont.eot);
-  src: url(/assets/miso-bold-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/miso-bold-webfont.woff) format('woff'), url(/assets/miso-bold-webfont.ttf) format('truetype'), url(/assets/miso-bold-webfont.svg#misobold) format('svg');
+  src: url(/assets/miso-bold-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/miso-bold-webfont.svg#misobold) format('svg'), url(/assets/miso-bold-webfont.woff) format('woff'), url(/assets/miso-bold-webfont.ttf) format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'miso';
   src: url(/assets/miso-light-webfont.eot);
-  src: url(/assets/miso-light-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/miso-light-webfont.woff) format('woff'), url(/assets/miso-light-webfont.ttf) format('truetype'), url(/assets/miso-light-webfont.svg#misolight) format('svg');
+  src: url(/assets/miso-light-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/miso-light-webfont.svg#misolight) format('svg'), url(/assets/miso-light-webfont.woff) format('woff'), url(/assets/miso-light-webfont.ttf) format('truetype');
   font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'insignia';
-  src: url(/assets/insignia-webfont.eot);
-  src: url(/assets/insignia-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/insignia-webfont.woff) format('woff'), url(/assets/insignia-webfont.ttf) format('truetype'), url(/assets/insignia-webfont.svg#InsigniaRegular) format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'fontawesome';
-  src: url(/assets/fontawesome-webfont.eot);
-  src: url(/assets/fontawesome-webfont.eot?#iefix) format('embedded-opentype'), url(/assets/fontawesome-webfont.woff) format('woff'), url(/assets/fontawesome-webfont.ttf) format('truetype'), url(/assets/fontawesome-webfont.svg#fontawesome) format('svg');
-  font-weight: normal;
   font-style: normal;
 }
 @font-face {
@@ -9364,11 +9350,6 @@ ul.icons li .icon-large:before {
   src: url(/assets/BD_Cartoon_Shout-webfont.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-.insignia {
-  font-family: "insignia";
-  display: inline-block;
-  text-decoration: inherit;
 }
 .miso {
   font-family: "miso";
@@ -9379,13 +9360,6 @@ ul.icons li .icon-large:before {
   font-family: "Helvetica Neue", "Helvetica";
   display: inline-block;
   text-decoration: inherit;
-}
-/* OL overrides */
-body {
-  margin-top: 10px;
-}
-hr {
-  margin: 10px 0;
 }
 a {
   -webkit-transition: 0.15s color ease;
