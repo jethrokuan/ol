@@ -15,8 +15,6 @@ class LessonsController < ApplicationController
     end
   end
 
-  # GET /lessons/1
-  # GET /lessons/1.json
   def show
     @lesson = Lesson.find(params[:id])
 
@@ -26,8 +24,6 @@ class LessonsController < ApplicationController
     end
   end
 
-  # GET /lessons/new
-  # GET /lessons/new.json
   def new
     @lesson = Lesson.new
 
@@ -37,13 +33,10 @@ class LessonsController < ApplicationController
     end
   end
 
-  # GET /lessons/1/edit
   def edit
     @lesson = Lesson.find(params[:id])
   end
 
-  # POST /lessons
-  # POST /lessons.json
   def create
     @lesson = Lesson.new(params[:lesson])
 
@@ -58,8 +51,6 @@ class LessonsController < ApplicationController
     end
   end
 
-  # PUT /lessons/1
-  # PUT /lessons/1.json
   def update
     @lesson = Lesson.find(params[:id])
 
@@ -74,8 +65,6 @@ class LessonsController < ApplicationController
     end
   end
 
-  # DELETE /lessons/1
-  # DELETE /lessons/1.json
   def destroy
     @lesson = Lesson.find(params[:id])
     @lesson.destroy
@@ -84,6 +73,10 @@ class LessonsController < ApplicationController
       format.html { redirect_to edit_subject_path(@lesson.subject) }
       format.json { head :no_content }
     end
+  end
+
+  def showedit
+    @lesson = Lesson.find(params[:id])
   end
 
   def sort

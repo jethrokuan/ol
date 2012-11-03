@@ -1,6 +1,5 @@
-<%title "Edit Q/A"%>
 <div class="row">
-	<nav class="span3">
+  <nav class="span3">
       <%=render partial: 'shared/logo'%>
       <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
         <%=render partial: 'shared/start'%>
@@ -9,8 +8,16 @@
       </ul>
   </nav><!--span3-->
 <div class="span8 offset1">
-<h1>New Question and Answer</h1>
+<h1><%=@lesson.lesson%></h1>
+<h6 class="muted">Checkpoints:</h6>
+<%-@lesson.checkpoints.each do |cp|-%>
+<%=cp.checkpoint%>
+<%-end-%>
 <hr>
-<%=render partial: "form"%>
+
+</ol>
 </div><!--span8-->
 </div><!--row-->
+
+<%=javascript_include_tag "jquery-ui-1.9.1.custom.min"%>
+<%=javascript_include_tag "sortable.js"%>

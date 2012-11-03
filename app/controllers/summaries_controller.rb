@@ -1,44 +1,19 @@
 class SummariesController < ApplicationController
-  # GET /summaries
-  # GET /summaries.json
+  respond_to :json, :html
   def index
     @summaries = Summary.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @summaries }
-    end
+    respond_with @summaries
   end
 
-  # GET /summaries/1
-  # GET /summaries/1.json
-  def show
-    @summary = Summary.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @summary }
-    end
-  end
-
-  # GET /summaries/new
-  # GET /summaries/new.json
   def new
     @summary = Summary.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @summary }
-    end
+    respond_with @summary
   end
 
-  # GET /summaries/1/edit
   def edit
     @summary = Summary.find(params[:id])
   end
 
-  # POST /summaries
-  # POST /summaries.json
   def create
     @summary = Summary.new(params[:summary])
 
@@ -53,8 +28,6 @@ class SummariesController < ApplicationController
     end
   end
 
-  # PUT /summaries/1
-  # PUT /summaries/1.json
   def update
     @summary = Summary.find(params[:id])
 
@@ -69,8 +42,6 @@ class SummariesController < ApplicationController
     end
   end
 
-  # DELETE /summaries/1
-  # DELETE /summaries/1.json
   def destroy
     @summary = Summary.find(params[:id])
     @summary.destroy
