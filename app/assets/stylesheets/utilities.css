@@ -1,0 +1,64 @@
+/* Padding Classes */
+.padtop0 {padding-top:0;}
+.padtop10 {padding-top:10px;}
+.padtop20 {padding-top:20px;}
+.padtop40 {padding-top:40px;}
+.padtop60 {padding-top:60px;}
+
+.padbot0 {padding-bottom:0;}
+.padbot10 {padding-bottom:10px;}
+.padbot20 {padding-bottom:20px;}
+.padbot40 {padding-bottom:40px;}
+.padbot60 {padding-bottom:60px;}
+
+/* Margin Classes */
+.margintop0 {margin-top:0;}
+.margintop5p {margin-top:5%;}
+.margintop10p {margin-top:10%;}
+.margintop20p {margin-top:20%;}
+.margintop30p {margin-top:30%;}
+.margintop40p {margin-top:40%;}
+
+.marginbot0 {margin-bottom:0;}
+.marginbot5p {margin-bottom:5%;}
+.marginbot10p {margin-bottom:10%;}
+.marginbot20p {margin-bottom:20%;}
+.marginbot30p {margin-bottom:30%;}
+.marginbot40p {margin-bottom:40%;}
+
+/* Text Alignment */
+.alignright { text-align:right; }
+.alignleft { text-align:left; }
+.aligncenter { text-align:center; }
+.alignjustify { text-align:justify; }
+
+/* Link Styles */
+.clean, .clean:hover {
+  color: inherit;
+}
+
+/* Element Centering */
+.element-center {
+  display:table; 
+  margin:0 auto;
+}
+
+.element-center * {
+  display:inline-block;
+}
+
+/* Responsive Video Hack */
+.videoWrapper {
+  position: relative;
+  padding-bottom: 53.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper>iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
