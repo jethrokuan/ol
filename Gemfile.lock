@@ -40,6 +40,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    commonjs (0.2.6)
     daemons (1.1.9)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
@@ -64,6 +65,12 @@ GEM
     json (1.7.5)
     jwt (0.1.5)
       multi_json (>= 1.0)
+    less (2.2.2)
+      commonjs (~> 0.2.6)
+    less-rails (2.2.3)
+      actionpack (>= 3.1)
+      less (~> 2.2.0)
+    libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -129,6 +136,8 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    therubyracer (0.10.2)
+      libv8 (~> 3.3.10)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -160,6 +169,7 @@ DEPENDENCIES
   faraday
   friendly_id
   jquery-rails
+  less-rails
   oauth2
   omniauth
   omniauth-facebook
@@ -169,6 +179,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   select2-rails
   simple_form
+  therubyracer
   thin
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
