@@ -12,7 +12,7 @@
   <meta name="author" content="The Cookie Monster, hello@openlectures.org">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta property="og:site_name" content="openlectures">
   <meta property="og:url" content="<%= request.url %>">
   <meta property="og:title" content="<%= content_for(:title) + '|'%> openlectures">
@@ -24,6 +24,7 @@
   <!-- windows meta -->
   <!--[if lt IE 7]>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="cleartype" content="on">
   <%= stylesheet_link_tag "font-awesome-ie7", :media => "all" %>
   <meta name="application-name" content="openlectures">
   <meta name="msapplication-tooltip" content="Free, online lectures for anyone who wants to learn">
@@ -41,8 +42,8 @@
   <%= favicon_link_tag 'apple-touch-icon.png', :rel=>"apple-touch-icon", :type => 'image/png'%>
   <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel=>"fluid-icon", :title=>"openlectures", :type => 'image/png'%>
   <!-- end icons and humans.txt -->
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <script>var _gaq=[['_setAccount','UA-26070822-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </head>
 <body>
 	<%if notice || alert%>

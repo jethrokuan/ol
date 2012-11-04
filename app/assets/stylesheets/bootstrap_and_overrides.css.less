@@ -37,6 +37,7 @@ This might be replaced with another icon suite in time */
 .white {color: @white;}
 .gray {color: @grayDark;}
 
+/* Hides menu dropdown on large screens and shows on small */
 .tinynav { display: none }
 @media screen and (max-width: 768px) {
   .tinynav { display: block; width:100%; }
@@ -95,9 +96,12 @@ html {
     height: auto;
     width: 80%;
 }
+
+/* Fixes iOS textarea fail */
 textarea[contenteditable] {
     -webkit-appearance: none;
 }
+
 /* Match form border to color scheme */
 textarea,
 input[type="text"],

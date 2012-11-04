@@ -10,7 +10,8 @@
 	<title><%= content_for(:title) + ' | '%>openlectures</title>
 	<meta name="description" content="Free, online lectures for anyone who wants to learn - because effort should decide success">
 	<meta name="author" content="The Cookie Monster, hello@openlectures.org">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<%= javascript_include_tag "review"%>
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta property="og:site_name" content="openlectures">
@@ -42,9 +43,8 @@
 	<%= favicon_link_tag 'apple-touch-icon.png', :rel=>"apple-touch-icon", :type => 'image/png'%>
 	<%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel=>"fluid-icon", :title=>"openlectures", :type => 'image/png'%>
 	<!-- end icons and humans.txt -->
-	<%= csrf_meta_tags %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <script>var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+  <script>var _gaq=[['_setAccount','UA-26070822-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </head>
 <body>
 	<%if notice || alert%>
@@ -72,8 +72,9 @@
 	<footer class="container aligncenter marginbot10p">
 		<hr>
 			<div class="element-center">
-			<ul class="nav nav-pills marginbot0 hidden-phone navbar">
+			<ul id="botnav" class="nav nav-pills marginbot0">
 				<%=render 'shared/about'%>
+				<li><a class='reView' href='http://openlectures.org'>Mobile View</a></li>
 			</ul>
 			</div><!--element-center-->
 			<p><span class="helvetica" style="font-size:0.9em;"><strong>open</strong>lectures</span> is designed and produced in <%=link_to "a small room", pages_team_path%> on the sunny island of Singapore</p>
@@ -88,7 +89,7 @@
 	  }
 	}).listen();
 	$(function () {
-    $('.navbar').tinyNav();
+    $('#navbar').tinyNav();
   });
 	</script>
 </body>
