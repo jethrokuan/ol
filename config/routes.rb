@@ -1,15 +1,4 @@
 Ol::Application.routes.draw do
-  resources :topics
-  resources :lessons do 
-    collection {post :sort}
-  end
-  resources :checkpoints do
-    collection {post :sort}
-  end
-  resources :summaries
-  resources :schedules
-  resources :questionanswers
-
   devise_for :staffs, :skip => [:new_staff_registration]
   as :staff do
     get 'a/really/really/really/really/long/route/for/staff/to/sign/up' => 'devise/registrations#new', :as => :new_staff_registration
@@ -34,6 +23,17 @@ Ol::Application.routes.draw do
     resources :checkpoints
   end
 
+  resources :topics
+  resources :lessons do 
+    collection {post :sort}
+  end
+  resources :checkpoints do
+    collection {post :sort}
+  end
+  resources :summaries
+  resources :schedules
+  resources :questionanswers
+  
   get "pages/index"
   get "pages/team"
   get "pages/opportunities"
