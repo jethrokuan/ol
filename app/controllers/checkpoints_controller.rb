@@ -6,12 +6,8 @@ class CheckpointsController < ApplicationController
   skip_authorize_resource :only => :index
   
   def index
-    @lesson = Lesson.find(params[:lesson_id])
-    @checkpoints = @lesson.checkpoints
-
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @checkpoints }
+      format.json { render json: Checkpoint.all }
     end
   end
 

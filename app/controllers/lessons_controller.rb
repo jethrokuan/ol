@@ -6,12 +6,13 @@ class LessonsController < ApplicationController
   skip_authorize_resource :only => :index
   
   def index
-    @topic = Topic.find(params[:topic_id])
-    @lessons = @topic.lessons
-
     respond_to do |format|
-      format.html {render :layout => 'reveal'}
-      format.json { render json: @lessons }
+      format.html {
+        @topic = Topic.find(params[:topic_id])
+        @lessons = @topic.lessons
+        render :layout => 'reveal'
+      }
+      format.json { render json: Lesson.all }
     end
   end
 
