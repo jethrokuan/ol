@@ -50,16 +50,20 @@
 	<%if notice || alert%>
 	<div class="container">
 		<%if notice%>
+		<div class="page-alert">
 		<div class="alert alert-success">
-		<button type="button" class="close" data-dismiss="alert">×</button>
+		<button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
 			<%= notice %>
-		</div>
+		</div><!--alert-->
+		</div><!--pagealert-->
 		<%end%>
 		<% if alert%>
+		<div class="page-alert">
 		<div class="alert alert-error">
-		<button type="button" class="close" data-dismiss="alert">×</button>
+		<button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
 			<%= alert %>
-		</div>
+		</div><!--alert-->
+		</div><!--pagealert-->
 		<% end%>
 	</div>
 	<%end%>
@@ -74,7 +78,7 @@
 			<div class="element-center">
 			<ul id="botnav" class="nav nav-pills marginbot0">
 				<%=render 'shared/about'%>
-				<li><a class='reView' href='http://openlectures.org'>Mobile View</a></li>
+				<li><a class="reView" href="http://openlectures.org">Switch View</a></li>
 			</ul>
 			</div><!--element-center-->
 			<p><span class="helvetica" style="font-size:0.9em;"><strong>open</strong>lectures</span> is designed and produced in <%=link_to "a small room", pages_team_path%> on the sunny island of Singapore</p>

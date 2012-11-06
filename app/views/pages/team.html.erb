@@ -2,7 +2,7 @@
 <div class="row">
 <nav class="span3">
 <%=render 'shared/logo'%>
-<ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+<ul id="navbar" data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
 	<%=render 'shared/search'%>
 	<%=render 'shared/start'%>
 	<%=render partial: "shared/pages"%>
@@ -21,7 +21,7 @@
 	<ul class="thumbnails">
 	<%@thumbs.each do |thumb|%>
 	  <li class="span2">
-	    <a class="thumbnail" rel="popover" data-placement="top" data-trigger="hover" data-content=<%=thumb.gsub("app/assets/images/profile/","").gsub(".jpg","").capitalize%> data-trigger="hover">
+	    <a class="thumbnail" rel="popover" data-placement="top" data-trigger="hover" data-content=<%=thumb.gsub("app/assets/images/profile/","").gsub(".jpg","").capitalize%>>
 	    	<%=image_tag thumb.gsub("app/assets/images/", "")%>
 	    </a>
 	  </li>
