@@ -33,18 +33,23 @@ Topic.create(	topic: "National and International Economy",
 #Economics - Lessons
 Lesson.create(	lesson: "Scarcity, Choice and Opportunity Cost",
 				topic_id: "1",
+				staff_id: "1",
 	)
 
 Lesson.create(	lesson: "Resource Allocation in Competitive Markets",
 				topic_id: "1",
+				staff_id: "1",
 	)
 
 Lesson.create(	lesson: "Price Discrimination",
 				topic_id: "1",
+				staff_id: "1",
 				is_sublesson: true,
 	)
 
 Lesson.create(	lesson: "Firms and How They Operate",
 				topic_id: "1",
+				staff_id: "1",
 	)
 
+#Economics - Checkpoints

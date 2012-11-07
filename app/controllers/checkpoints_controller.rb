@@ -1,6 +1,4 @@
 class CheckpointsController < ApplicationController
-  # GET /checkpoints
-  # GET /checkpoints.json
   load_and_authorize_resource find_by: :slug
   skip_load_resource :only => :index
   skip_authorize_resource :only => :index
@@ -11,8 +9,6 @@ class CheckpointsController < ApplicationController
     end
   end
 
-  # GET /checkpoints/1
-  # GET /checkpoints/1.json
   def show
     @checkpoint = Checkpoint.find(params[:id])
     @questionanswer = @checkpoint.questionanswers.new
@@ -24,8 +20,6 @@ class CheckpointsController < ApplicationController
     end
   end
 
-  # GET /checkpoints/new
-  # GET /checkpoints/new.json
   def new
     @checkpoint = Checkpoint.new
 
@@ -35,13 +29,10 @@ class CheckpointsController < ApplicationController
     end
   end
 
-  # GET /checkpoints/1/edit
   def edit
     @checkpoint = Checkpoint.find(params[:id])
   end
 
-  # POST /checkpoints
-  # POST /checkpoints.json
   def create
     @checkpoint = Checkpoint.new(params[:checkpoint])
 
@@ -56,8 +47,6 @@ class CheckpointsController < ApplicationController
     end
   end
 
-  # PUT /checkpoints/1
-  # PUT /checkpoints/1.json
   def update
     @checkpoint = Checkpoint.find(params[:id])
 
@@ -72,8 +61,6 @@ class CheckpointsController < ApplicationController
     end
   end
 
-  # DELETE /checkpoints/1
-  # DELETE /checkpoints/1.json
   def destroy
     @checkpoint = Checkpoint.find(params[:id])
     @checkpoint.destroy

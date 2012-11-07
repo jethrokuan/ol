@@ -1,4 +1,4 @@
-jQuery ->
+$(document).ready ->
   $('#sortable').sortable
     axis: 'y'
     handle: '.handle'

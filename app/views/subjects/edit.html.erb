@@ -17,7 +17,7 @@
 	<%@subject.topics.each do |topic|%>
 		<h3><%=topic.topic%> <small><a href=<%=edit_topic_path(topic)%> class="salmon">(EDIT)</a><%=link_to "(DELETE)", topic_path(topic), method: :delete, class: "salmon"%></small></h3>
 		<h6><small><%=topic.description%></small></h6>
-		<ol id="lessons-list" data-update-url="<%= sort_lessons_url %>">
+		<ol id="sortable" data-update-url="<%= sort_lessons_url %>">
 			<%topic.lessons.each do |lesson|%>
         <%=content_tag_for :li, lesson do%>
         <span class="handle" style="cursor:move">[drag]</span>
@@ -34,6 +34,7 @@
 	<%=render partial: "shared/manage"%>
 	</div><!--span8-->
 	</div><!--row-->
-
-<%=javascript_include_tag "jquery-ui-1.9.1.custom.min"%>
-<%=javascript_include_tag "sortable.js"%>
+ <%-content_for  :javascripts do%>
+  <%=javascript_include_tag "jquery-ui-1.9.1.custom.min"%>
+  <%=javascript_include_tag "sortable.js"%>
+  <%-end%>

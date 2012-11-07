@@ -17,12 +17,13 @@
 <%@lesson.checkpoints.each do |cp|%>
   <%=content_tag_for :li, cp do%>
   <span class="handle" style="cursor:move">[drag]</span>
-  <%=cp.checkpoint%><small><a href=<%=edit_checkpoint_path(cp)%> class="salmon">(EDIT)<%=link_to "(DELETE)", checkpoint_path(cp), method: :delete, class: "salmon"%></a></small>
+  <%=link_to cp.checkpoint, checkpoint_path(cp)%><small><a href=<%=edit_checkpoint_path(cp)%> class="salmon">(EDIT)<%=link_to "(DELETE)", checkpoint_path(cp), method: :delete, class: "salmon"%></a></small>
   <%end%>
 <%end%>
 </ol>
 </div><!--span8-->
 </div><!--row-->
-
+<%content_for :javascripts do%>
 <%=javascript_include_tag "jquery-ui-1.9.1.custom.min"%>
 <%=javascript_include_tag "sortable.js"%>
+<%end%>

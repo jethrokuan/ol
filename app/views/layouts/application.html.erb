@@ -82,6 +82,7 @@
 	<%= javascript_include_tag "application"%>
 	<%= javascript_include_tag "enquire.min"%>
 	<%= javascript_include_tag "tinynav"%>
+	<%= yield :javascripts %>
 	<script>
 	enquire.register("screen and (max-width:768px)", {
     match : function() {
