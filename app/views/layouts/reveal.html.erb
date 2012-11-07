@@ -30,7 +30,7 @@
   <%= stylesheet_link_tag "font-awesome-ie7", :media => "all" %>
   <meta name="application-name" content="openlectures">
   <meta name="msapplication-tooltip" content="Free, online lectures for anyone who wants to learn">
-  <meta name="msapplication-starturl" content="/">
+  <meta name="msapplication-starturl" content="<%=root_path%>">
   <![endif]-->
   <!-- end windows meta -->
 
@@ -45,6 +45,7 @@
   <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel=>"fluid-icon", :title=>"openlectures", :type => 'image/png'%>
   <!-- end icons and humans.txt -->
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= yield :styles %>
   <script>var _gaq=[['_setAccount','UA-26070822-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </head>
 <body>

@@ -1,6 +1,7 @@
 <%title @lesson.lesson%>
+<%content_for :styles do%>
 <%= stylesheet_link_tag  "reveal", :media => "all" %>
-
+<%end%>
 <div class="reveal">
 	<div class="state-background"></div>
 	<div class="slides">
@@ -36,6 +37,16 @@
 			</div><!--row-->
 		</section>
 		<%@lesson.checkpoints.each do |checkpoint|%>
+		<%content_for :fbog do%>
+			<%= tag :meta, property: "og:type", content: "video.episode" %>
+			<%= tag :meta, property: "og:image", content: "http://img.youtube.com/vi/" + checkpoint.videourl + "/maxresdefault.jpg" %>
+			<%= tag :meta, property: "og:video", content: "http://youtube.com/" + checkpoint.videourl %>
+			<%= tag :meta, property: "og:video:actor", content: @lesson.staff.givenname + " " + @lesson.staff.surname %>
+			<%= tag :meta, property: "og:video:actor:role", content: "Lecturer" %>
+			<%= tag :meta, property: "og:video:director", content: "openlectures" %>
+			<%= tag :meta, property: "og:video:type", content: "video/youtube" %>
+			<%= tag :meta, property: "og:video:series", content: @lesson.lesson %>
+		<%end%>
 			<section id=<%=checkpoint.checkpoint.gsub(' ', '').downcase%>>
 				<section>
 				<div class="row-fluid alignleft">
@@ -140,13 +151,15 @@
 	<!-- Presentation progress bar -->
 	<!-- <div class="progress"><span></span></div> -->
 	</div><!--reveal-->
-<%= javascript_include_tag "head.min" %>
-<%= javascript_include_tag "reveal.min" %>
-<script>
-	Reveal.initialize({
-		history: true,
-		rollingLinks: false,
-		transition: 'linear',
-		mouseWheel: false
-	});
-</script>
+<%content_for :javascripts do%>
+	<%= javascript_include_tag "head.min" %>
+	<%= javascript_include_tag "reveal.min" %>
+	<script>
+		Reveal.initialize({
+			history: true,
+			rollingLinks: false,
+			transition: 'linear',
+			mouseWheel: false
+		});
+	</script>
+<% end %>
