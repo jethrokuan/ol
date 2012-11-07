@@ -1,47 +1,52 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Checkpoint:</b>
-  <%= @checkpoint.checkpoint %>
-</p>
-
-<p>
-  <b>Lesson:</b>
-  <%= @checkpoint.lesson_id %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @checkpoint.description %>
-</p>
-
-<p>
-  <b>Videourl:</b>
-  <%= @checkpoint.videourl %>
-</p>
-
-<p>
-  <b>Objective:</b>
-  <%= @checkpoint.objective %>
-</p>
-
-
-<p>
-  <b>Position:</b>
-  <%= @checkpoint.position %>
-</p>
-
-<%@checkpoint.questionanswers.each do |qa|%>
-  <%=qa.question%> - <%=qa.answer%>
-<%end%>
 <div class="row">
-  <div class="span6">
+  <nav class="span3">
+      <%=render partial: 'shared/logo'%>
+      <ul data-spy="affix" class="nav nav-pills nav-stacked hidden-phone">
+        <%=render partial: 'shared/start'%>
+        <%=render partial: "shared/navmanage"%>
+        <%=render partial: "shared/last"%>
+      </ul>
+  </nav><!--span3-->
+  <div class="span9">
+    <p id="notice"><%= notice %></p>
+    <p>
+      <b>Checkpoint:</b>
+      <%= @checkpoint.checkpoint %>
+    </p>
+
+    <p>
+      <b>Lesson:</b>
+      <%= @checkpoint.lesson_id %>
+    </p>
+
+    <p>
+      <b>Description:</b>
+      <%= @checkpoint.description %>
+    </p>
+
+    <p>
+      <b>Videourl:</b>
+      <%= @checkpoint.videourl %>
+    </p>
+
+    <p>
+      <b>Objective:</b>
+      <%= @checkpoint.objective %>
+    </p>
+
+
+    <p>
+      <b>Position:</b>
+      <%= @checkpoint.position %>
+    </p>
+
+    <%@checkpoint.questionanswers.each do |qa|%>
+      <%=qa.question%> - <%=qa.answer%>
+    <%end%>
+    
     <%=render partial: "questionanswers/form"%>
-  </div>
-  <div class="span6">
-    <%=render partial: "summaries/form"%>
+
+    <%= link_to 'Edit', edit_checkpoint_path(@checkpoint) %> |
+    <%= link_to 'Back', checkpoints_path %>
   </div>
 </div>
-
-<%= link_to 'Edit', edit_checkpoint_path(@checkpoint) %> |
-<%= link_to 'Back', checkpoints_path %>

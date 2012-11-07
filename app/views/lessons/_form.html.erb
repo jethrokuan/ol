@@ -1,9 +1,8 @@
-<%=stylesheet_link_tag  "select2"%>
 <%= simple_form_for(@lesson, html: {class: "form-horizontal"}) do |f| %>
     <%= f.input :lesson, input_html: {class:"input-xxlarge"}, placeholder: "Lesson" %>
     <%= f.association :topic, label_method: :topic, input_html: {class:"input-xxlarge e1"}%>
     <%= f.input :is_sublesson, input_html: {class:"input-xxlarge"}%>
-    <%= f.association :staff, label_method: :givenname%>
+    <%= f.association :staff, label_method: :givenname, input_html: {class:"input-xxlarge e1"}%>
 
   <div class="form-actions">
     <button type="submit" class="btn btn-primary">
@@ -11,11 +10,3 @@
     </button>
   </div>
 <% end %>
-
-<%=javascript_include_tag "select2"%>
-
-<script type="text/javascript">
-	jQuery(function($){
-    	$('.e1').select2();
-	});
-</script>

@@ -25,15 +25,12 @@ group :assets do
 end
 
 #Oauth
-gem 'omniauth'
-gem 'oauth2'
 gem 'omniauth-facebook'
 
 #For sanity
 gem 'thin'
-gem 'faraday'
 gem 'devise'
-gem "cancan"
+gem 'cancan'
 gem 'jquery-rails'
 gem 'quiet_assets'
 gem 'simple_form'

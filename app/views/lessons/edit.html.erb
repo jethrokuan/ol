@@ -11,19 +11,42 @@
 <h1>Edit Lesson</h1>
 <hr>
 <%=render partial: "form"%>
-<h3>Checkpoints</h3>
-<hr>
-<ol id="sortable" data-update-url="<%= sort_checkpoints_url %>">
-<%@lesson.checkpoints.each do |cp|%>
-  <%=content_tag_for :li, cp do%>
-  <span class="handle" style="cursor:move">[drag]</span>
-  <%=link_to cp.checkpoint, checkpoint_path(cp)%><small><a href=<%=edit_checkpoint_path(cp)%> class="salmon">(EDIT)<%=link_to "(DELETE)", checkpoint_path(cp), method: :delete, class: "salmon"%></a></small>
-  <%end%>
-<%end%>
-</ol>
+<div class="row-fluid">
+  <div class="span6">
+    <h3>Checkpoints</h3>
+    <hr>
+    <ol class="sortable" data-update-url="<%= sort_checkpoints_url %>">
+    <%@lesson.checkpoints.each do |cp|%>
+      <%=content_tag_for :li, cp do%>
+      <span class="handle" style="cursor:move">[drag]</span>
+      <%=link_to cp.checkpoint, checkpoint_path(cp)%><small><a href=<%=edit_checkpoint_path(cp)%> class="salmon">(EDIT)<%=link_to "(DELETE)", checkpoint_path(cp), method: :delete, class: "salmon"%></a></small>
+      <%end%>
+    <%end%>
+    </ol>
+  </div>
+    <div class="span6">
+    <h3>Summaries</h3>
+    <hr>
+    <ol class="sortable" data-update-url="<%= sort_summaries_url %>">
+    <%-@lesson.summaries.each do |s|%>
+      <%=content_tag_for :li, s do%>
+      <span class="handle" style="cursor:move">[drag]</span>
+      <%=link_to s.summary, checkpoint_path(s)%><small><a href=<%=edit_checkpoint_path(s)%> class="salmon">(EDIT)<%=link_to "(DELETE)", checkpoint_path(s), method: :delete, class: "salmon"%></a></small>
+      <%-end%>
+    <%-end%>
+    </ol>
+  </div>
+</div>
 </div><!--span8-->
 </div><!--row-->
 <%content_for :javascripts do%>
-<%=javascript_include_tag "jquery-ui-1.9.1.custom.min"%>
-<%=javascript_include_tag "sortable.js"%>
+  <%=javascript_include_tag "jquery-ui-1.9.1.custom.min"%>
+  <%=javascript_include_tag "sortable.js"%>
+  <%=stylesheet_link_tag "select2"%>
+  <%= javascript_include_tag "select2.js"%>
+  <script type="text/javascript">
+  jQuery(function($){
+      $('.e1').select2();
+  });
+</script>
 <%end%>

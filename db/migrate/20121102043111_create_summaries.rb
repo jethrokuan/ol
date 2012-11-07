@@ -4,8 +4,10 @@ class CreateSummaries < ActiveRecord::Migration
       t.string :summary
       t.integer :position
       t.integer :lesson_id
+      t.string :slug
 
       t.timestamps
     end
+    add_index :summaries, :slug, unique: true
   end
 end

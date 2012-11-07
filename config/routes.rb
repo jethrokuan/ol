@@ -30,7 +30,9 @@ Ol::Application.routes.draw do
   resources :checkpoints do
     collection {post :sort}
   end
-  resources :summaries
+  resources :summaries do
+    collection {post :sort}
+  end
   resources :schedules
   resources :questionanswers
   

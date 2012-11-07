@@ -96,9 +96,12 @@ ActiveRecord::Schema.define(:version => 20121102043111) do
     t.string   "summary"
     t.integer  "position"
     t.integer  "lesson_id"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "summaries", ["slug"], :name => "index_summaries_on_slug", :unique => true
 
   create_table "topics", :force => true do |t|
     t.string   "topic"

@@ -166,12 +166,9 @@ DEPENDENCIES
   cancan
   coffee-rails (~> 3.2.1)
   devise
-  faraday
   friendly_id
   jquery-rails
   less-rails
-  oauth2
-  omniauth
   omniauth-facebook
   pg
   quiet_assets

@@ -1,5 +1,5 @@
 $(document).ready ->
-  $('#sortable').sortable
+  $('.sortable').sortable
     axis: 'y'
     handle: '.handle'
     update: ->
