@@ -62,3 +62,25 @@
   width: 100%;
   height: 100%;
 }
+
+/* Float alerts over the page */
+.page-alert {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1020;
+  width: 0;
+}
+
+.page-alert .alert {
+  width: 550px;
+  margin-left: -300px;
+  border-top-width: 0;
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+body > .page-alert {
+  position: fixed;
+}

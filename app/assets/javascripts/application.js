@@ -7,4 +7,5 @@
 //= require twitter/bootstrap/bootstrap-popover
 //= require twitter/bootstrap/bootstrap-transition
 //= require twitter/bootstrap/bootstrap-affix
+//= require twitter/bootstrap/bootstrap-typeahead
 //= require iosfix

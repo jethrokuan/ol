@@ -43,17 +43,24 @@ This might be replaced with another icon suite in time */
   .tinynav { display: block; width:100%; }
 }
 
-/* Font Size Overrides (Uses Golden Ratio)
-This will be replaced with Responsive Measure */
+/* Font Size Overrides (Uses Golden Ratio) */
 h1 { font-size: 2.966em; line-height: @baseLineHeight * 2;}
 h2 { font-size: 2.618em; line-height: @baseLineHeight * 1.6;}
 h3 { font-size: 1.833em; line-height: @baseLineHeight * 1.2;}
 h4 { font-size: 1.618em;}
 h5 { font-size: 1.133em;}
 h6 { font-size: 1em;}
+p.small, small { font-size: 0.618em !important;}
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.5;
+  font-weight: 200;
+  line-height: @baseLineHeight * 1.5;
+}
+
+/* Font Rendering Hacks */
 p {
   -webkit-hyphens: auto;
-  -webkit-hyphenate-character: "\2010";
   -webkit-hyphenate-limit-after: 1;
   -webkit-hyphenate-limit-before: 3;
   -moz-hyphens: auto;
@@ -62,12 +69,12 @@ p {
 pre {
   -webkit-font-smoothing: subpixel-antialiased;
 }
-p.small, small { font-size: 0.618em !important;}
-.lead {
-  margin-bottom: @baseLineHeight;
-  font-size: @baseFontSize * 1.5;
-  font-weight: 200;
-  line-height: @baseLineHeight * 1.5;
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 /* Adds a nice fade effect to links */
@@ -77,15 +84,6 @@ a {
        -o-transition: 0.15s color ease;
           transition: 0.15s color ease;
   text-decoration: none !important;
-}
-
-/* Because browsers cannot render fonts to save their lives */
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
 }
 
 /* Center popover content */
@@ -133,8 +131,8 @@ input[type="color"],
   }
 }
 
-/* Unfuck Skimpy horizontal list until Bootstrap Rails updates to 2.1.4*/
+/* Unfuck skimpy horizontal list */
 .dl-horizontal dt {
-  margin-right: 10px;
-  width: 160px;
+  margin-right: 20px;
+  width: 200px;
 }
