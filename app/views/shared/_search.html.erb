@@ -1,1 +1,8 @@
-<input type="search" placeholder="Search Everything" data-provide="typeahead" data-items="4" data-source="root/lessons.json" data-minLength="3">
+<input type="search" id="search" placeholder="Search Everything" data-provide="typeahead" data-items="4" data-minLength="3">
+<%content_for :javascripts do%>
+<script>
+$(document).ready(function() {
+        $('#search').typeahead({source: <%= File.read('app/assets/json/schools.json').html_safe %>});
+    });
+</script>
+<%end%>

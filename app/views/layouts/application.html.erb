@@ -6,7 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
 <head>
 	<!-- universal meta -->
-	<meta charset="utf-8">
+	<%= tag :meta, charset: "utf-8" %>
 	<title><%= content_for(:title) + ' | '%>openlectures</title>
 	<meta name="description" content="Free, online lectures for anyone who wants to learn - because effort should decide success">
 	<meta name="author" content="The Cookie Monster, hello@openlectures.org">
@@ -47,14 +47,9 @@
   <script>var _gaq=[['_setAccount','UA-26070822-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </head>
 <body>
-	<% flash.each do |name, msg| %>
 	<div class="page-alert">
-		<div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-			<button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
-			<%= msg %>
-		</div>
-	</div>
-	<% end %>
+		<%= bootstrap_flash %>
+	</div><!--page-alert-->
 	<div id="wrap">
 		<div class="container">
 			<%= yield %>
