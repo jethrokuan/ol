@@ -16,9 +16,16 @@
 </div><!--controls-->
 <label class="control-label">"The Facility"</label>
 <div class="controls controls-row">
-    <%= f.text_field :school, class: "span6 aligncenter", placeholder: "School", :data =>{:provide => "typeahead", :items => "4", :source => asset_path("schools.json"), :minLength => "3"}%><%= f.number_field :school_year, class: "span2 aligncenter", placeholder: "Grad. Year eg. 2013", min: "2012" %>
+    <%= f.text_field :school, id: "autocomplete_school", class: "span6 aligncenter", placeholder: "School", :data =>{:provide => "typeahead", :items => "4", :minLength => "3"}%><%= f.number_field :school_year, class: "span2 aligncenter", placeholder: "Grad. Year eg. 2013", min: "2012" %>
 </div><!--controls-->
 <%= f.submit "Sign Up", class: "btn btn-link", style: "visibility:hidden;"%>
 <% end %>
 <hr>
 <%= render "devise/shared/links" %>
+<%content_for :javascripts do%>
+<script>
+$(document).ready(function() {
+        $('#autocomplete_school').typeahead({source: <%= File.read('app/assets/json/schools.json').html_safe %>});
+    });
+</script>
+<%end%>
