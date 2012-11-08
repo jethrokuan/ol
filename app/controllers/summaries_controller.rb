@@ -19,7 +19,7 @@ class SummariesController < ApplicationController
 
     respond_to do |format|
       if @summary.save
-        format.html { redirect_to @summary, notice: 'Summary was successfully created.' }
+        format.html { redirect_to :back, notice: 'Summary was successfully created.' }
         format.json { render json: @summary, status: :created, location: @summary }
       else
         format.html { render action: "new" }
@@ -33,7 +33,7 @@ class SummariesController < ApplicationController
 
     respond_to do |format|
       if @summary.update_attributes(params[:summary])
-        format.html { redirect_to @summary, notice: 'Summary was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Summary was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -47,13 +47,13 @@ class SummariesController < ApplicationController
     @summary.destroy
 
     respond_to do |format|
-      format.html { redirect_to summaries_url }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end
 
   def sort
-    params[:checkpoint].each_with_index do |id, index|
+    params[:summary].each_with_index do |id, index|
     Summary.update_all({position: index+1}, {id: id})
   end
     render nothing: true

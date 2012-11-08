@@ -1,3 +1,4 @@
+<%title @checkpoint.checkpoint%>
 <div class="row">
   <nav class="span3">
       <%=render partial: 'shared/logo'%>
@@ -8,17 +9,9 @@
       </ul>
   </nav><!--span3-->
   <div class="span9">
-    <p id="notice"><%= notice %></p>
-    <p>
-      <b>Checkpoint:</b>
-      <%= @checkpoint.checkpoint %>
-    </p>
-
-    <p>
-      <b>Lesson:</b>
-      <%= @checkpoint.lesson_id %>
-    </p>
-
+	  <h1><%=@checkpoint.checkpoint%></h1>
+	  <p class="muted"><%=@checkpoint.lesson.lesson%></p>
+	  <hr>
     <p>
       <b>Description:</b>
       <%= @checkpoint.description %>
@@ -39,14 +32,13 @@
       <b>Position:</b>
       <%= @checkpoint.position %>
     </p>
-
+	<p>
+		<b></b>
+	</p>
     <%@checkpoint.questionanswers.each do |qa|%>
       <%=qa.question%> - <%=qa.answer%>
     <%end%>
     
     <%=render partial: "questionanswers/form"%>
-
-    <%= link_to 'Edit', edit_checkpoint_path(@checkpoint) %> |
-    <%= link_to 'Back', checkpoints_path %>
   </div>
 </div>

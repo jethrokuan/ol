@@ -2,7 +2,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.hidden_field :lesson_id%>
+    <%= f.hidden_field :lesson_id, value: @lesson.id%>
     <%= f.input :summary %>
   </div>
 

@@ -36,6 +36,7 @@ class LessonsController < ApplicationController
 
   def edit
     @lesson = Lesson.find(params[:id])
+    @summary = Summary.new
   end
 
   def create
