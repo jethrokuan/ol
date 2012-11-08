@@ -1,12 +1,6 @@
 <%= simple_form_for(@summary) do |f| %>
   <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.hidden_field :lesson_id, value: @lesson.id%>
-    <%= f.input :summary %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+<%= f.hidden_field :lesson_id, value: @lesson.id%>
+<%= f.text_field :summary %>
+<%= f.button :submit %>
 <% end %>

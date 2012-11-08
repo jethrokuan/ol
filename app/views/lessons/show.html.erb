@@ -17,7 +17,7 @@
 				</nav><!--span3-->
 			<div class="span8 offset1">
 			<h1><%=@lesson.lesson%></h1>
-			<p class="lead"><small>by</small> <a href="#"><%=@lesson.staff.givenname + " " + @lesson.staff.surname%></a></p>
+			<p class="lead"><small>by</small><%=link_to @lesson.staff.givenname + " " + @lesson.staff.surname, "mailto:#{@lesson.staff.email}"%></p>
 			<hr>
 			<div class="row">
 				<div class="span6">
