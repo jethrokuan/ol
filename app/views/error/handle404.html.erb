@@ -65,25 +65,19 @@
 		</section>
 	</section>
 </div><!--slides-->
-
-<%=javascript_include_tag "head.min"%>
-<%=javascript_include_tag "reveal.min"%>
+<%content_for :javascripts do%>
 <%=javascript_include_tag "pacman"%>
 <%=javascript_include_tag "modernizr-1.5.min"%>
-
-
- <script>
-    var el = document.getElementById("pacman");
-
-    if (Modernizr.canvas && Modernizr.localstorage && 
-        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
-      window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
-    } else { 
-      el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
-        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
-    }
-  </script>
 <script>
+  var el = document.getElementById("pacman");
+
+  if (Modernizr.canvas && Modernizr.localstorage && 
+      Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+    window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+  } else { 
+    el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+      "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+  }
 	Reveal.initialize({
 		rollingLinks: false,
 		transition: 'linear',
@@ -91,4 +85,5 @@
 		mouseWheel: false
 	});
 </script>
+<%end%>
 </html>
