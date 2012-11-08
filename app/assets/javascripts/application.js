@@ -2,6 +2,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.turbolinks
 //= require twitter/bootstrap/bootstrap-alert
 //= require twitter/bootstrap/bootstrap-tab
 //= require twitter/bootstrap/bootstrap-tooltip
