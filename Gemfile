@@ -29,3 +29,4 @@ gem 'select2-rails'
 gem 'acts_as_list'
 
 gem 'friendly_id'
+gem 'turbolinks'
