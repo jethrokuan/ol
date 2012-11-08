@@ -1,7 +1,4 @@
 <%title @lesson.lesson%>
-<%content_for :styles do%>
-<%= stylesheet_link_tag  "reveal", :media => "all" %>
-<%end%>
 <div class="reveal">
 	<div class="state-background"></div>
 	<div class="slides">
@@ -91,7 +88,7 @@
 							<ul class="nav nav-pills nav-stacked aligncenter marginbot20p hidden-phone">
 								<li><a href="#" onclick="Reveal.navigateUp();return false">Back to Lecture</a></li>
 							</ul>
-							<h5 class="muted"><%=checkpoint.position.to_s + ": "+checkpoint.checkpoint%></	h5>
+							<h5 class="muted"><%=checkpoint.position.to_s + ": "+checkpoint.checkpoint%></h5>
 							<h2>Question</h2>
 							<hr>
 							<p><%=qa.question%></p>
@@ -148,12 +145,8 @@
 		<a class="down" href="#"><i class="icon-caret-down icon-large"></i></a>
 	</aside>
 
-	<!-- Presentation progress bar -->
-	<!-- <div class="progress"><span></span></div> -->
 	</div><!--reveal-->
 <%content_for :javascripts do%>
-	<%= javascript_include_tag "head.min" %>
-	<%= javascript_include_tag "reveal.min" %>
 	<script>
 		Reveal.initialize({
 			history: true,

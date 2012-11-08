@@ -30,3 +30,4 @@ gem 'acts_as_list'
 
 gem 'friendly_id'
 gem 'turbolinks'
+gem 'jquery-turbolinks'
