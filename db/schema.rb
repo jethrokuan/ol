@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121102043111) do
+ActiveRecord::Schema.define(:version => 20121108023455) do
 
   create_table "checkpoints", :force => true do |t|
     t.string   "checkpoint"
@@ -133,6 +133,8 @@ ActiveRecord::Schema.define(:version => 20121102043111) do
     t.string   "givenname"
     t.string   "school"
     t.string   "school_year"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

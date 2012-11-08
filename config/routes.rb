@@ -10,7 +10,7 @@ Ol::Application.routes.draw do
   get "usr/staff"
   get "questionanswers/new"  
   match "usr/manage/:id" => "subjects#edit"
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   resources :subjects do
     resources :topics
