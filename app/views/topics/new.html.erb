@@ -14,3 +14,16 @@
 <%=render partial: "form"%>
 </div><!--span8-->
 </div><!--row-->
+
+<%content_for :styles do%>
+<%=stylesheet_link_tag "select2"%>
+<%end%>
+
+<%content_for :javascripts do%>
+	<%=javascript_include_tag "select2"%>
+	<script type="text/javascript">
+	  jQuery(function($){
+	      $('.e1').select2();
+	  });
+	</script>
+<%end%>
