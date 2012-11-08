@@ -5,7 +5,9 @@ class Lesson < ActiveRecord::Base
   belongs_to :staff
   has_many :checkpoints, :order => :position
   has_many :summaries, :order => :position
-
+  
+  validates_presence_of :lesson, :topic_id, :staff_id
+  
   extend FriendlyId
   friendly_id :lesson, use: :slugged
 end

@@ -15,6 +15,7 @@ Ol::Application.routes.draw do
   resources :subjects do
     resources :topics
   end
+  
   resources :topics do
     resources :lessons
   end
@@ -33,7 +34,7 @@ Ol::Application.routes.draw do
   resources :summaries do
     collection {post :sort}
   end
-  resources :schedules
+  
   resources :questionanswers
   
   get "pages/index"
