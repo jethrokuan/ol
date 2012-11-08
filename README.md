@@ -26,13 +26,11 @@ Install Rails:`sudo gem install rails`
 
 ##Windows
 Jethro: Screw Windows
+
 Kenneth: Really, who uses Winblows?!
 
 #API
-##Database Structure
-subjects(id, subject)
-topics (id, topic, subject_id, order, is_subtopic, description)
-lessons (id, lesson, topic_id, order)
-checkpoints (id, ,date, checkpoint, lesson_id, description, videourl, objective, qa_array, order)
+====
 
-users(id, user_id, surname, givenname, role, email, school, school_year, checkpoint_id, subject_ids) + oauth
+##Database Structure
+Take a look at schema.rb

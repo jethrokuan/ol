@@ -1,8 +1,9 @@
 <input type="search" id="search" placeholder="Search Everything" data-provide="typeahead" data-items="4" data-minLength="3">
 <%content_for :javascripts do%>
-<script>
-$(document).ready(function() {
-        $('#search').typeahead({source: <%= File.read('app/assets/json/schools.json').html_safe %>});
+<%= javascript_tag "var autocomplete_items = #{ Subject.all.each.to_json };" %>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        $('#search').typeahead({source: autocomplete_items});
     });
 </script>
 <%end%>
