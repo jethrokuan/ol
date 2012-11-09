@@ -1,0 +1,5 @@
+<ul class="nav nav-pills nav-stacked">
+<% @subjects.each do |subject|%>
+  <li><%=link_to subject.subject, subject%></li>
+<%end%>
+</ul>

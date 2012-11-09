@@ -25,7 +25,7 @@
 
 // Components: Buttons & Alerts
 @import "twitter/bootstrap/buttons.less";
-// @import "twitter/bootstrap/button-groups.less";
+@import "twitter/bootstrap/button-groups.less";
 @import "twitter/bootstrap/alerts.less";
 
 // Components: Nav
@@ -101,7 +101,14 @@ This might be replaced with another icon suite in time */
   .tinynav { display: block; width:100%; }
 }
 
-/* Font Size Overrides (Uses Golden Ratio) */
+/* Shitty hack to fix the font size on the landing page */
+h2 ul li {
+  font-size: .5em !important;
+}
+
+/* Font Size Overrides (Uses Golden Ratio) 
+This needs to be fixed bad.
+*/
 h1 { font-size: 2.966em; line-height: @baseLineHeight * 2;}
 h2 { font-size: 2.618em; line-height: @baseLineHeight * 1.6;}
 h3 { font-size: 1.833em; line-height: @baseLineHeight * 1.2;}

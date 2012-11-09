@@ -13,8 +13,8 @@
 	<h1>Sign In</h1>
 	<hr>
 	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:name => "myform"} ) do |f| %>
-	<%= f.email_field :email, class: "input-xxlarge aligncenter", placeholder: "Email", required: "required", autofocus: "autofocus"%><br>	
-	<%= f.password_field :password, class: "input-xxlarge aligncenter", placeholder: "Password", required: "required"%><br/>
+	<%= f.email_field :email, class: "input-block-level", placeholder: "Email", required: "required", autofocus: "autofocus"%><br>	
+	<%= f.password_field :password, class: "input-block-level", placeholder: "Password", required: "required"%><br/>
 
 	<% if devise_mapping.rememberable? -%>
 	<label class="checkbox inline" style="line-height:0.9;">
@@ -26,3 +26,10 @@
 	<hr>
 	<%= render "devise/shared/links" %>
 </div><!--span8-->
+<%content_for :javascripts do%>
+<script>
+  $(document).ready(function() {
+    $("input:password").chromaHash({bars: 4});
+  });
+</script>
+<%end%>

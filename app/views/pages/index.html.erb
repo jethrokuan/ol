@@ -5,13 +5,24 @@
   <h4>Free, online lectures for anyone who wants to learn</h4>
     <div class="row">
       <div class="span4">
-        <h2><%= link_to('Sign In', new_user_session_path)%></h2>
+        <h2><i class="icon-list-ul icon-large"></i></h2>
+        <h2>
+          <%= link_to('Subjects', subjects_path, :class => "visible-phone") %>
+          <a href="#" class="hidden-phone" rel="popover" data-placement="bottom" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/subjects')%>" title="Choose Your Poison!">Subjects</a>
+        </h2>
       </div><!--span4-->
       <div class="span4">
-        <h1><%= link_to('Get Started', new_user_registration_path)%></h1>
+        <h1><i class="icon-play-circle icon-large"></i></h1>
+        <h1>
+          <%= link_to('Start', new_user_registration_path)%>
+        </h1>
       </div><!--span4-->
       <div class="span4">
-        <h2>Subjects</h2>
+        <h2><i class="icon-key icon-large"></i></h2>
+        <h2>
+          <%= link_to('Log In', new_user_session_path, :class => "visible-phone")%>
+          <a href="#" class="hidden-phone" rel="popover" data-placement="bottom" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/login')%>" title="Continue Your Adventure!">Log In</a>
+        </h2>
       </div><!--span4-->
     </div><!--row-->
   </div><!--span12-->
