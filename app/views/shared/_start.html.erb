@@ -8,4 +8,5 @@
   <li><a href="#" class="hidden-phone" rel="popover" data-placement="right" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/login')%>" title="Continue Your Adventure!">Log In/Get Started</a></li>
   <li><%= link_to('Log In/Get Started', new_user_session_path, :class => "visible-phone")%></li>
 <% end %>
+  <li><%=link_to('Subjects', subjects_path)%></li>
 <hr>

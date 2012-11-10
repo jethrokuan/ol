@@ -1,29 +1,53 @@
 <%- title "Welcome" %>
 <div class="row">
-  <div class="span12 aligncenter">
+  <div class="span12">
   <%=render 'shared/logo'%>
-  <h4>Free, online lectures for anyone who wants to learn</h4>
-    <div class="row">
-      <div class="span4">
-        <h2><i class="icon-list-ul icon-large"></i></h2>
-        <h2>
-          <%= link_to('Subjects', subjects_path, :class => "visible-phone") %>
-          <a href="#" class="hidden-phone" rel="popover" data-placement="bottom" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/subjects')%>" title="Choose Your Poison!">Subjects</a>
-        </h2>
-      </div><!--span4-->
-      <div class="span4">
-        <h1><i class="icon-play-circle icon-large"></i></h1>
-        <h1>
-          <%= link_to('Start', new_user_registration_path)%>
-        </h1>
-      </div><!--span4-->
-      <div class="span4">
-        <h2><i class="icon-key icon-large"></i></h2>
-        <h2>
-          <%= link_to('Log In', new_user_session_path, :class => "visible-phone")%>
-          <a href="#" class="hidden-phone" rel="popover" data-placement="bottom" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/login')%>" title="Continue Your Adventure!">Log In</a>
-        </h2>
-      </div><!--span4-->
-    </div><!--row-->
+  <div class="row aligncenter">
+  <p>picture here behind text</p>
+  <h2>1099 ways to learn</h2>
+  <ul class="span4 nav nav-tabs nav-stacked">
+    <li><a href="#" class="hidden-phone" rel="popover" data-placement="bottom" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/subjects')%>" title="Choose Your Poison!">Subjects</a></li>
+  </ul>
+  <ul class="span4 nav nav-tabs nav-stacked">
+    <li><%= link_to('Start', new_user_registration_path)%></li>
+  </ul>
+  <ul class="span4 nav nav-tabs nav-stacked">
+    <li><a href="#" class="hidden-phone" rel="popover" data-placement="bottom" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/login')%>" title="Continue Your Adventure!">Log In</a></li>
+  </ul>
+  </div><!--row-->
+  <div class="row">
+  <div class="span8">
+  <h3>Free, online lectures for the Singapore Syllabus</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices congue convallis. Curabitur tellus felis, viverra a pharetra a, scelerisque a mi. Etiam viverra dui sed nibh condimentum sit amet mattis risus aliquet. Nulla eu sem arcu, non consequat dui.</p>
+  </div><!--span8-->
+  </div><!--row-->
+  <hr>
+  <%=render 'shared/search'%>
+  <div class="row">
+    <div class="span4">
+      <h5>Newest Lectures</h5>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#">Tequila</a></li>
+        <li><a href="#">Vodka</a></li>
+        <li><a href="#">Jagermeister</a></li>
+      </ul>
+    </div><!--span4-->
+    <div class="span4">
+      <h5>Hot and Trending</h5>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#">Linan and the Mad Hatter</a></li>
+        <li><a href="#">Gary and the Zhang Family</a></li>
+        <li><a href="#">Pas de boire du vin</a></li>
+      </ul>
+    </div><!--span4-->
+    <div class="span4">
+      <h5>Announcements</h5>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#">Party today</a></li>
+        <li><a href="#">Party tomorrow</a></li>
+        <li><a href="#">Party next Friday</a></li>
+      </ul>
+    </div><!--span4-->
+  </div><!--row-->
   </div><!--span12-->
 </div><!--row-->
