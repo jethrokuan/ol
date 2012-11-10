@@ -53,10 +53,10 @@
 	<div class="page-alert">
     <%= bootstrap_flash %>
   </div><!--page-alert-->
-	<%= yield %>
-  <%= javascript_include_tag "application" %>
+	<%=yield%>
+  <%=javascript_include_tag "application"%>
   <%=javascript_include_tag "head.min"%>
   <%=javascript_include_tag "reveal.min"%>
-  <%= yield :javascripts %>
+  <%=yield :javascripts %>
 </body>
 </html>
