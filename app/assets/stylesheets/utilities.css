@@ -84,3 +84,549 @@
 body > .page-alert {
   position: fixed;
 }
+
+@media (max-width: 480px) {
+  .page-alert {
+    position: static;
+    width: auto;
+  }
+  .page-alert .alert {
+    width: auto;
+    margin-left: 0;
+    border-top-width: 1px;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+  }
+  body > .page-alert {
+    position: static;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-alert .alert {
+    width: 700px;
+    margin-left: -375px;
+  }
+}
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+form > *:last-child {
+  margin-bottom: 0;
+}
+
+label input[type="image"],
+label input[type="checkbox"],
+label input[type="radio"] {
+  vertical-align: middle;
+}
+
+.form-vertical .form-horizontal .control-group > label {
+  text-align: left;
+}
+
+.form-horizontal .form-vertical .control-group > label {
+  float: none;
+  padding-top: 0;
+  text-align: left;
+}
+
+.form-horizontal .form-vertical .controls {
+  margin-left: 0;
+}
+
+.form-horizontal .form-vertical.form-actions,
+.form-horizontal .form-vertical .form-actions {
+  padding-left: 20px;
+}
+
+.control-group .control-group {
+  margin-bottom: 0;
+}
+
+.form-horizontal .well .control-label {
+  width: 120px;
+}
+
+.form-horizontal .well .controls {
+  margin-left: 140px;
+}
+
+form .well > *:last-child {
+  margin-bottom: 0;
+}
+
+.editor {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uneditable-textarea.editor-html {
+  padding: 5px 3px 5px 5px;
+  white-space: normal;
+}
+
+textarea.editor-html {
+  visibility: hidden;
+}
+
+.uneditable-input,
+.uneditable-textarea {
+  display: inline-block;
+  padding: 4px 3px 4px 5px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  cursor: not-allowed;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.uneditable-input {
+  height: 20px;
+  overflow: hidden;
+  white-space: pre;
+}
+
+.uneditable-textarea {
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+select[disabled],
+textarea[disabled],
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="search"][disabled] {
+  color: #999;
+}
+
+.uneditable-input.disabled,
+.uneditable-textarea.disabled {
+  color: #999;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+textarea,
+.uneditable-textarea {
+  height: 60px;
+}
+
+textarea[rows="1"],
+.uneditable-textarea[rows="1"] {
+  height: 40px;
+}
+
+textarea[rows="2"],
+.uneditable-textarea[rows="2"] {
+  height: 60px;
+}
+
+textarea[rows="3"],
+.uneditable-textarea[rows="3"] {
+  height: 80px;
+}
+
+textarea[rows="4"],
+.uneditable-textarea[rows="4"] {
+  height: 100px;
+}
+
+textarea[rows="5"],
+.uneditable-textarea[rows="5"] {
+  height: 120px;
+}
+
+textarea[rows="6"],
+.uneditable-textarea[rows="6"] {
+  height: 140px;
+}
+
+textarea[rows="7"],
+.uneditable-textarea[rows="7"] {
+  height: 160px;
+}
+
+textarea[rows="8"],
+.uneditable-textarea[rows="8"] {
+  height: 180px;
+}
+
+textarea[rows="9"],
+.uneditable-textarea[rows="9"] {
+  height: 200px;
+}
+
+textarea[rows="10"],
+.uneditable-textarea[rows="10"] {
+  height: 220px;
+}
+
+textarea[rows="11"],
+.uneditable-textarea[rows="11"] {
+  height: 240px;
+}
+
+textarea[rows="12"],
+.uneditable-textarea[rows="12"] {
+  height: 260px;
+}
+
+textarea[rows="13"],
+.uneditable-textarea[rows="13"] {
+  height: 280px;
+}
+
+textarea[rows="14"],
+.uneditable-textarea[rows="14"] {
+  height: 300px;
+}
+
+textarea[rows="15"],
+.uneditable-textarea[rows="15"] {
+  height: 320px;
+}
+
+textarea[rows="16"],
+.uneditable-textarea[rows="16"] {
+  height: 340px;
+}
+
+textarea[rows="17"],
+.uneditable-textarea[rows="17"] {
+  height: 360px;
+}
+
+textarea[rows="18"],
+.uneditable-textarea[rows="18"] {
+  height: 380px;
+}
+
+textarea[rows="19"],
+.uneditable-textarea[rows="19"] {
+  height: 400px;
+}
+
+textarea[rows="20"],
+.uneditable-textarea[rows="20"] {
+  height: 420px;
+}
+
+textarea[rows="21"],
+.uneditable-textarea[rows="21"] {
+  height: 440px;
+}
+
+textarea[rows="22"],
+.uneditable-textarea[rows="22"] {
+  height: 460px;
+}
+
+textarea[rows="23"],
+.uneditable-textarea[rows="23"] {
+  height: 480px;
+}
+
+textarea[rows="24"],
+.uneditable-textarea[rows="24"] {
+  height: 500px;
+}
+
+textarea[rows="25"],
+.uneditable-textarea[rows="25"] {
+  height: 520px;
+}
+
+textarea[rows="26"],
+.uneditable-textarea[rows="26"] {
+  height: 540px;
+}
+
+textarea[rows="27"],
+.uneditable-textarea[rows="27"] {
+  height: 560px;
+}
+
+textarea[rows="28"],
+.uneditable-textarea[rows="28"] {
+  height: 580px;
+}
+
+textarea[rows="29"],
+.uneditable-textarea[rows="29"] {
+  height: 600px;
+}
+
+textarea[rows="30"],
+.uneditable-textarea[rows="30"] {
+  height: 620px;
+}
+
+textarea[rows="35"],
+.uneditable-textarea[rows="35"] {
+  height: 720px;
+}
+
+textarea[rows="40"],
+.uneditable-textarea[rows="40"] {
+  height: 820px;
+}
+
+textarea[rows="45"],
+.uneditable-textarea[rows="45"] {
+  height: 920px;
+}
+
+textarea[rows="50"],
+.uneditable-textarea[rows="50"] {
+  height: 1020px;
+}
+
+.uneditable-textarea {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uneditable-input[class*="span"],
+.uneditable-textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"],
+.row-fluid .uneditable-textarea[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+.input-append .uneditable-input,
+.input-prepend .uneditable-input {
+  vertical-align: top;
+}
+
+.input-append .uneditable-input[class*="span"],
+.input-prepend .uneditable-input[class*="span"] {
+  display: inline-block;
+}
+
+.uneditable-form input[disabled],
+.uneditable-form textarea[disabled],
+.uneditable-form select[disabled] {
+  cursor: auto;
+}
+
+.uneditable-form .uneditable-input,
+.uneditable-form .uneditable-textarea {
+  cursor: text;
+}
+
+.uneditable-form .form-actions {
+  background-color: transparent;
+}
+
+.thumbnail-borderless .thumbnail {
+  padding: 0;
+  border: none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  outline: none;
+}
+
+.nav-tabs > li.disabled > a {
+  color: #CCCCCC;
+  cursor: not-allowed;
+}
+
+.tabbable {
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 0;
+  *zoom: 1;
+}
+
+.tabbable:before,
+.tabbable:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.tabbable:after {
+  clear: both;
+}
+
+.tabbable > .nav-tabs {
+  margin: 0;
+}
+
+.tab-content {
+  padding: 18px 0 0 0;
+  overflow: auto;
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 0;
+}
+
+.tabbable-bordered {
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.tabbable-bordered > .tab-content {
+  padding: 20px 20px 10px 20px;
+  border-width: 0 1px 1px 1px;
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+body > .container.tabbable > .nav-tabs {
+  padding-top: 15px;
+}
+
+.tabs-below > .tab-content {
+  padding: 0 0 10px 0;
+}
+
+.tabs-below.tabbable-bordered > .tab-content {
+  padding: 20px 20px 10px 20px;
+  border-width: 1px 1px 0 1px;
+  -webkit-border-radius: 4px 4px 0 0;
+     -moz-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+}
+
+body > .container.tabs-below.tabbable-bodered > .tab-content {
+  border-top-width: 0;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.tabs-left,
+.tabs-right {
+  margin-bottom: 20px;
+}
+
+.tabs-left > .nav-tabs,
+.tabs-right > .nav-tabs {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.tabs-left > .tab-content,
+.tabs-right > .tab-content {
+  overflow: hidden;
+}
+
+.tabs-left > .nav-tabs {
+  left: 1px;
+}
+
+.tabs-left > .nav-tabs > .active > a,
+.tabs-left > .nav-tabs > .active > a:hover {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+.tabs-left > .tab-content {
+  padding: 0 0 0 19px;
+  border-left-width: 1px;
+}
+
+.tabs-left.tabbable-bordered {
+  border-width: 0 1px 0 0;
+}
+
+.tabs-left.tabbable-bordered > .tab-content {
+  padding: 20px 20px 10px 20px;
+  border-width: 1px 0 1px 1px;
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+
+body > .container.tabs-left.tabbable-bodered > .tab-content {
+  border-top-width: 0;
+  -webkit-border-radius: 0 0 4px 0;
+     -moz-border-radius: 0 0 4px 0;
+          border-radius: 0 0 4px 0;
+}
+
+.tabs-right > .nav-tabs {
+  right: 1px;
+}
+
+.tabs-right > .nav-tabs > .active > a,
+.tabs-right > .nav-tabs > .active > a:hover {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: #ffffff;
+}
+
+.tabs-right > .tab-content {
+  padding: 0 19px 0 0;
+  border-right-width: 1px;
+}
+
+.tabs-right.tabbable-bordered {
+  border-width: 0 0 0 1px;
+}
+
+.tabs-right.tabbable-bordered > .tab-content {
+  padding: 20px 20px 10px 20px;
+  border-width: 1px 1px 1px 0;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+body > .container.tabs-right.tabbable-bodered > .tab-content {
+  border-top-width: 0;
+  -webkit-border-radius: 0 0 0 4px;
+     -moz-border-radius: 0 0 0 4px;
+          border-radius: 0 0 0 4px;
+}
+
+.modal form {
+  margin-bottom: 0;
+}
