@@ -1,6 +1,6 @@
 <h1>Welcome to Ghetto Land</h1>
 <hr>
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), ) do |f| %>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:data => {:persist => "garlic"}}) do |f| %>
 <%= devise_error_messages! %>
 <label class="control-label">Name</label>
 <div class="controls controls-row">	
@@ -16,7 +16,7 @@
 </div><!--controls-->
 <label class="control-label">Education</label>
 <div class="controls controls-row">
-    <%= f.text_field :school, class: "span8 aligncenter", placeholder: "School" %>	
+    <%= f.text_field :school, id: "autocomplete_school", class: "input-block-level aligncenter", placeholder: "School", :data =>{:provide => "typeahead", :items => "4", :minLength => "3"}%>	
 </div><!--controls-->
 <label class="control-label">Information</label>
 <div class="controls controls-row">
@@ -25,8 +25,14 @@
 <div class="controls controls-row">
     <%= f.text_field :phone, class: "span8 aligncenter", placeholder: "Phone Number (For staff database)" %>
 </div><!--controls-->
-<%= f.submit "Sign Up", class: "btn btn-link", style: "visibility:hidden;"%>
+<%= f.submit "Sign Up", class: "btn btn-block"%>
 <% end %>
 <hr>
-<%= render "devise/shared/links" %>
+<%content_for :javascripts do%>
+<script>
+$(document).ready(function() {
+        $('#autocomplete_school').typeahead({source: <%= File.read('app/assets/json/schools.json').html_safe %>});
+    });
+</script>
+<%end%>
 

@@ -1,8 +1,8 @@
 <%= simple_form_for(@topic, html: {class: "form-horizontal"}) do |f| %>
   <div class="form-inputs">
-    <%= f.input :topic, input_html: {class:"input-xxlarge"}, placeholder: "Topic" %>
-    <%= f.association :subject,input_html: {class:"input-xxlarge e1"}, label_method: :subject %>
-    <%= f.input :description, input_html: {class:"input-xxlarge"}, placeholder: "Description Here"%>
+    <%= f.input :topic, input_html: {class:"input-block-level"}, placeholder: "Topic" %>
+    <%= f.association :subject,input_html: {class:"input-block-level e1"}, label_method: :subject %>
+    <%= f.input :description, input_html: {class:"input-block-level"}, placeholder: "Description Here"%>
   </div>
   <div class="form-actions">
     <button type="submit" class="btn btn-primary">

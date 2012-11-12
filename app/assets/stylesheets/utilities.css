@@ -110,11 +110,6 @@ body > .page-alert {
   }
 }
 
-/* Fix Input Block Level Height */
-.input-block-level {
-  min-height: 35px;
-}
-
 form > *:last-child {
   margin-bottom: 0;
 }
@@ -123,37 +118,6 @@ label input[type="image"],
 label input[type="checkbox"],
 label input[type="radio"] {
   vertical-align: middle;
-}
-
-.form-vertical .form-horizontal .control-group > label {
-  text-align: left;
-}
-
-.form-horizontal .form-vertical .control-group > label {
-  float: none;
-  padding-top: 0;
-  text-align: left;
-}
-
-.form-horizontal .form-vertical .controls {
-  margin-left: 0;
-}
-
-.form-horizontal .form-vertical.form-actions,
-.form-horizontal .form-vertical .form-actions {
-  padding-left: 20px;
-}
-
-.control-group .control-group {
-  margin-bottom: 0;
-}
-
-.form-horizontal .well .control-label {
-  width: 120px;
-}
-
-.form-horizontal .well .controls {
-  margin-left: 140px;
 }
 
 form .well > *:last-child {
@@ -366,51 +330,6 @@ textarea[rows="25"],
   height: 520px;
 }
 
-textarea[rows="26"],
-.uneditable-textarea[rows="26"] {
-  height: 540px;
-}
-
-textarea[rows="27"],
-.uneditable-textarea[rows="27"] {
-  height: 560px;
-}
-
-textarea[rows="28"],
-.uneditable-textarea[rows="28"] {
-  height: 580px;
-}
-
-textarea[rows="29"],
-.uneditable-textarea[rows="29"] {
-  height: 600px;
-}
-
-textarea[rows="30"],
-.uneditable-textarea[rows="30"] {
-  height: 620px;
-}
-
-textarea[rows="35"],
-.uneditable-textarea[rows="35"] {
-  height: 720px;
-}
-
-textarea[rows="40"],
-.uneditable-textarea[rows="40"] {
-  height: 820px;
-}
-
-textarea[rows="45"],
-.uneditable-textarea[rows="45"] {
-  height: 920px;
-}
-
-textarea[rows="50"],
-.uneditable-textarea[rows="50"] {
-  height: 1020px;
-}
-
 .uneditable-textarea {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -448,17 +367,6 @@ textarea[rows="50"],
 
 .uneditable-form .form-actions {
   background-color: transparent;
-}
-
-.thumbnail-borderless .thumbnail {
-  padding: 0;
-  border: none;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
 }
 
 .nav-tabs > li > a,

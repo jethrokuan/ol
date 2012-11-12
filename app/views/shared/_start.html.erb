@@ -3,10 +3,12 @@
 	<li><%= link_to(current_user.fullname, usr_profile_path)%></li>
 <%elsif staff_signed_in?%>
   <li><%= link_to(current_staff.fullname, usr_profile_path)%></li>
-  <li><%= link_to('OL Command', usr_manage_path)%></li>
+  <li><%= link_to('Manage Subjects', usr_manage_path)%></li>
+  <li><%=link_to "Staff Database", usr_staff_path%></li>
 <% else %>
-  <li><a href="#" class="hidden-phone" rel="popover" data-placement="right" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/login')%>" title="Continue Your Adventure!">Log In/Get Started</a></li>
-  <li><%= link_to('Log In/Get Started', new_user_session_path, :class => "visible-phone")%></li>
+  <li><a href="#" class="hidden-phone" rel="popover" data-placement="right" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/login')%>" title="Continue Your Adventure!">Log In</a></li>
+  <li><%= link_to('Get Started', new_user_registration_path)%></li>
+  <li><a href="#" class="hidden-phone" rel="popover" data-placement="right" data-trigger="click" data-html="true" data-content="<%=render :text => render('shared/navsubjects')%>" title="Pick One!">Subjects</a></li>
 <% end %>
-  <li><%=link_to('Subjects', subjects_path)%></li>
+  <li><%= link_to('About Us', pages_team_path)%></li>
 <hr>

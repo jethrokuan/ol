@@ -1,4 +1,6 @@
-<input type="search" class="input-block-level" id="search" placeholder="Search Everything" data-provide="typeahead" data-items="4" data-minLength="3">
+<form class="form-search">
+<input type="search" class="search-query input-block-level" id="search" placeholder="Search Everything >>" data-provide="typeahead" data-items="4" data-minLength="3">
+</form>
 <%content_for :javascripts do%>
 <%= javascript_tag "var autocomplete_items = #{ Subject.all.each.to_json };" %>
 <script type="text/javascript">
