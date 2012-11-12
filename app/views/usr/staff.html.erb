@@ -9,25 +9,39 @@
   <%=render 'shared/last'%>
 </ul>
 </nav><!--span3-->
-<div class="span8 offset1">
+<div class="span8 offset1" id="staff-list">
 <h1>Staff Database</h1>
 <hr>
-<input class="input-block-level">
-<table class="table">
+<input type="search" class="search input-block-level" placeholder="Filter List">
+<table class="table table-hover table-condensed">
+<thead>
   <tr>
-    <th>Name:</th>
-  <th>Email Address:</th>
-  <th>Phone Number:</th>
-  <th>Title:</th>  
+  <th>Name</th>
+  <th>Email Address</th>
+  <th>Phone Number</th>
+  <th>Title</th>  
   </tr>
+</thead>
+<tbody class="list">
 <%@staff.each do |s|%>
   <tr>
-	<td><%=s.givenname + " " + s.surname%></td>
-	<td><%=s.email%></td>
-	<td><%=s.phone%></td>
-  <td><%=s.title%></td>
+	<td class="name"><%=s.givenname + " " + s.surname%></td>
+	<td class="email"><%= mail_to(s.email, nil, :encode => "javascript") %></td>
+	<td class="phone"><a href="callto:<%=s.phone%>"><%=s.phone%></a></td>
+  <td class="title"><%=s.title%></td>
   </tr>
 <%end%>
+</tbody>
 </table>
 </div><!--span8-->
 </div><!--row-->
+<%content_for :javascripts do%>
+<%=javascript_include_tag "list.min"%>
+<script>
+var options = {
+    valueNames: [ 'name', 'email', 'phone', 'title' ]
+};
+
+var staffList = new List('staff-list', options);
+</script>
+<%end%>

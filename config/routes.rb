@@ -1,8 +1,8 @@
 Ol::Application.routes.draw do
   devise_for :staffs, :skip => [:new_staff_registration]
-  as :staff do
-    get 'a/really/really/really/really/long/route/for/staff/to/sign/up' => 'devise/registrations#new', :as => :new_staff_registration
-  end
+  # as :staff do
+  #   get 'a/really/really/really/really/long/route/for/staff/to/sign/up' => 'devise/registrations#new', :as => :new_staff_registration
+  # end
 
   get "lessons/:id/showedit" => "lessons#showedit"
   get "usr/manage"
