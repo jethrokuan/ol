@@ -101,7 +101,7 @@ This might be replaced with another icon suite in time */
   .tinynav { display: block; width:100%; }
 }
 
-/* Shitty hack to fix the font size on the landing page */
+/* Shitty hack to fix the font size for the subjects dropdown on the landing page */
 h2 ul li {
   font-size: .5em !important;
 }
@@ -195,12 +195,19 @@ input[type="color"],
   }
 }
 
+/* Remove top rounded borders */
+.top-square {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
 /* Unfuck skimpy horizontal list */
 .dl-horizontal dt {
   margin-right: 20px;
   width: 200px;
 }
 
+/* Fix spacey hr */
 hr {
 	margin: 12px 0;
 }

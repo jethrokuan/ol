@@ -1,6 +1,6 @@
 <h1>Start Your Adventure</h1>
 <hr>
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), ) do |f| %>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:data => {:persist => "garlic"}}) do |f| %>
 <%= devise_error_messages! %>
 <label class="control-label">A Replacement for "Heyy"</label>
 <div class="controls controls-row">

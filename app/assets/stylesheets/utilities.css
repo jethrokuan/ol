@@ -112,7 +112,7 @@ body > .page-alert {
 
 /* Fix Input Block Level Height */
 .input-block-level {
-  min-height: 30px;
+  min-height: 35px;
 }
 
 form > *:last-child {

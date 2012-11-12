@@ -1,4 +1,7 @@
 <%- title "Partners" %>
+<%content_for :fbog do%>
+<%= tag :meta, property: "og:description", content: "" %>
+<%end%>
 <div class="row">
 <nav class="span3">
 <%=render 'shared/logo'%>
@@ -10,9 +13,7 @@
 </ul>
 </nav><!--span3-->
 <div class="span8 offset1">
-<ul class="thumbnails">
-	<li class="span8"><a class="thumbnail"><%=image_tag "partners.jpg"%></a></li>
-</ul><!--thumbnails-->
+<%=image_tag "partners.jpg", :class => "img-rounded top-square"%>
 <h1>We bring education to everyone.</h1>
 <p class="lead">If there's a place for us in your organization's <abbr class="initialism" title="Corporate Social Responsibility">CSR</abbr> programme, or you'd just like to help, <a href='m&#97;&#105;lt&#111;&#58;%6&#56;e&#108;lo%40o%&#55;0&#37;6&#53;n&#108;&#101;c&#116;%&#55;5r&#101;%7&#51;&#46;&#111;rg'>we'd love to hear from you.</a></p>
 <hr>
