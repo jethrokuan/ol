@@ -1,4 +1,7 @@
 <%title @subject.subject%>
+<%content_for :fbog do%>
+<%= tag :meta, property: "og:description", content: "" %>
+<%end%>
 <div class="row">
 <nav class="span3">
 <%=render 'shared/logo'%>

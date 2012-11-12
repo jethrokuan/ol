@@ -19,6 +19,8 @@
 	<%= tag :meta, property: "og:title", content: content_for(:title) + ' | ' + "openlectures" %>
 	<%= tag :meta, property: "fb:app_id", content: ENV["FACEBOOK_APP_ID"] %>
 	<%= tag :meta, property: "og:email", content: "hello@openlectures.org" %>
+	<%= tag :meta, property: "twitter:card", content: "summary" %>
+  <%= tag :meta, property: "twitter:site", content: "@openlecturessg" %>
 	<%= yield :fbog %>
 	<%= csrf_meta_tags %>
 	<!-- end universal meta -->

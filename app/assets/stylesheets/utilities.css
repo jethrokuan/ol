@@ -110,13 +110,9 @@ body > .page-alert {
   }
 }
 
+/* Fix Input Block Level Height */
 .input-block-level {
-  display: block;
-  width: 100%;
   min-height: 30px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 form > *:last-child {
@@ -627,6 +623,7 @@ body > .container.tabs-right.tabbable-bodered > .tab-content {
           border-radius: 0 0 0 4px;
 }
 
+/* Fix Modal Form Margins */
 .modal form {
   margin-bottom: 0;
 }

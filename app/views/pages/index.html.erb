@@ -1,4 +1,7 @@
 <%- title "Welcome" %>
+<%content_for :fbog do%>
+<%= tag :meta, property: "og:description", content: "" %>
+<%end%>
 <div class="row">
   <div class="span12">
   <%=render 'shared/logo'%>

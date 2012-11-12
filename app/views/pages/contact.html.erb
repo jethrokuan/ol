@@ -1,4 +1,7 @@
 <%- title "Contact Us" %>
+<%content_for :fbog do%>
+<%= tag :meta, property: "og:description", content: "" %>
+<%end%>
 <div class="row">
 <nav class="span3">
 <%=render 'shared/logo'%>
@@ -9,10 +12,21 @@
 	<%=render 'shared/last'%>
 </ul>
 </nav><!--span3-->
-<div class="span8 offset1">
-<h1 style="font-size:17em; line-height:0.8;"><i class="icon-globe"></i></h1>
-<h1>Location: <a href="http://en.wikipedia.org/wiki/The_Hitchhiker's_Guide_to_the_Galaxy" target="_blank">ZZ9 Plural Z Alpha</a></h1>
-<p class="lead">1.3667° N, 103.7500° E</p>
+<div class="span8 offset1 vcard" itemscope itemtype="http://data-vocabulary.org/Organization">
+<h1 class="fn org" itemprop="name">openlectures</h1>
+<h1 class="adr" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+	Location: <a href="http://en.wikipedia.org/wiki/The_Hitchhiker's_Guide_to_the_Galaxy" class="locality" target="_blank" itemprop="locality">ZZ9 Plural Z Alpha</a>
+</h1>
+<p class="lead geo">
+	<span class="latitutde">
+		<span class="value-title" title="1.3667"></span>
+	</span>
+	1.3667° N, 
+	<span class="longitude">
+		<span class="value-title" title="103.7500"></span>
+	</span>
+	103.7500° E
+</p>
 <hr>
 <dl class="dl-horizontal">
 	<dt>General Enquiries</dt>
