@@ -11,5 +11,5 @@
 //= require twitter/bootstrap/bootstrap-affix
 //= require twitter/bootstrap/bootstrap-typeahead
 //= require twitter/bootstrap/bootstrap-button
-//= require garlic.min
+//= require garlic
 //= require iosfix
