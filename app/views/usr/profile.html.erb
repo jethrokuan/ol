@@ -15,6 +15,7 @@
 		<h1><%=current_user.fullname%></h1>
 		<p class="lead"><%=current_user.school%></a></p>
 	<%elsif staff_signed_in?%>
+		<%=image_tag current_staff.avatar.url%>
 		<h1><%=current_staff.fullname%></h1>
 		<hr>
 		<h3>Important Information</h3>
