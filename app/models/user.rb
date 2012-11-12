@@ -9,7 +9,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role, :school_year, :school, :surname, :givenname, :checkpoint_id, :subject_ids, :provider, :uid
+  attr_accessible :avatar
 
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  
   def fullname
     return givenname+" "+surname
   end

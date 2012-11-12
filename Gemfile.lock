@@ -33,6 +33,7 @@ GEM
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
     cancan (1.6.8)
+    cocaine (0.4.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -97,6 +98,11 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     orm_adapter (0.4.0)
+    paperclip (2.8.0)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     pg (0.14.1)
     polyglot (0.3.3)
     quiet_assets (1.0.1)
@@ -177,6 +183,7 @@ DEPENDENCIES
   jquery-turbolinks
   less-rails
   omniauth-facebook
+  paperclip
   pg
   quiet_assets
   rails (= 3.2.8)

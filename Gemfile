@@ -32,3 +32,4 @@ gem 'friendly_id'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'jquery-rails-cdn'
+gem "paperclip"
